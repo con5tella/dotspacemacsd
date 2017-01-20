@@ -368,7 +368,7 @@ you should place your code here."
   ;; Also use functions set-frame-height, set-frame-width, set-frame-size, set-frame-position
 
   ;; remap "SPC SPC" to avy-goto-char
-  (evil-leader/set-key "SPC" 'evil-avy-goto-char)
+  ;; (evil-leader/set-key "SPC" 'evil-avy-goto-char)
 
   ;; ace-pinyin Traditional Chinese Characters Support
   ;; (setq ace-pinyin-simplified-chinese-only-p nil)
@@ -469,3 +469,5 @@ you should place your code here."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
+(load custom-file 'no-error 'no-message)
