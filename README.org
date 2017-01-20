@@ -1,0 +1,4 @@
+#+STARTUP: content
+#+STARTUP: indent
+* My spacemacs config files
+- Emacs config files using [[https://github.com/syl20bnr/spacemacs][spacemacs]].
