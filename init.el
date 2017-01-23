@@ -36,7 +36,7 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ;; helm
+     helm
      ivy
      (auto-completion :variables
                       auto-completion-enable-sort-by-usage t
@@ -438,9 +438,6 @@ you should place your code here."
   ;;          "\\(?:" (org-create-multibrace-regexp "(" ")" org-match-sexp-depth) "\\)"
   ;;          "\\|"
   ;;          "\\(?:\\*\\|[+-]?[[:alnum:].,\\]*[[:alnum:]]\\)\\)")))
-
-  ;; hungry-delete on
-  (global-hungry-delete-mode t)
 
   ;; improve the performance of opening large file
   (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)

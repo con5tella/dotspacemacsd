@@ -15,7 +15,5 @@
     (interactive)
     (when frame
       (select-frame frame))
-    (set-frame-width (selected-frame) 96)
-    (set-frame-height (selected-frame) 48)
-    )
+    (set-frame-size (selected-frame) 96 48))
   )
