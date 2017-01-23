@@ -371,25 +371,6 @@ you should place your code here."
   ;; (set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
   ;; (set-face-attribute 'font-lock-comment-face nil :slant 'oblique)
 
-  ;; Include underscores in word motions
-  ;; For python
-  (add-hook 'python-mode-hook '(lambda () (modify-syntax-entry ?_ "w")))
-
-  ;; ;; org-mode font
-  ;; (with-eval-after-load 'org
-  ;;   (set-face-attribute 'org-level-1 nil :height 1.6 :bold t)
-  ;;   (set-face-attribute 'org-level-2 nil :height 1.4 :bold t)
-  ;;   (set-face-attribute 'org-level-3 nil :height 1.2 :bold t)
-  ;;   )
-  ;; ;;
-  ;; (add-hook 'org-mode-hook
-  ;;           '(lambda ()
-  ;;              (set-face-attribute 'org-level-1 nil :height 1.6 :bold t)
-  ;;              (set-face-attribute 'org-level-2 nil :height 1.4 :bold t)
-  ;;              (set-face-attribute 'org-level-3 nil :height 1.2 :bold t)
-  ;;              )
-  ;;           )
-
   ;; org-mode align table
   (when (configuration-layer/layer-usedp 'chinese)
     (spacemacs//set-monospaced-font "Source Code Pro" "Wenquanyi Micro Hei" 14 16))
@@ -399,30 +380,6 @@ you should place your code here."
 
   ;; set default widths of images in org-mode
   (setq org-image-actual-width 1200)
-
-  ;; ;; default disabled
-  ;; ;; set Chinese markup correct in org-mode
-  ;; (setcar (nthcdr 0 org-emphasis-regexp-components) " \t('\"{[:nonascii:]")
-  ;; (setcar (nthcdr 1 org-emphasis-regexp-components) "- \t.,:!?;'\")}\\[[:nonascii:]")
-  ;; (org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components)
-  ;; (org-element-update-syntax)
-  ;; ;; markup is correct when export
-  ;; (setq org-emphasis-regexp-components
-  ;;       (list (concat " \t('\"{"            "[:nonascii:]")
-  ;;             (concat "- \t.,:!?;'\")}\\["  "[:nonascii:]")
-  ;;             " \t\r\n,\"'"
-  ;;             "."
-  ;;             1))
-  ;; ;; set range of the superscript and subscript
-  ;; (with-eval-after-load 'org
-  ;;   (setq org-match-substring-regexp
-  ;;         (concat
-  ;;          "\\([0-9a-zA-Zα-γΑ-Ω]\\)\\([_^]\\)\\("
-  ;;          "\\(?:" (org-create-multibrace-regexp "{" "}" org-match-sexp-depth) "\\)"
-  ;;          "\\|"
-  ;;          "\\(?:" (org-create-multibrace-regexp "(" ")" org-match-sexp-depth) "\\)"
-  ;;          "\\|"
-  ;;          "\\(?:\\*\\|[+-]?[[:alnum:].,\\]*[[:alnum:]]\\)\\)")))
 
   ;; improve the performance of opening large file
   (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
