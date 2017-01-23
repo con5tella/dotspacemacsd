@@ -156,7 +156,6 @@ values."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(;; spacemacs-dark
                          ;; spacemacs-light
-                         monokai
                          ;; heroku
                          ;; sanityinc-solarized-light
                          ;; sanityinc-tomorrow-night
@@ -355,7 +354,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
   ;; set default background-color
-  ;; (set-background-color "AntiqueWhite1")
+  (set-background-color "AntiqueWhite1")
 
   ;; ace-pinyin Traditional Chinese Characters Support
   ;; (setq ace-pinyin-simplified-chinese-only-p nil)
