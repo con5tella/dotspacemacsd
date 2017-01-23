@@ -156,6 +156,7 @@ values."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(;; spacemacs-dark
                          ;; spacemacs-light
+                         monokai
                          ;; heroku
                          ;; sanityinc-solarized-light
                          ;; sanityinc-tomorrow-night
@@ -354,7 +355,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
   ;; set default background-color
-  (set-background-color "AntiqueWhite1")
+  ;; (set-background-color "AntiqueWhite1")
 
   ;; ace-pinyin Traditional Chinese Characters Support
   ;; (setq ace-pinyin-simplified-chinese-only-p nil)
@@ -398,22 +399,6 @@ you should place your code here."
 
   ;; set default widths of images in org-mode
   (setq org-image-actual-width 1200)
-
-  ;; load-languages in org-mode
-  (org-babel-do-load-languages
-   'org-babel-load-languages
-   '(
-     (sh . t)
-     (python . t)
-     (R . t)
-     (ruby . t)
-     (ditaa . t)
-     (dot . t)
-     (octave . t)
-     (sqlite . t)
-     (perl . t)
-     (C . t)
-     ))
 
   ;; ;; default disabled
   ;; ;; set Chinese markup correct in org-mode
