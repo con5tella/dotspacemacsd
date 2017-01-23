@@ -30,7 +30,10 @@
 ;;; Code:
 
 (defconst asterix-packages
-  '(org)
+  '(
+    company
+    org
+    )
   "The list of Lisp packages required by the asterix layer.
 
 Each entry is either:
@@ -58,9 +61,14 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
-(defun asterix/post-init-org ()
+;; company minimum length 1
+(defun asterix/post-init-company()
+  (setq company-minimum-prefix-length 1))
+
+(defun asterix/post-init-org()
   (with-eval-after-load 'org
-    (org-babel-do-load-languages
+    (;; load-languages in org-mode
+     org-babel-do-load-languages
      'org-babel-load-languages
      '(
        (sh . t)
