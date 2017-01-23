@@ -12,8 +12,5 @@
 ;; remap "SPC SPC" to avy-goto-char
 ;; (evil-leader/set-key "SPC" 'evil-avy-goto-char)
 
-;; remap "C-n" to hippie-expand in hybrid-mode
-(global-set-key (kbd "C-n") 'hippie-expand)
-
 ;; youdao dictionary
 (evil-leader/set-key "oy" 'youdao-dictionary-search-at-point+)
