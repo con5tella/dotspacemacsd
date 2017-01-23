@@ -262,7 +262,7 @@ values."
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup t
+   dotspacemacs-maximized-at-startup nil
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
@@ -355,20 +355,6 @@ you should place your code here."
 
   ;; set default background-color
   (set-background-color "AntiqueWhite1")
-
-  ;; ;; reset-frame-size-at-startup
-  ;; (defun reset-frame-size-at-startup (&optional frame)
-  ;;   "reset frame size at startup"
-  ;;   (interactive)
-  ;;   (when frame
-  ;;     (select-frame frame))
-  ;;   (set-frame-size (selected-frame) 96 48))
-  ;; (reset-frame-size-at-startup)
-  ;; (add-hook 'after-make-frame-functions 'reset-frame-size-at-startup)
-
-  ;; set frame size. For example:
-  (when window-system (set-frame-size (selected-frame) 96 48))
-  ;; Also use functions set-frame-height, set-frame-width, set-frame-size, set-frame-position
 
   ;; ace-pinyin Traditional Chinese Characters Support
   ;; (setq ace-pinyin-simplified-chinese-only-p nil)
