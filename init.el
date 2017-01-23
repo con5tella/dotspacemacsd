@@ -76,6 +76,7 @@ values."
      (chinese :variables
               chinese-enable-fcitx t
               chinese-enable-youdao-dict t)
+     asterix
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -369,9 +370,6 @@ you should place your code here."
   (when window-system (set-frame-size (selected-frame) 96 48))
   ;; Also use functions set-frame-height, set-frame-width, set-frame-size, set-frame-position
 
-  ;; remap "SPC SPC" to avy-goto-char
-  ;; (evil-leader/set-key "SPC" 'evil-avy-goto-char)
-
   ;; ace-pinyin Traditional Chinese Characters Support
   ;; (setq ace-pinyin-simplified-chinese-only-p nil)
 
@@ -457,9 +455,6 @@ you should place your code here."
 
   ;; hungry-delete on
   (global-hungry-delete-mode t)
-
-  ;; youdao dictionary
-  (evil-leader/set-key "oy" 'youdao-dictionary-search-at-point+)
 
   ;; improve the performance of opening large file
   (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
