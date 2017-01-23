@@ -360,10 +360,10 @@ you should place your code here."
   ;; (setq ace-pinyin-simplified-chinese-only-p nil)
 
   ;; Make sure the following comes before `(fcitx-aggressive-setup)'
-  (setq fcitx-active-evil-states '(insert emacs hybrid)) ; if you use hybrid mode
+  (setq fcitx-active-evil-states '(insert emacs hybrid)) ;; if you use hybrid mode
   (fcitx-aggressive-setup)
-  (fcitx-prefix-keys-add "M-m") ; M-m is common in Spacemacs
-  (setq fcitx-use-dbus t) ; uncomment if you're using Linux
+  (fcitx-prefix-keys-add "M-m") ;; M-m is common in Spacemacs
+  (setq fcitx-use-dbus t) ;; uncomment if you're using Linux
 
   ;; ;; set face-attribute font, disabled in default theme
   ;; (set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
