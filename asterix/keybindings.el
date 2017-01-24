@@ -14,3 +14,10 @@
 
 ;; youdao dictionary
 (evil-leader/set-key "oy" 'youdao-dictionary-search-at-point+)
+
+;; remap "C-n" to hippie-expand
+(define-key evil-insert-state-map (kbd "C-n") 'hippie-expand)
+(define-key git-commit-mode-map (kbd "C-n") 'hippie-expand)
+
+;; remap "C-e" to mwim-end-of-code-or-line
+(define-key evil-normal-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
