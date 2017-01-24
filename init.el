@@ -373,6 +373,12 @@ you should place your code here."
   (when (configuration-layer/layer-usedp 'chinese)
     (spacemacs//set-monospaced-font "Source Code Pro" "Wenquanyi Micro Hei" 14 16))
 
+  ;; hungry-delete-mode on
+  (global-hungry-delete-mode t)
+
+  ;; golden-ratio on
+  (golden-ratio-mode t)
+
   ;; org-mode auto-fill
   (add-hook 'org-mode-hook 'auto-fill-mode)
 
