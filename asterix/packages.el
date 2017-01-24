@@ -2,8 +2,8 @@
 ;;
 ;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
 ;;
-;; Author: erStern <erstern@Asteriximon>
-;; URL: https://github.com/syl20bnr/spacemacs
+;; Author: Yuanchen Xie <yuanchen.gm@gmail.com>
+;; URL: https://github.com/erstern/dotspacemacsd
 ;;
 ;; This file is not part of GNU Emacs.
 ;;

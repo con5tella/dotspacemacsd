@@ -1,9 +1,9 @@
-;;; config.el --- Better Emacs Defaults Layer configuration variables File
+;;; config.el --- asterix Layer configuration variables File for Spacemacs
 ;;
 ;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
 ;;
-;; Author: Thomas de Beauchêne <thomas.de.beauchene@gmail.com>
-;; URL: https://github.com/syl20bnr/spacemacs
+;; Author: Yuanchen Xie <yuanchen.gm@gmail.com>
+;; URL: https://github.com/erstern/dotspacemacsd
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
