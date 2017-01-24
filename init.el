@@ -391,6 +391,8 @@ you should place your code here."
     (when (> (buffer-size) 500000)
       (progn (fundamental-mode)
              (hl-line-mode -1))))
+  (add-hook 'find-file-hook 'spacemacs/check-large-file)
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
