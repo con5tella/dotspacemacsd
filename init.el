@@ -157,13 +157,8 @@ values."
    dotspacemacs-themes '(
                          ;; spacemacs-dark
                          ;; spacemacs-light
-                         ;; heroku
-                         monokai
                          ;; sanityinc-solarized-light
-                         ;; sanityinc-tomorrow-night
-                         ;; sanityinc-tomorrow-eighties
-                         ;; spacegray
-                         ;; labburn
+                         sanityinc-tomorrow-eighties
                          leuven
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
