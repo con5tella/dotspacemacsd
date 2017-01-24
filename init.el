@@ -364,11 +364,6 @@ you should place your code here."
   (fcitx-prefix-keys-add "M-m") ;; M-m is common in Spacemacs
   (setq fcitx-use-dbus t) ;; uncomment if you're using Linux
 
-  ;; ;; set face-attribute font, disabled in default theme
-  ;; (set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
-  ;; (set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
-  ;; (set-face-attribute 'font-lock-comment-face nil :slant 'oblique)
-
   ;; org-mode align table
   (when (configuration-layer/layer-usedp 'chinese)
     (spacemacs//set-monospaced-font "Source Code Pro" "Wenquanyi Micro Hei" 14 16))
@@ -382,9 +377,6 @@ you should place your code here."
   ;; org-mode auto-fill
   (add-hook 'org-mode-hook 'auto-fill-mode)
 
-  ;; set default widths of images in org-mode
-  (setq org-image-actual-width 1200)
-
   ;; improve the performance of opening large file
   (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
   (defun spacemacs/check-large-file ()
@@ -392,6 +384,14 @@ you should place your code here."
       (progn (fundamental-mode)
              (hl-line-mode -1))))
   (add-hook 'find-file-hook 'spacemacs/check-large-file)
+
+  ;; ;; set face-attribute font, disabled in default theme
+  ;; (set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
+  ;; (set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
+  ;; (set-face-attribute 'font-lock-comment-face nil :slant 'oblique)
+
+  ;; set default widths of images in org-mode
+  (setq org-image-actual-width 1200)
 
   )
 
