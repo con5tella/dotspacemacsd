@@ -14,13 +14,12 @@
 ;; learn from liu233w
 (add-hook 'after-make-frame-functions 'asterix/reset-frame-size)
 
-;; org-mode auto-fill
-(add-hook 'org-mode-hook 'auto-fill-mode)
+;; improve the performance of opening org file
+(add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
+(add-hook 'find-file-hook 'spacemacs/check-large-file)
+(add-hook 'org-mode-hook (lambda ()
+                           (auto-fill-mode)
+                           (spacemacs/toggle-centered-point-on)))
 
 ;; centered point when reviewing files
 (add-hook 'markdown-mode-hook 'spacemacs/toggle-centered-point-on)
-(add-hook 'org-mode-hook 'spacemacs/toggle-centered-point-on)
-
-;; improve the performance of opening large file
-(add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
-(add-hook 'find-file-hook 'spacemacs/check-large-file)
