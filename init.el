@@ -374,13 +374,6 @@ you should place your code here."
   ;; golden-ratio on
   (golden-ratio-mode t)
 
-  ;; org-mode auto-fill
-  (add-hook 'org-mode-hook 'auto-fill-mode)
-
-  ;; centered point when reviewing files
-  (add-hook 'markdown-mode-hook 'spacemacs/toggle-centered-point-on)
-  (add-hook 'org-mode-hook 'spacemacs/toggle-centered-point-on)
-
   ;; ;; set face-attribute font, disabled in default theme
   ;; (set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
   ;; (set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
