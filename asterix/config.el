@@ -13,3 +13,7 @@
 (asterix/reset-frame-size)
 ;; learn from liu233w
 (add-hook 'after-make-frame-functions 'asterix/reset-frame-size)
+
+;; improve the performance of opening large file
+(add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
+(add-hook 'find-file-hook 'spacemacs/check-large-file)

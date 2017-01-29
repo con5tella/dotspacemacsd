@@ -381,14 +381,6 @@ you should place your code here."
   (add-hook 'markdown-mode-hook 'spacemacs/toggle-centered-point-on)
   (add-hook 'org-mode-hook 'spacemacs/toggle-centered-point-on)
 
-  ;; improve the performance of opening large file
-  (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
-  (defun spacemacs/check-large-file ()
-    (when (> (buffer-size) 500000)
-      (progn (fundamental-mode)
-             (hl-line-mode -1))))
-  (add-hook 'find-file-hook 'spacemacs/check-large-file)
-
   ;; ;; set face-attribute font, disabled in default theme
   ;; (set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
   ;; (set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)

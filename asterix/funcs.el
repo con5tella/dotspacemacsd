@@ -17,3 +17,8 @@
       (select-frame frame))
     (set-frame-size (selected-frame) 96 48))
   )
+
+(defun spacemacs/check-large-file ()
+  (when (> (buffer-size) 500000)
+    (progn (fundamental-mode)
+           (hl-line-mode -1))))
