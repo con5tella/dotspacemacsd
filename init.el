@@ -377,8 +377,9 @@ you should place your code here."
   ;; org-mode auto-fill
   (add-hook 'org-mode-hook 'auto-fill-mode)
 
-  ;; centered point in markdown files
+  ;; centered point when reviewing files
   (add-hook 'markdown-mode-hook 'spacemacs/toggle-centered-point-on)
+  (add-hook 'org-mode-hook 'spacemacs/toggle-centered-point-on)
 
   ;; improve the performance of opening large file
   (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
