@@ -65,7 +65,7 @@ values."
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom
-            shell-default-shell 'eshell
+            shell-default-shell 'multi-term
             shell-enable-smart-eshell t)
      ;; spell-checking
      (syntax-checking :variables
@@ -380,7 +380,7 @@ you should place your code here."
   ;; (set-face-attribute 'font-lock-comment-face nil :slant 'oblique)
 
   ;; set default widths of images in org-mode
-  (setq org-image-actual-width 1200)
+  (setq org-image-actual-width 720)
 
   )
 
