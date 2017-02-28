@@ -42,9 +42,10 @@ values."
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-snippets-in-popup t
       )
-     (better-defaults :variables
-                      better-defaults-move-to-beginning-of-code-first t
-                      better-defaults-move-to-end-of-code-first t)
+     better-defaults
+     ;; (better-defaults :variables
+     ;;                  better-defaults-move-to-beginning-of-code-first t
+     ;;                  better-defaults-move-to-end-of-code-first t)
      (colors :variables
              colors-colorize-identifiers 'variables)
      emacs-lisp
