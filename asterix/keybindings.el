@@ -19,10 +19,10 @@
 (define-key evil-insert-state-map (kbd "C-n") 'hippie-expand)
 (define-key git-commit-mode-map (kbd "C-n") 'hippie-expand)
 
-;; remap "C-a" to beginning-of-code-or-line
-(define-key evil-normal-state-map (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment)
-(define-key evil-insert-state-map (kbd "C-a") 'move-beginning-of-line)
+;; ;; remap "C-a" to beginning-of-code-or-line
+;; (define-key evil-normal-state-map (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment)
+;; (define-key evil-insert-state-map (kbd "C-a") 'move-beginning-of-line)
 
-;; remap "C-e" to end-of-code-or-line
-(define-key evil-normal-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
-(define-key evil-insert-state-map (kbd "C-e") 'move-end-of-line)
+;; ;; remap "C-e" to end-of-code-or-line
+;; (define-key evil-normal-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
+;; (define-key evil-insert-state-map (kbd "C-e") 'move-end-of-line)
