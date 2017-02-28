@@ -68,7 +68,10 @@ values."
             shell-default-position 'bottom
             shell-default-shell 'multi-term
             shell-enable-smart-eshell t)
-     ;; spell-checking
+     (spell-checking :variables
+                     ispell-program-name "aspell"
+                     ispell-dictionary "american"
+                     spell-checking-enable-by-default nil)
      (syntax-checking :variables
                       syntax-checking-enable-by-default nil
                       syntax-checking-enable-tooltips nil)
