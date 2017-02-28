@@ -162,7 +162,7 @@ values."
    dotspacemacs-themes '(
                          ;; spacemacs-dark
                          ;; spacemacs-light
-                         ;; sanityinc-solarized-light
+                         sanityinc-solarized-light
                          sanityinc-tomorrow-eighties
                          leuven
                          )
