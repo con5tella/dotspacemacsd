@@ -378,6 +378,9 @@ you should place your code here."
   ;; golden-ratio on
   (golden-ratio-mode t)
 
+  ;; global-visual-line-mode
+  (global-visual-line-mode t)
+
   ;; ;; set face-attribute font, disabled in default theme
   ;; (set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
   ;; (set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
