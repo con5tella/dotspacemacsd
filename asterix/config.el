@@ -18,7 +18,8 @@
 (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
 (add-hook 'find-file-hook 'spacemacs/check-large-file)
 (add-hook 'org-mode-hook (lambda ()
-                           (auto-fill-mode)
+                           ;; (auto-fill-mode)
+                           (setq truncate-lines nil)
                            (spacemacs/toggle-centered-point-on)))
 
 ;; centered point when reviewing files
