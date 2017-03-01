@@ -28,8 +28,11 @@
 
 ;; visual-line-mode
 (when (visual-line-mode)
+  ;; previous or next line in visual-line-mode
   (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+  (define-key evil-visual-state-map (kbd "j") 'evil-next-visual-line)
   (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+  (define-key evil-visual-state-map (kbd "k") 'evil-previous-visual-line)
   ;; beginning-of-visual-line in visual-line-mode
   (define-key evil-normal-state-map (kbd "C-a") 'evil-beginning-of-visual-line)
   (define-key evil-insert-state-map (kbd "C-a") 'beginning-of-visual-line)
