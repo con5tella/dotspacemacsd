@@ -19,10 +19,20 @@
 (define-key evil-insert-state-map (kbd "C-n") 'hippie-expand)
 (define-key git-commit-mode-map (kbd "C-n") 'hippie-expand)
 
-;; remap "C-a" to beginning-of-code-or-line
-(define-key evil-normal-state-map (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment)
-(define-key evil-insert-state-map (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment)
+;; ;; remap "C-a" to beginning-of-code-or-line
+;; (define-key evil-normal-state-map (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment)
+;; (define-key evil-insert-state-map (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment)
+;; ;; remap "C-e" to end-of-code-or-line
+;; (define-key evil-normal-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
+;; (define-key evil-insert-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
 
-;; remap "C-e" to end-of-code-or-line
-(define-key evil-normal-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
-(define-key evil-insert-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
+;; visual-line-mode
+(when (visual-line-mode)
+  (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+  (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+  ;; beginning-of-visual-line in visual-line-mode
+  (define-key evil-normal-state-map (kbd "C-a") 'evil-beginning-of-visual-line)
+  (define-key evil-insert-state-map (kbd "C-a") 'beginning-of-visual-line)
+  ;; end-of-visual-line in visual-line-mode
+  (define-key evil-normal-state-map (kbd "C-e") 'evil-end-of-visual-line)
+  (define-key evil-insert-state-map (kbd "C-e") 'end-of-visual-line))
