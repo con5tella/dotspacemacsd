@@ -35,7 +35,7 @@
 (define-key evil-normal-state-map (kbd "C-a") 'evil-beginning-of-visual-line)
 (define-key evil-insert-state-map (kbd "C-a") 'beginning-of-visual-line)
 (define-key evil-normal-state-map (kbd "C-e") 'evil-end-of-visual-line)
-(define-key evil-insert-state-map (kbd "C-e") 'end-of-visual-line))
+(define-key evil-insert-state-map (kbd "C-e") 'end-of-visual-line)
 
 ;; ;; remap (visual-line-mode t)
 ;; (when (visual-line-mode)
