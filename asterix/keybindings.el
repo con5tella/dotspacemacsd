@@ -19,6 +19,7 @@
 (define-key evil-insert-state-map (kbd "C-n") 'hippie-expand)
 (define-key git-commit-mode-map (kbd "C-n") 'hippie-expand)
 
+;; ;; remap (auto-fill-mode t)
 ;; ;; remap "C-a" to beginning-of-code-or-line
 ;; (define-key evil-normal-state-map (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment)
 ;; (define-key evil-insert-state-map (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment)
@@ -26,16 +27,26 @@
 ;; (define-key evil-normal-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
 ;; (define-key evil-insert-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
 
-;; visual-line-mode
-(when (visual-line-mode)
-  ;; previous or next line in visual-line-mode
-  (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
-  (define-key evil-visual-state-map (kbd "j") 'evil-next-visual-line)
-  (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
-  (define-key evil-visual-state-map (kbd "k") 'evil-previous-visual-line)
-  ;; beginning-of-visual-line in visual-line-mode
-  (define-key evil-normal-state-map (kbd "C-a") 'evil-beginning-of-visual-line)
-  (define-key evil-insert-state-map (kbd "C-a") 'beginning-of-visual-line)
-  ;; end-of-visual-line in visual-line-mode
-  (define-key evil-normal-state-map (kbd "C-e") 'evil-end-of-visual-line)
-  (define-key evil-insert-state-map (kbd "C-e") 'end-of-visual-line))
+;; remap (truncate-lines nil)
+(define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+(define-key evil-visual-state-map (kbd "j") 'evil-next-visual-line)
+(define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+(define-key evil-visual-state-map (kbd "k") 'evil-previous-visual-line)
+(define-key evil-normal-state-map (kbd "C-a") 'evil-beginning-of-visual-line)
+(define-key evil-insert-state-map (kbd "C-a") 'beginning-of-visual-line)
+(define-key evil-normal-state-map (kbd "C-e") 'evil-end-of-visual-line)
+(define-key evil-insert-state-map (kbd "C-e") 'end-of-visual-line))
+
+;; ;; remap (visual-line-mode t)
+;; (when (visual-line-mode)
+;;   ;; previous or next line in visual-line-mode
+;;   (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+;;   (define-key evil-visual-state-map (kbd "j") 'evil-next-visual-line)
+;;   (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+;;   (define-key evil-visual-state-map (kbd "k") 'evil-previous-visual-line)
+;;   ;; beginning-of-visual-line in visual-line-mode
+;;   (define-key evil-normal-state-map (kbd "C-a") 'evil-beginning-of-visual-line)
+;;   (define-key evil-insert-state-map (kbd "C-a") 'beginning-of-visual-line)
+;;   ;; end-of-visual-line in visual-line-mode
+;;   (define-key evil-normal-state-map (kbd "C-e") 'evil-end-of-visual-line)
+;;   (define-key evil-insert-state-map (kbd "C-e") 'end-of-visual-line))
