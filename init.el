@@ -378,8 +378,8 @@ you should place your code here."
   ;; golden-ratio on
   (golden-ratio-mode t)
 
-  ;; display long lines by truncation
-  (setq truncate-lines nil)
+  ;; ;; display long lines by truncation
+  ;; (setq truncate-lines nil)
 
   ;; ;; global-visual-line-mode
   ;; (global-visual-line-mode t)

@@ -9,14 +9,14 @@
 ;;
 ;;; License: GPLv3
 
-(unless (functionp 'asterix/reset-frame-size)
-  (defun asterix/reset-frame-size (&optional frame)
-    "reset frame size"
-    (interactive)
-    (when frame
-      (select-frame frame))
-    (set-frame-size (selected-frame) 96 48))
-  )
+;; (unless (functionp 'asterix/reset-frame-size)
+;;   (defun asterix/reset-frame-size (&optional frame)
+;;     "reset frame size"
+;;     (interactive)
+;;     (when frame
+;;       (select-frame frame))
+;;     (set-frame-size (selected-frame) 96 48))
+;;   )
 
 (defun spacemacs/check-large-file ()
   (when (> (buffer-size) 500000)
