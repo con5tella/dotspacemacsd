@@ -31,6 +31,7 @@
 
 (defconst asterix-packages
   '(
+    bing-dict
     ;; company
     fcitx
     org
@@ -62,6 +63,13 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
+;; ;; bing-dict
+;; (defun asterix/post-init-bing-dict ()
+;;   (with-eval-after-load 'bing-dict
+;;     (setq bing-dict-show-thesaurus 'both)
+;;     ;; (setq bing-dict-pronunciation-style 'uk)
+;;     ))
+
 ;; ;; company minimum length 1
 ;; (defun asterix/post-init-company()
 ;;   (setq company-minimum-prefix-length 1))
@@ -69,11 +77,11 @@ Each entry is either:
 (defun asterix/post-init-fcitx ()
   ;; Make sure the following comes before `(fcitx-aggressive-setup)'
   (with-eval-after-load 'fcitx
-  (setq fcitx-active-evil-states '(insert emacs hybrid)) ;; if you use hybrid mode
-  (fcitx-aggressive-setup)
-  (fcitx-prefix-keys-add "M-m") ;; M-m is common in Spacemacs
-  (setq fcitx-use-dbus t) ;; uncomment if you're using Linux
-  ))
+    (setq fcitx-active-evil-states '(insert emacs hybrid)) ;; if you use hybrid mode
+    (fcitx-aggressive-setup)
+    (fcitx-prefix-keys-add "M-m") ;; M-m is common in Spacemacs
+    (setq fcitx-use-dbus t) ;; uncomment if you're using Linux
+    ))
 
 (defun asterix/post-init-org()
   (with-eval-after-load 'org

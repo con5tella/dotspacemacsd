@@ -16,6 +16,9 @@
 (evil-leader/set-key "oy" 'youdao-dictionary-search-at-point)
 (evil-leader/set-key "oi" 'youdao-dictionary-search-from-input)
 
+;; bing-dict-brief
+(evil-leader/set-key "ob" 'bing-dict-brief)
+
 ;; remap "C-n" to hippie-expand
 (define-key evil-insert-state-map (kbd "C-n") 'hippie-expand)
 (define-key git-commit-mode-map (kbd "C-n") 'hippie-expand)

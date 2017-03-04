@@ -366,6 +366,10 @@ you should place your code here."
   (when (configuration-layer/layer-usedp 'chinese)
     (spacemacs//set-monospaced-font "Source Code Pro" "Wenquanyi Micro Hei" 14 16))
 
+  ;; bing-dict config
+  (setq bing-dict-show-thesaurus 'both)
+  ;; (setq bing-dict-pronunciation-style 'uk)
+
   ;; hungry-delete-mode on
   (global-hungry-delete-mode t)
 
