@@ -12,9 +12,9 @@
 ;; remap "SPC SPC" to avy-goto-char
 ;; (evil-leader/set-key "SPC" 'evil-avy-goto-char)
 
-;; youdao dictionary
-(evil-leader/set-key "oy" 'youdao-dictionary-search-at-point)
-(evil-leader/set-key "oi" 'youdao-dictionary-search-from-input)
+;; ;; youdao dictionary
+;; (evil-leader/set-key "oy" 'youdao-dictionary-search-at-point)
+;; (evil-leader/set-key "oi" 'youdao-dictionary-search-from-input)
 
 ;; bing-dict-brief
 (evil-leader/set-key "ob" 'bing-dict-brief)

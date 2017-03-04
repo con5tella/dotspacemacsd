@@ -79,7 +79,8 @@ values."
      yaml
      (chinese :variables
               chinese-enable-fcitx t
-              chinese-enable-youdao-dict t)
+              ;; chinese-enable-youdao-dict t
+              )
      asterix
      )
    ;; List of additional packages that will be installed without being
