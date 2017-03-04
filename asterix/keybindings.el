@@ -13,7 +13,8 @@
 ;; (evil-leader/set-key "SPC" 'evil-avy-goto-char)
 
 ;; youdao dictionary
-(evil-leader/set-key "oy" 'youdao-dictionary-search-at-point+)
+(evil-leader/set-key "oy" 'youdao-dictionary-search-at-point)
+(evil-leader/set-key "oi" 'youdao-dictionary-search-from-input)
 
 ;; remap "C-n" to hippie-expand
 (define-key evil-insert-state-map (kbd "C-n") 'hippie-expand)
