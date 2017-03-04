@@ -86,7 +86,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(bing-dict)
+   dotspacemacs-additional-packages '()
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -365,10 +365,6 @@ you should place your code here."
   ;; org-mode align table
   (when (configuration-layer/layer-usedp 'chinese)
     (spacemacs//set-monospaced-font "Source Code Pro" "Wenquanyi Micro Hei" 14 16))
-
-  ;; bing-dict config
-  (setq bing-dict-show-thesaurus 'both)
-  ;; (setq bing-dict-pronunciation-style 'uk)
 
   ;; hungry-delete-mode on
   (global-hungry-delete-mode t)

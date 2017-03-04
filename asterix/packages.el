@@ -63,12 +63,13 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
-;; ;; bing-dict
-;; (defun asterix/post-init-bing-dict ()
-;;   (with-eval-after-load 'bing-dict
-;;     (setq bing-dict-show-thesaurus 'both)
-;;     ;; (setq bing-dict-pronunciation-style 'uk)
-;;     ))
+;; bing-dict
+(defun asterix/init-bing-dict ()
+  (use-package bing-dict)
+  (with-eval-after-load 'bing-dict
+    (setq bing-dict-show-thesaurus 'both)
+    ;; (setq bing-dict-pronunciation-style 'uk)
+    ))
 
 ;; ;; company minimum length 1
 ;; (defun asterix/post-init-company()
