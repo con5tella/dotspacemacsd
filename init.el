@@ -86,7 +86,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(bing-dict)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -361,12 +361,6 @@ you should place your code here."
 
   ;; ace-pinyin Traditional Chinese Characters Support
   ;; (setq ace-pinyin-simplified-chinese-only-p nil)
-
-  ;; Make sure the following comes before `(fcitx-aggressive-setup)'
-  (setq fcitx-active-evil-states '(insert emacs hybrid)) ;; if you use hybrid mode
-  (fcitx-aggressive-setup)
-  (fcitx-prefix-keys-add "M-m") ;; M-m is common in Spacemacs
-  (setq fcitx-use-dbus t) ;; uncomment if you're using Linux
 
   ;; org-mode align table
   (when (configuration-layer/layer-usedp 'chinese)

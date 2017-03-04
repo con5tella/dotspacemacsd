@@ -32,6 +32,7 @@
 (defconst asterix-packages
   '(
     ;; company
+    fcitx
     org
     )
   "The list of Lisp packages required by the asterix layer.
@@ -64,6 +65,15 @@ Each entry is either:
 ;; ;; company minimum length 1
 ;; (defun asterix/post-init-company()
 ;;   (setq company-minimum-prefix-length 1))
+
+(defun asterix/post-init-fcitx ()
+  ;; Make sure the following comes before `(fcitx-aggressive-setup)'
+  (with-eval-after-load 'fcitx
+  (setq fcitx-active-evil-states '(insert emacs hybrid)) ;; if you use hybrid mode
+  (fcitx-aggressive-setup)
+  (fcitx-prefix-keys-add "M-m") ;; M-m is common in Spacemacs
+  (setq fcitx-use-dbus t) ;; uncomment if you're using Linux
+  ))
 
 (defun asterix/post-init-org()
   (with-eval-after-load 'org
