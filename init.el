@@ -38,7 +38,7 @@ values."
      ;; ----------------------------------------------------------------
      ivy
      (auto-completion :variables
-                      ;; auto-completion-return-key-behavior nil
+                      auto-completion-return-key-behavior nil
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-snippets-in-popup t)
      better-defaults
