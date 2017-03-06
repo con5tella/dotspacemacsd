@@ -75,7 +75,9 @@ values."
      (syntax-checking :variables
                       syntax-checking-enable-by-default nil
                       syntax-checking-enable-tooltips nil)
-     version-control
+     (version-control :variables
+                      version-control-diff-tool 'diff-hl
+                      version-control-global-margin t)
      yaml
      (chinese :variables
               chinese-enable-fcitx t

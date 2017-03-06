@@ -76,8 +76,8 @@ Each entry is either:
 ;;   (setq company-minimum-prefix-length 1))
 
 (defun asterix/post-init-fcitx ()
-  ;; Make sure the following comes before `(fcitx-aggressive-setup)'
   (with-eval-after-load 'fcitx
+    ;; Make sure the following comes before `(fcitx-aggressive-setup)'
     (setq fcitx-active-evil-states '(insert emacs hybrid)) ;; if you use hybrid mode
     (fcitx-aggressive-setup)
     (fcitx-prefix-keys-add "M-m") ;; M-m is common in Spacemacs
