@@ -36,12 +36,11 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ;; helm
      ivy
      (auto-completion :variables
+                      ;; auto-completion-return-key-behavior nil
                       auto-completion-enable-sort-by-usage t
-                      auto-completion-enable-snippets-in-popup t
-      )
+                      auto-completion-enable-snippets-in-popup t)
      better-defaults
      ;; (better-defaults :variables
      ;;                  better-defaults-move-to-beginning-of-code-first t
