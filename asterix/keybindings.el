@@ -19,9 +19,13 @@
 ;; bing-dict-brief
 (evil-leader/set-key "ob" 'bing-dict-brief)
 
-;; remap "C-n" to hippie-expand
-(define-key evil-insert-state-map (kbd "C-n") 'hippie-expand)
-(define-key git-commit-mode-map (kbd "C-n") 'hippie-expand)
+;; remap C-n and C-p for next and previous candidate
+(define-key company-active-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
+(define-key company-active-map (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1)))
+
+;; ;; remap "C-n" to hippie-expand
+;; (define-key evil-insert-state-map (kbd "C-n") 'hippie-expand)
+;; (define-key git-commit-mode-map (kbd "C-n") 'hippie-expand)
 
 ;; ;; remap (auto-fill-mode t)
 ;; ;; remap "C-a" to beginning-of-code-or-line
