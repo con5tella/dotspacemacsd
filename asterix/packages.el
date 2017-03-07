@@ -34,6 +34,7 @@
     bing-dict
     ;; company
     fcitx
+    general
     org
     )
   "The list of Lisp packages required by the asterix layer.
@@ -84,7 +85,10 @@ Each entry is either:
     (setq fcitx-use-dbus t) ;; uncomment if you're using Linux
     ))
 
-(defun asterix/post-init-org()
+(defun asterix/init-general ()
+  (setq general-default-keymaps 'evil-normal-state-map))
+
+(defun asterix/post-init-org ()
   (with-eval-after-load 'org
     (;; load-languages in org-mode
      org-babel-do-load-languages
