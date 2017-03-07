@@ -66,7 +66,6 @@ Each entry is either:
 
 ;; bing-dict
 (defun asterix/init-bing-dict ()
-  (use-package bing-dict)
   (with-eval-after-load 'bing-dict
     (setq bing-dict-show-thesaurus 'both)
     ;; (setq bing-dict-pronunciation-style 'uk)
