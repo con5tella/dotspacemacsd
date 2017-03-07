@@ -35,6 +35,22 @@
 ;; (define-key evil-normal-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
 ;; (define-key evil-insert-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
 
+;; remap ; comment-or-uncomment
+(define-key evil-normal-state-map (kbd ";") 'spacemacs/comment-or-uncomment-lines)
+(define-key evil-visual-state-map (kbd ";") 'comment-or-uncomment-region)
+
+;; (with-eval-after-load 'org
+;;   (progn
+;;     (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+;;     (define-key evil-visual-state-map (kbd "j") 'evil-next-visual-line)
+;;     (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+;;     (define-key evil-visual-state-map (kbd "k") 'evil-previous-visual-line)
+;;     (define-key evil-normal-state-map (kbd "C-a") 'evil-beginning-of-visual-line)
+;;     (define-key evil-insert-state-map (kbd "C-a") 'beginning-of-visual-line)
+;;     (define-key evil-normal-state-map (kbd "C-e") 'evil-end-of-visual-line)
+;;     (define-key evil-insert-state-map (kbd "C-e") 'end-of-visual-line)
+;;     ))
+
 ;; remap (truncate-lines nil)
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-visual-state-map (kbd "j") 'evil-next-visual-line)
