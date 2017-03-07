@@ -13,9 +13,6 @@
 ;; (evil-leader/set-key "oy" 'youdao-dictionary-search-at-point)
 ;; (evil-leader/set-key "oi" 'youdao-dictionary-search-from-input)
 
-;; bing-dict-brief
-(evil-leader/set-key "ob" 'bing-dict-brief)
-
 ;; remap C-n and C-p for next and previous candidate
 (define-key company-active-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
 (define-key company-active-map (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1)))
@@ -31,9 +28,13 @@
 (define-key evil-normal-state-map (kbd ";") 'spacemacs/comment-or-uncomment-lines)
 (define-key evil-visual-state-map (kbd ";") 'comment-or-uncomment-region)
 
-;; remap ", SPC" to avy-goto-char
+;; remap leader-key ","
 (general-define-key :prefix ","
-                    "SPC" 'evil-avy-goto-char)
+                    ;; ", SPC" avy-goto-char
+                    "SPC" 'evil-avy-goto-char
+                    ;; ", b" bing-dict-brief
+                    "b" 'bing-dict-brief
+                    )
 
 ;; remap org-mode navigate
 (general-define-key
