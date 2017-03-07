@@ -9,6 +9,9 @@
 ;;
 ;;; License: GPLv3
 
+;; ;; bing-dict-brief
+(evil-leader/set-key "ob" 'bing-dict-brief)
+
 ;; ;; youdao dictionary
 ;; (evil-leader/set-key "oy" 'youdao-dictionary-search-at-point)
 ;; (evil-leader/set-key "oi" 'youdao-dictionary-search-from-input)
@@ -32,8 +35,6 @@
 (general-define-key :prefix ","
                     ;; ", SPC" avy-goto-char
                     "SPC" 'evil-avy-goto-char
-                    ;; ", b" bing-dict-brief
-                    "b" 'bing-dict-brief
                     )
 
 ;; remap org-mode navigate
