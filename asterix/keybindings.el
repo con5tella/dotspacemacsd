@@ -35,20 +35,28 @@
  "w" 'save-buffer
  )
 
-;; remap with modifier-key
+;; remap with Meta-key
+(general-define-key
+ :keymaps 'global
+ :states '(normal visual)
+ (kbd "M-b") 'bing-dict-brief
+ (kbd "M-f") 'counsel-find-file
+ (kbd "M-g") 'magit-status
+ (kbd "M-h") 'ivy-spacemacs-help
+ (kbd "M-i") '(spacemacs/find-dotfile)
+ (kbd "M-p") 'counsel-projectile-find-file
+ (kbd "M-r") 'deer
+ (kbd "M-s") '(spacemacs/search-project-auto)
+ (kbd "M-u") 'undo-tree-visualize
+ (kbd "M-w") '(spacemacs/window-manipulation-transient-state/body)
+ )
+
+;; remap with Ctrl-key
 (general-define-key
  :keymaps 'global
  :states '(normal visual insert emacs)
  (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment
  (kbd "C-e") 'mwim-end-of-code-or-line
- (kbd "H-f") 'counsel-projectile-find-file
- (kbd "H-g") 'magit-status
- (kbd "H-h") 'ivy-spacemacs-help
- (kbd "H-i") '(spacemacs/find-dotfile)
- (kbd "H-r") 'deer
- (kbd "H-s") '(spacemacs/search-project-auto)
- (kbd "H-u") 'undo-tree-visualize
- (kbd "H-w") '(spacemacs/window-manipulation-transient-state/body)
  )
 
 ;; remap without leader-key or modifier-key
