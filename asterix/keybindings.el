@@ -32,12 +32,22 @@
 (define-key evil-visual-state-map (kbd ";") 'comment-or-uncomment-region)
 
 ;; remap leader-key ","
-(general-define-key :prefix ","
-                    ;; ", SPC" avy-goto-char
-                    "SPC" 'evil-avy-goto-char
-                    )
+(setq my-leader1 ",")
+(general-define-key
+ :prefix my-leader1
+ ;; ", SPC" avy-goto-char
+ "SPC" 'evil-avy-goto-char
+ "w" 'other-window
+ )
 
-;; remap org-mode navigate
+;; remap without leader-key
+(general-define-key
+ :states '(normal visual)
+ :keymaps 'global
+ "/" 'swiper
+ )
+
+;; remap navigate org-mode-map
 (general-define-key
  :states '(normal visual)
  :keymaps 'org-mode-map
@@ -45,4 +55,6 @@
  "C-e" 'evil-end-of-visual-line
  "j" 'evil-next-visual-line
  "k" 'evil-previous-visual-line
+ "gj" 'org-next-visible-heading
+ "gk" 'org-previous-visible-heading
  )
