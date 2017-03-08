@@ -42,7 +42,6 @@
  (kbd "M-b") 'bing-dict-brief
  (kbd "M-f") 'counsel-find-file
  (kbd "M-g") 'magit-status
- (kbd "M-h") 'ivy-spacemacs-help
  (kbd "M-i") '(spacemacs/find-dotfile)
  (kbd "M-p") 'counsel-projectile-find-file
  (kbd "M-r") 'ranger
