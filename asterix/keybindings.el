@@ -36,18 +36,18 @@
 (general-define-key
  :states '(normal visual)
  :keymaps 'global
- "/" 'swiper
- (kbd ";") 'spacemacs/comment-or-uncomment-lines
  (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment
  (kbd "C-e") 'mwim-end-of-code-or-line
+ "/" 'swiper
+ ";" 'spacemacs/comment-or-uncomment-lines
  )
 
 ;; remap navigate org-mode-map
 (general-define-key
  :states '(normal visual)
  :keymaps 'org-mode-map
- "C-a" 'evil-beginning-of-visual-line
- "C-e" 'evil-end-of-visual-line
+ (kbd "C-a") 'evil-beginning-of-visual-line
+ (kbd "C-e") 'evil-end-of-visual-line
  "j" 'evil-next-visual-line
  "k" 'evil-previous-visual-line
  "gj" 'org-next-visible-heading
