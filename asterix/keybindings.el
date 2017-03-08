@@ -26,6 +26,7 @@
  :keymaps 'global
  :states '(normal visual)
  :prefix generaleader
+ :prefix-command 'my-prefix-map
  "SPC" 'evil-avy-goto-char
  ;; "b" 'bing-dict-brief
  "f" 'counsel-find-file
