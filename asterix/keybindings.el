@@ -45,7 +45,7 @@
  (kbd "M-h") 'ivy-spacemacs-help
  (kbd "M-i") '(spacemacs/find-dotfile)
  (kbd "M-p") 'counsel-projectile-find-file
- (kbd "M-r") 'deer
+ (kbd "M-r") 'ranger
  (kbd "M-s") '(spacemacs/search-project-auto)
  (kbd "M-u") 'undo-tree-visualize
  (kbd "M-w") '(spacemacs/window-manipulation-transient-state/body)

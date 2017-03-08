@@ -64,7 +64,7 @@ values."
           org-enable-reveal-js-support t)
      python
      (ranger :variables
-             ranger-show-preview t)
+             ranger-show-preview nil)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom
