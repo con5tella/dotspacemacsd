@@ -20,43 +20,42 @@
 (define-key company-active-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
 (define-key company-active-map (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1)))
 
-;; remap with leader-key ","
-(setq generaleader ",")
+;; remap with leader-key
+(setq general-leader ",")
 (general-define-key
  :keymaps 'global
  :states '(normal visual)
- :prefix generaleader
- :prefix-command 'my-prefix-map
+ :prefix general-leader
  "SPC" 'evil-avy-goto-char
- ;; "b" 'bing-dict-brief
- "f" 'counsel-find-file
- "F" 'counsel-describe-function
- ;; "g" (general-key-dispatch 'find-symbol
- ;;       :timeout 0.1
- ;;       "" 'magit-status)
- ;; "h" 'ivy-spacemacs-help
- "i" '(spacemacs/find-dotfile)
+ "f" 'counsel-describe-function
  "k" 'describe-key
- "o" 'other-window
  "p" 'counsel-projectile-find-file
+ "r" 'ranger
  "R" '(dotspacemacs/sync-configuration-layers)
  "u" 'undo-tree-visualize
  "w" 'save-buffer
  )
 
-;; remap without leader-key
-(general-define-key
- :keymaps 'global
- :states '(normal visual)
- "/" 'swiper
- ";" 'spacemacs/comment-or-uncomment-lines
- )
-
+;; remap with modifier-key
 (general-define-key
  :keymaps 'global
  :states '(normal visual insert emacs)
  (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment
  (kbd "C-e") 'mwim-end-of-code-or-line
+ (kbd "H-g") 'magit-status
+ (kbd "H-h") 'ivy-spacemacs-help
+ (kbd "H-i") '(spacemacs/find-dotfile)
+ (kbd "H-r") 'ranger
+ (kbd "H-u") 'undo-tree-visualize
+ (kbd "H-w") '(spacemacs/window-manipulation-transient-state/body)
+ )
+
+;; remap without leader-key or modifier-key
+(general-define-key
+ :keymaps 'global
+ :states '(normal visual)
+ "/" 'swiper
+ ";" 'spacemacs/comment-or-uncomment-lines
  )
 
 ;; remap navigate org-mode-map
