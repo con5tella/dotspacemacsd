@@ -63,6 +63,8 @@ values."
      (org :variables
           org-enable-reveal-js-support t)
      python
+     (ranger :variables
+             ranger-show-preview t)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom
@@ -268,7 +270,7 @@ values."
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup nil
+   dotspacemacs-maximized-at-startup t
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
@@ -372,8 +374,8 @@ you should place your code here."
   ;; hungry-delete-mode on
   (global-hungry-delete-mode t)
 
-  ;; golden-ratio on
-  (golden-ratio-mode t)
+  ;; ;; golden-ratio on
+  ;; (golden-ratio-mode t)
 
   ;; ;; display long lines by truncation
   ;; (setq truncate-lines nil)
