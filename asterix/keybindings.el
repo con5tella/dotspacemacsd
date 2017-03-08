@@ -29,8 +29,7 @@
  "SPC" 'evil-avy-goto-char
  "f" 'counsel-describe-function
  "k" 'describe-key
- "p" 'counsel-projectile-find-file
- "r" 'ranger
+ "r" 'deer
  "R" '(dotspacemacs/sync-configuration-layers)
  "u" 'undo-tree-visualize
  "w" 'save-buffer
@@ -42,10 +41,12 @@
  :states '(normal visual insert emacs)
  (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment
  (kbd "C-e") 'mwim-end-of-code-or-line
+ (kbd "H-f") 'counsel-projectile-find-file
  (kbd "H-g") 'magit-status
  (kbd "H-h") 'ivy-spacemacs-help
  (kbd "H-i") '(spacemacs/find-dotfile)
- (kbd "H-r") 'ranger
+ (kbd "H-r") 'deer
+ (kbd "H-s") '(spacemacs/search-project-auto)
  (kbd "H-u") 'undo-tree-visualize
  (kbd "H-w") '(spacemacs/window-manipulation-transient-state/body)
  )
