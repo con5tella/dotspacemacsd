@@ -37,6 +37,8 @@
  :prefix my-leader1
  ;; ", SPC" avy-goto-char
  "SPC" 'evil-avy-goto-char
+ "f" 'counsel-find-file
+ "p" 'counsel-projectile-find-file
  "w" 'other-window
  )
 
