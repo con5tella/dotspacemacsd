@@ -23,23 +23,39 @@
 ;; remap with leader-key ","
 (setq generaleader ",")
 (general-define-key
+ :keymaps 'global
+ :states '(normal visual)
  :prefix generaleader
  "SPC" 'evil-avy-goto-char
+ ;; "b" 'bing-dict-brief
  "f" 'counsel-find-file
+ "F" 'counsel-describe-function
+ ;; "g" (general-key-dispatch 'find-symbol
+ ;;       :timeout 0.1
+ ;;       "" 'magit-status)
+ ;; "h" 'ivy-spacemacs-help
+ "i" '(spacemacs/find-dotfile)
+ "k" 'describe-key
  "o" 'other-window
  "p" 'counsel-projectile-find-file
+ "R" '(dotspacemacs/sync-configuration-layers)
  "u" 'undo-tree-visualize
  "w" 'save-buffer
  )
 
 ;; remap without leader-key
 (general-define-key
- :states '(normal visual)
  :keymaps 'global
- (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment
- (kbd "C-e") 'mwim-end-of-code-or-line
+ :states '(normal visual)
  "/" 'swiper
  ";" 'spacemacs/comment-or-uncomment-lines
+ )
+
+(general-define-key
+ :keymaps 'global
+ :states '(normal visual insert emacs)
+ (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment
+ (kbd "C-e") 'mwim-end-of-code-or-line
  )
 
 ;; remap navigate org-mode-map

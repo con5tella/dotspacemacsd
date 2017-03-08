@@ -85,7 +85,7 @@ Each entry is either:
     ))
 
 (defun asterix/init-general ()
-  (setq general-default-keymaps 'evil-normal-state-map))
+  )
 
 (defun asterix/post-init-org ()
   (with-eval-after-load 'org
