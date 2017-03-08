@@ -20,26 +20,16 @@
 (define-key company-active-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
 (define-key company-active-map (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1)))
 
-;; remap "C-a" to beginning-of-code-or-line
-(define-key evil-normal-state-map (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment)
-(define-key evil-insert-state-map (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment)
-;; remap "C-e" to end-of-code-or-line
-(define-key evil-normal-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
-(define-key evil-insert-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
-
-;; remap ; comment-or-uncomment
-(define-key evil-normal-state-map (kbd ";") 'spacemacs/comment-or-uncomment-lines)
-(define-key evil-visual-state-map (kbd ";") 'comment-or-uncomment-region)
-
-;; remap leader-key ","
-(setq my-leader1 ",")
+;; remap with leader-key ","
+(setq generaleader ",")
 (general-define-key
- :prefix my-leader1
- ;; ", SPC" avy-goto-char
+ :prefix generaleader
  "SPC" 'evil-avy-goto-char
  "f" 'counsel-find-file
+ "o" 'other-window
  "p" 'counsel-projectile-find-file
- "w" 'other-window
+ "u" 'undo-tree-visualize
+ "w" 'save-buffer
  )
 
 ;; remap without leader-key
@@ -47,6 +37,9 @@
  :states '(normal visual)
  :keymaps 'global
  "/" 'swiper
+ (kbd ";") 'spacemacs/comment-or-uncomment-lines
+ (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment
+ (kbd "C-e") 'mwim-end-of-code-or-line
  )
 
 ;; remap navigate org-mode-map
