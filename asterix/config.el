@@ -14,6 +14,9 @@
 ;; ;; learn from liu233w
 ;; (add-hook 'after-make-frame-functions 'asterix/reset-frame-size)
 
+;; swap numbers and symbols
+(add-hook 'evil-insert-state-entry-hook 'evil-swap-keys-swap-number-row)
+
 ;; improve the performance of opening org file
 (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
 (add-hook 'find-file-hook 'spacemacs/check-large-file)

@@ -33,6 +33,7 @@
   '(
     bing-dict
     ;; company
+    evil-swap-keys
     fcitx
     general
     org
@@ -74,6 +75,10 @@ Each entry is either:
 ;; ;; company minimum length 1
 ;; (defun asterix/post-init-company()
 ;;   (setq company-minimum-prefix-length 1))
+
+(defun asterix/init-evil-swap-keys ()
+  (global-evil-swap-keys-mode)
+  )
 
 (defun asterix/post-init-fcitx ()
   (with-eval-after-load 'fcitx
