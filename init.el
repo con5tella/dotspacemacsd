@@ -166,7 +166,7 @@ values."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          ;; spacemacs-dark
-                         ;; spacemacs-light
+                         spacemacs-light
                          sanityinc-solarized-light
                          ;; sanityinc-tomorrow-eighties
                          ;; leuven
