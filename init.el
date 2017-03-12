@@ -43,9 +43,6 @@ values."
                       ;; auto-completion-complete-with-key-sequence "jk"
                       )
      better-defaults
-     ;; (better-defaults :variables
-     ;;                  better-defaults-move-to-beginning-of-code-first t
-     ;;                  better-defaults-move-to-end-of-code-first t)
      (colors :variables
              colors-colorize-identifiers 'variables)
      emacs-lisp
@@ -95,8 +92,7 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(chinese-pyim
-                                    )
+   dotspacemacs-excluded-packages '()
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and uninstall any
@@ -379,11 +375,6 @@ you should place your code here."
 
   ;; ;; global-visual-line-mode
   ;; (global-visual-line-mode t)
-
-  ;; ;; set face-attribute font, disabled in default theme
-  ;; (set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
-  ;; (set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
-  ;; (set-face-attribute 'font-lock-comment-face nil :slant 'oblique)
 
   ;; set default widths of images in org-mode
   (setq org-image-actual-width 720)
