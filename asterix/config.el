@@ -18,7 +18,7 @@
 (set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
 (set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
 (set-face-attribute 'font-lock-comment-face nil :slant 'oblique)
-(set-face-attribute 'font-lock-string-face nil :foreground '"forest green")
+;; (set-face-attribute 'font-lock-string-face nil :foreground '"forest green")
 
 ;; swap numbers and symbols
 ;; (add-hook 'evil-insert-state-entry-hook 'evil-swap-keys-swap-number-row)
