@@ -29,6 +29,7 @@
  "SPC" 'evil-avy-goto-char
  "f" 'counsel-describe-function
  "k" 'describe-key
+ "K" '(spacemacs/kill-this-buffer)
  "r" 'deer
  "R" '(dotspacemacs/sync-configuration-layers)
  "u" 'undo-tree-visualize
