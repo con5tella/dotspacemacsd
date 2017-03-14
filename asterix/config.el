@@ -14,6 +14,15 @@
 ;; ;; learn from liu233w
 ;; (add-hook 'after-make-frame-functions 'asterix/reset-frame-size)
 
+;; (unless (functionp 'asterix/reset-frame-size)
+;;   (defun asterix/reset-frame-size (&optional frame)
+;;     "reset frame size"
+;;     (interactive)
+;;     (when frame
+;;       (select-frame frame))
+;;     (set-frame-size (selected-frame) 96 48))
+;;   )
+
 ;; set face-attribute font, disabling in default theme
 (set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
 (set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
@@ -34,7 +43,16 @@
                            ;; (spacemacs/toggle-centered-point-on)
                            ))
 
-;; centered point when reviewing files
+;; performance of opening markdown file
 (add-hook 'markdown-mode-hook (lambda ()
                                 ;; (visual-line-mode t)
                                 (spacemacs/toggle-centered-point-on)))
+
+;; performance of opening large file
+(defun spacemacs/check-large-file ()
+  (when (> (buffer-size) 500000)
+    (progn
+      (fundamental-mode)
+      (hl-line-mode -1)
+      (evil-swap-keys-mode -1)
+      )))
