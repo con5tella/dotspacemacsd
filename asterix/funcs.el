@@ -20,5 +20,8 @@
 
 (defun spacemacs/check-large-file ()
   (when (> (buffer-size) 500000)
-    (progn (fundamental-mode)
-           (hl-line-mode -1))))
+    (progn
+      (fundamental-mode)
+      (hl-line-mode -1)
+      (evil-swap-keys-mode -1)
+      )))
