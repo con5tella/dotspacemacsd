@@ -27,6 +27,7 @@
  :states '(normal visual)
  :prefix general-leader
  "SPC" 'evil-avy-goto-char
+ "/" 'evil-search-forward ;; mainly used in fundamental-mode for large-file
  "f" 'counsel-describe-function
  "k" 'describe-key
  "K" '(spacemacs/kill-this-buffer)
