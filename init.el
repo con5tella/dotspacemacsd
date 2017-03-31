@@ -77,6 +77,7 @@ values."
      (version-control :variables
                       version-control-diff-tool 'diff-hl
                       version-control-global-margin t)
+     vimscript
      yaml
      (chinese :variables
               chinese-enable-fcitx t
