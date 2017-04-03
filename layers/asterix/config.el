@@ -1,6 +1,6 @@
 ;;; config.el --- asterix Layer configuration variables File for Spacemacs
 ;;
-;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
+;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
 ;;
 ;; Author: Yuanchen Xie <yuanchen.gm@gmail.com>
 ;; URL: https://github.com/erstern/dotspacemacsd
@@ -29,9 +29,9 @@
 (set-face-attribute 'font-lock-comment-face nil :slant 'oblique)
 ;; (set-face-attribute 'font-lock-string-face nil :foreground '"forest green")
 
-;; swap numbers and symbols
-;; (add-hook 'evil-insert-state-entry-hook 'evil-swap-keys-swap-number-row)
-(add-hook 'prog-mode-hook 'evil-swap-keys-swap-number-row)
+;; ;; swap numbers and symbols
+;; ;; (add-hook 'evil-insert-state-entry-hook 'evil-swap-keys-swap-number-row)
+;; (add-hook 'prog-mode-hook 'evil-swap-keys-swap-number-row)
 
 ;; improve the performance of opening org file
 (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)

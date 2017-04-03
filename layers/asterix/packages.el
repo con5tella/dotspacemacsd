@@ -1,6 +1,6 @@
 ;;; packages.el --- asterix layer packages file for Spacemacs.
 ;;
-;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
+;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
 ;;
 ;; Author: Yuanchen Xie <yuanchen.gm@gmail.com>
 ;; URL: https://github.com/erstern/dotspacemacsd
@@ -32,7 +32,6 @@
 (defconst asterix-packages
   '(
     bing-dict
-    ;; company
     evil-swap-keys
     fcitx
     general
@@ -72,13 +71,9 @@ Each entry is either:
     ;; (setq bing-dict-pronunciation-style 'uk)
     ))
 
-;; ;; company minimum length 1
-;; (defun asterix/post-init-company()
-;;   (setq company-minimum-prefix-length 1))
-
-(defun asterix/init-evil-swap-keys ()
-  (global-evil-swap-keys-mode)
-  )
+;; (defun asterix/init-evil-swap-keys ()
+;;   (global-evil-swap-keys-mode)
+;;   )
 
 (defun asterix/post-init-fcitx ()
   (with-eval-after-load 'fcitx
