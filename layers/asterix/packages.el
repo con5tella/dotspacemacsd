@@ -32,7 +32,7 @@
 (defconst asterix-packages
   '(
     bing-dict
-    evil-swap-keys
+    ;; evil-swap-keys
     fcitx
     general
     org
