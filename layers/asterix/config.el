@@ -54,5 +54,5 @@
     (progn
       (fundamental-mode)
       (hl-line-mode -1)
-      (evil-swap-keys-mode -1)
+      ;; (evil-swap-keys-mode -1)
       )))
