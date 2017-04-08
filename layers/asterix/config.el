@@ -56,3 +56,6 @@
       (hl-line-mode -1)
       ;; (evil-swap-keys-mode -1)
       )))
+
+;; line-numbers for yaml-mode
+(add-hook 'yaml-mode-hook (lambda () (spacemacs/toggle-line-numbers-on)) 'append)
