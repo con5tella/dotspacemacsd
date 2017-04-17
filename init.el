@@ -74,6 +74,7 @@ values."
      (syntax-checking :variables
                       syntax-checking-enable-by-default nil
                       syntax-checking-enable-tooltips nil)
+     ;; themes-megapack
      (version-control :variables
                       version-control-diff-tool 'diff-hl
                       version-control-global-margin t)
@@ -164,7 +165,8 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         anti-zenburn
+                         ;; anti-zenburn
+                         organic-green
                          ;; spacemacs-dark
                          ;; spacemacs-light
                          ;; sanityinc-solarized-light
