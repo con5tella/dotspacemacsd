@@ -94,7 +94,6 @@ values."
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(chinese-pyim
-                                    exec-path-from-shell
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -171,6 +170,7 @@ values."
                          ;; sanityinc-solarized-light
                          ;; sanityinc-tomorrow-eighties
                          ;; leuven
+                         zenburn
                          )
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
