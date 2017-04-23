@@ -166,12 +166,12 @@ values."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          ;; anti-zenburn
-                         organic-green
                          ;; spacemacs-dark
                          ;; spacemacs-light
-                         ;; sanityinc-solarized-light
+                         sanityinc-solarized-light
                          ;; sanityinc-tomorrow-eighties
                          ;; leuven
+                         organic-green
                          zenburn
                          )
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
