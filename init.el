@@ -167,7 +167,7 @@ values."
    dotspacemacs-themes '(
                          ;; anti-zenburn
                          ;; spacemacs-dark
-                         ;; spacemacs-light
+                         spacemacs-light
                          sanityinc-solarized-light
                          ;; sanityinc-tomorrow-eighties
                          ;; leuven
