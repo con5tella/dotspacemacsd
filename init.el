@@ -167,8 +167,9 @@ values."
    dotspacemacs-themes '(
                          ;; anti-zenburn
                          ;; spacemacs-dark
-                         spacemacs-light
-                         sanityinc-solarized-light
+                         ;; spacemacs-light
+                         material-light
+                         ;; sanityinc-solarized-light
                          ;; sanityinc-tomorrow-eighties
                          ;; leuven
                          organic-green
