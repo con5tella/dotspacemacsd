@@ -398,8 +398,8 @@ you should place your code here."
   (when (configuration-layer/layer-usedp 'chinese)
     (spacemacs//set-monospaced-font "Source Code Pro" "Source Han Sans CN Regular" 14 16))
 
-  ;; hungry-delete-mode on
-  (global-hungry-delete-mode t)
+  ;; ;; hungry-delete-mode on
+  ;; (global-hungry-delete-mode t)
 
   ;; ;; golden-ratio on
   ;; (golden-ratio-mode t)
