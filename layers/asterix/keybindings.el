@@ -60,6 +60,14 @@
  (kbd "C-e") 'mwim-end-of-code-or-line
  )
 
+;; remap with Shift-key
+(general-define-key
+ :keymaps 'global
+ :states '(normal visual)
+ (kbd "S-<left>") 'previous-buffer
+ (kbd "S-<right>") 'next-buffer
+ )
+
 ;; remap without leader-key or modifier-key
 (general-define-key
  :keymaps 'global
