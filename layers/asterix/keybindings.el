@@ -12,6 +12,9 @@
 ;; ;; bing-dict-brief
 (evil-leader/set-key "ob" 'bing-dict-brief)
 
+;; find by Pinyin directory
+(evil-leader/set-key "od" 'find-by-pinyin-dired)
+
 ;; ;; youdao dictionary
 ;; (evil-leader/set-key "oy" 'youdao-dictionary-search-at-point)
 ;; (evil-leader/set-key "oi" 'youdao-dictionary-search-from-input)
@@ -42,6 +45,7 @@
  :keymaps 'global
  :states '(normal visual)
  (kbd "M-b") 'bing-dict-brief
+ (kbd "M-d") 'find-by-pinyin-dired
  (kbd "M-f") 'counsel-find-file
  (kbd "M-g") 'magit-status
  (kbd "M-i") '(spacemacs/find-dotfile)
