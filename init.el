@@ -421,7 +421,7 @@ you should place your code here."
 
   ;; org-mode align table
   (when (configuration-layer/layer-usedp 'chinese)
-    (spacemacs//set-monospaced-font "Source Code Pro" "Source Han Sans CN Regular" 14 16))
+    (spacemacs//set-monospaced-font "Source Code Pro" "Source Han Sans CN" 14 16))
 
   ;; ;; hungry-delete-mode on
   ;; (global-hungry-delete-mode t)
