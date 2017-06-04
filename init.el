@@ -51,7 +51,7 @@ values."
      git
      ;; (git :variables
           ;; git-magit-status-fullscreen t)
-     github
+     ;; github
      html
      (latex :variables
             latex-enable-auto-fill t
