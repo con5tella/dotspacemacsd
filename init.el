@@ -79,10 +79,12 @@ This function should only modify configuration layer settings."
                       version-control-global-margin t)
      vimscript
      yaml
-     (chinese :variables
-              chinese-enable-fcitx t
-              ;; chinese-enable-youdao-dict t
-              )
+     (chinese
+      (when spacemacs/system-is-linux
+        :variables (chinese-enable-fcitx t)
+        )
+      ;; chinese-enable-youdao-dict t
+      )
      asterix
      zilongshanren-ui
      )
