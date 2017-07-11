@@ -79,12 +79,10 @@ This function should only modify configuration layer settings."
                       version-control-global-margin t)
      vimscript
      yaml
-     (chinese
-      (when spacemacs/system-is-linux
-        :variables (chinese-enable-fcitx t)
-        )
-      ;; chinese-enable-youdao-dict t
-      )
+     (chinese :variables
+              chinese-enable-fcitx t
+              ;; chinese-enable-youdao-dict t
+              )
      asterix
      zilongshanren-ui
      )
@@ -425,6 +423,10 @@ before packages are loaded."
   ;; org-mode align table
   (when (configuration-layer/layer-usedp 'chinese)
     (spacemacs//set-monospaced-font "Source Code Pro" "Source Han Sans CN" 14 16))
+
+  (when (and (spacemacs/system-is-mswindows) window-system)
+    (setq fcitx-use-dbus nil)
+    )
 
   ;; ;; hungry-delete-mode on
   ;; (global-hungry-delete-mode t)
