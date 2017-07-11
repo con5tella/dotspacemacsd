@@ -424,10 +424,6 @@ before packages are loaded."
   (when (configuration-layer/layer-usedp 'chinese)
     (spacemacs//set-monospaced-font "Source Code Pro" "Source Han Sans CN" 14 16))
 
-  (when (and (spacemacs/system-is-mswindows) window-system)
-    (setq fcitx-use-dbus nil)
-    )
-
   ;; ;; hungry-delete-mode on
   ;; (global-hungry-delete-mode t)
 
