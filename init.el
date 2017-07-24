@@ -43,31 +43,31 @@ This function should only modify configuration layer settings."
                       :disabled-for org markdown
                       )
      better-defaults
-     colors
+     ;; colors
      ;; (colors :variables
      ;;         colors-colorize-identifiers 'variables)
      emacs-lisp
-     (ess :variables
-          ess-enable-smart-equals t)
+     ;; (ess :variables
+     ;;      ess-enable-smart-equals t)
      git
      ;; (git :variables
           ;; git-magit-status-fullscreen t)
      ;; github
-     html
-     (latex :variables
-            latex-enable-auto-fill t
-            latex-enable-folding t)
+     ;; html
+     ;; (latex :variables
+     ;;        latex-enable-auto-fill t
+     ;;        latex-enable-folding t)
      (markdown :variables markdown-live-preview-engine 'vmd)
      (org :variables
           org-enable-reveal-js-support t)
-     python
+     ;; python
      ;; (ranger :variables
      ;;         ranger-show-preview nil)
-     (shell :variables
-            shell-default-height 30
-            shell-default-position 'bottom
-            shell-default-shell 'multi-term
-            shell-enable-smart-eshell t)
+     ;; (shell :variables
+     ;;        shell-default-height 30
+     ;;        shell-default-position 'bottom
+     ;;        shell-default-shell 'multi-term
+     ;;        shell-enable-smart-eshell t)
      (spell-checking :variables
                      ispell-program-name "aspell"
                      ispell-dictionary "american"
@@ -76,9 +76,9 @@ This function should only modify configuration layer settings."
                       syntax-checking-enable-by-default nil
                       syntax-checking-enable-tooltips nil)
      ;; themes-megapack
-     (version-control :variables
-                      version-control-diff-tool 'diff-hl
-                      version-control-global-margin t)
+     ;; (version-control :variables
+     ;;                  version-control-diff-tool 'diff-hl
+     ;;                  version-control-global-margin t)
      yaml
      zilongshanren-ui
      (chinese :variables
@@ -108,7 +108,7 @@ This function should only modify configuration layer settings."
                                     google-translate
                                     helm/init-helm-spacemacs-faq helm/init-helm-spacemacs-help
                                     helm/init-helm-swoop helm/init-helm-themes
-                                    helm-make highlight-indentation hl-todo holy-mode
+                                    highlight-indentation hl-todo holy-mode
                                     ido-vertical-mode ivy-purpose-setup
                                     lorem-ipsum
                                     magit-gitflow
@@ -285,7 +285,7 @@ It should only modify the values of Spacemacs settings."
    ;; `right-then-bottom'. right-then-bottom tries to display the frame to the
    ;; right; if there is insufficient space it displays it at the bottom.
    ;; (default 'bottom)
-   dotspacemacs-which-key-position 'right-then-bottom
+   dotspacemacs-which-key-position 'bottom
    ;; Control where `switch-to-buffer' displays the buffer. If nil,
    ;; `switch-to-buffer' displays the buffer in the current window even if
    ;; another same-purpose window is available. If non-nil, `switch-to-buffer'
