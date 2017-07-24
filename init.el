@@ -95,8 +95,7 @@ This function should only modify configuration layer settings."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(auto-complete
-                                    auto-dictionary
+   dotspacemacs-excluded-packages '(auto-dictionary
                                     chinese-pyim
                                     clean-aindent-mode
                                     define-word
@@ -105,12 +104,19 @@ This function should only modify configuration layer settings."
                                     evil-edit
                                     evil-exchange
                                     evil-indent-plus
+                                    evil-magit
                                     evil-mc
                                     evil-unimpaired
                                     eyebrowse
                                     fancy-battery
                                     fill-column-indicator
                                     flx-ido
+                                    gitattributes-mode
+                                    gitconfig-mode
+                                    gitignore-mode
+                                    git-link
+                                    git-messenger
+                                    git-timemachine
                                     google-translate
                                     helm/init-helm-spacemacs-faq
                                     helm/init-helm-spacemacs-help
@@ -126,9 +132,12 @@ This function should only modify configuration layer settings."
                                     orgit
                                     org-bullets
                                     org-download
+                                    org-present
+                                    org-projectile
                                     rainbow-delimiters
                                     realgud
                                     smeargle
+                                    smooth-scrolling
                                     spaceline
                                     spacemacs-purpose-popwin
                                     symon
@@ -208,10 +217,10 @@ It should only modify the values of Spacemacs settings."
                          ;; spacemacs-dark
                          ;; spacemacs-light
                          ;; material-light
+                         organic-green
                          ;; sanityinc-solarized-light
                          ;; sanityinc-tomorrow-eighties
                          ;; leuven
-                         organic-green
                          zenburn
                          )
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
@@ -340,7 +349,7 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
-   dotspacemacs-smooth-scrolling t
+   dotspacemacs-smooth-scrolling nil
    ;; Control line numbers activation.
    ;; If set to `t' or `relative' line numbers are turned on in all `prog-mode' and
    ;; `text-mode' derivatives. If set to `relative', line numbers are relative.
@@ -463,8 +472,8 @@ before packages are loaded."
   (when (configuration-layer/layer-usedp 'chinese)
     (spacemacs//set-monospaced-font "Source Code Pro" "Source Han Sans CN" 14 16))
 
-  ;; ;; hungry-delete-mode on
-  ;; (global-hungry-delete-mode t)
+  ;; hungry-delete-mode on
+  (global-hungry-delete-mode t)
 
   ;; ;; golden-ratio on
   ;; (golden-ratio-mode t)
