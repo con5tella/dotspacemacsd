@@ -33,9 +33,18 @@
 ;; ;; (add-hook 'evil-insert-state-entry-hook 'evil-swap-keys-swap-number-row)
 ;; (add-hook 'prog-mode-hook 'evil-swap-keys-swap-number-row)
 
-;; improve the performance of opening org file
-(add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
+;; performance of opening large file
 (add-hook 'find-file-hook 'spacemacs/check-large-file)
+(defun spacemacs/check-large-file ()
+  (when (> (buffer-size) 500000)
+    (progn
+      (fundamental-mode)
+      (hl-line-mode -1)
+      ;; (evil-swap-keys-mode -1)
+      )))
+
+;; improve the performance of opening org file
+;; (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
 (add-hook 'org-mode-hook (lambda ()
                            ;; (auto-fill-mode)  ;; if column ==80 return
                            (setq truncate-lines nil)  ;; truncate lines ignore words
@@ -47,15 +56,6 @@
 (add-hook 'markdown-mode-hook (lambda ()
                                 ;; (visual-line-mode t)
                                 (spacemacs/toggle-centered-point-on)))
-
-;; performance of opening large file
-(defun spacemacs/check-large-file ()
-  (when (> (buffer-size) 500000)
-    (progn
-      (fundamental-mode)
-      (hl-line-mode -1)
-      ;; (evil-swap-keys-mode -1)
-      )))
 
 ;; line-numbers for yaml-mode
 (add-hook 'yaml-mode-hook (lambda () (spacemacs/toggle-line-numbers-on)) 'append)

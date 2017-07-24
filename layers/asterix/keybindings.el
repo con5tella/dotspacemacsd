@@ -45,7 +45,7 @@
  :keymaps 'global
  :states '(normal visual)
  (kbd "M-b") 'bing-dict-brief
- (kbd "M-d") 'find-by-pinyin-dired
+ ;; (kbd "M-d") 'find-by-pinyin-dired
  (kbd "M-f") 'counsel-find-file
  (kbd "M-g") 'magit-status
  (kbd "M-i") '(spacemacs/find-dotfile)

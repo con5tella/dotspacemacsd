@@ -43,6 +43,10 @@ This function should only modify configuration layer settings."
                       :disabled-for org markdown
                       )
      better-defaults
+     (chinese :variables
+              chinese-enable-fcitx t
+              ;; chinese-enable-youdao-dict t
+              )
      ;; colors
      ;; (colors :variables
      ;;         colors-colorize-identifiers 'variables)
@@ -80,11 +84,7 @@ This function should only modify configuration layer settings."
      ;;                  version-control-diff-tool 'diff-hl
      ;;                  version-control-global-margin t)
      yaml
-     zilongshanren-ui
-     (chinese :variables
-              chinese-enable-fcitx t
-              ;; chinese-enable-youdao-dict t
-              )
+     ;; zilongshanren-ui
      asterix
      )
    ;; List of additional packages that will be installed without being
@@ -99,12 +99,14 @@ This function should only modify configuration layer settings."
                                     chinese-pyim clean-aindent-mode coffee
                                     define-word doc-view
                                     emmet-mode exec-path-from-shell
-                                    evil-args evil-ediff evil-escape evil-exchange evil-indent-plus
-                                    evil-magit evil-mc evil-tutor evil-unimpaired
+                                    evil-anzu evil-args evil-ediff evil-escape evil-exchange
+                                    evil-indent-plus evil-magit evil-mc evil-search-highlight-persist
+                                    evil-tutor evil-unimpaired
                                     eyebrowse
                                     fancy-battery fill-column-indicator find-by-pinyin-dired flx-ido
-                                    gitattributes-mode gitconfig-mode gitignore-mode git-gutter+
-                                    git-gutter-fringe+ git-link git-messenger git-timemachine
+                                    gh-md
+                                    gitattributes-mode gitconfig-mode gitignore-mode
+                                    git-gutter+ git-gutter-fringe+ git-link git-messenger git-timemachine
                                     google-translate
                                     helm/init-helm-spacemacs-faq helm/init-helm-spacemacs-help
                                     helm/init-helm-swoop helm/init-helm-themes
@@ -112,12 +114,12 @@ This function should only modify configuration layer settings."
                                     ido-vertical-mode ivy-purpose-setup
                                     lorem-ipsum
                                     magit-gitflow
-                                    orgit org-bullets org-download org-present org-projectile
-                                    org-timer
+                                    orgit org-bullets org-download org-present org-projectile org-timer
                                     rainbow-delimiters realgud
                                     smeargle smooth-scrolling spaceline spacemacs-purpose-popwin
                                     sticky symon
                                     vi-tilde-fringe volatile-highlights
+                                    youdao-dictionary
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -190,7 +192,7 @@ It should only modify the values of Spacemacs settings."
                          ;; anti-zenburn
                          ;; spacemacs-dark
                          ;; spacemacs-light
-                         ;; material-light
+                         material-light
                          organic-green
                          ;; sanityinc-solarized-light
                          ;; sanityinc-tomorrow-eighties
