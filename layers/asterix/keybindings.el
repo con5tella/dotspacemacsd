@@ -12,8 +12,8 @@
 ;; ;; bing-dict-brief
 (evil-leader/set-key "ob" 'bing-dict-brief)
 
-;; find by Pinyin directory
-(evil-leader/set-key "od" 'find-by-pinyin-dired)
+;; ;; find by Pinyin directory
+;; (evil-leader/set-key "od" 'find-by-pinyin-dired)
 
 ;; ;; youdao dictionary
 ;; (evil-leader/set-key "oy" 'youdao-dictionary-search-at-point)

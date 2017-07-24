@@ -77,7 +77,7 @@ This function should only modify configuration layer settings."
                       syntax-checking-enable-tooltips nil)
      ;; themes-megapack
      (version-control :variables
-                      version-control-diff-tool 'git-gutter+
+                      version-control-diff-tool 'diff-hl
                       version-control-global-margin t)
      yaml
      zilongshanren-ui
@@ -96,54 +96,28 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(auto-dictionary
-                                    chinese-pyim
-                                    clean-aindent-mode
-                                    define-word
-                                    exec-path-from-shell
-                                    evil-args
-                                    evil-edit
-                                    evil-exchange
-                                    evil-indent-plus
-                                    evil-magit
-                                    evil-mc
-                                    evil-unimpaired
+                                    chinese-pyim clean-aindent-mode coffee
+                                    define-word doc-view
+                                    emmet-mode exec-path-from-shell
+                                    evil-args evil-ediff evil-escape evil-exchange evil-indent-plus
+                                    evil-magit evil-mc evil-tutor evil-unimpaired
                                     eyebrowse
-                                    fancy-battery
-                                    fill-column-indicator
-                                    flx-ido
-                                    gitattributes-mode
-                                    gitconfig-mode
-                                    gitignore-mode
-                                    git-link
-                                    git-messenger
-                                    git-timemachine
+                                    fancy-battery fill-column-indicator find-by-pinyin-dired flx-ido
+                                    gitattributes-mode gitconfig-mode gitignore-mode git-gutter+
+                                    git-gutter-fringe+ git-link git-messenger git-timemachine
                                     google-translate
-                                    helm/init-helm-spacemacs-faq
-                                    helm/init-helm-spacemacs-help
-                                    helm/init-helm-swoop
-                                    helm/init-helm-themes
-                                    helm-make
-                                    highlight-indentation
-                                    hl-todo
-                                    holy-mode
-                                    ido-vertical-mode
-                                    ivy-purpose-setup
+                                    helm/init-helm-spacemacs-faq helm/init-helm-spacemacs-help
+                                    helm/init-helm-swoop helm/init-helm-themes
+                                    helm-make highlight-indentation hl-todo holy-mode
+                                    ido-vertical-mode ivy-purpose-setup
                                     lorem-ipsum
-                                    orgit
-                                    org-bullets
-                                    org-download
-                                    org-present
-                                    org-projectile
-                                    rainbow-delimiters
-                                    realgud
-                                    smeargle
-                                    smooth-scrolling
-                                    spaceline
-                                    spacemacs-purpose-popwin
-                                    symon
-                                    vi-tilde-fringe
-                                    volatile-highlights
-                                    window-purpose
+                                    magit-gitflow
+                                    orgit org-bullets org-download org-present org-projectile
+                                    org-timer
+                                    rainbow-delimiters realgud
+                                    smeargle smooth-scrolling spaceline spacemacs-purpose-popwin
+                                    sticky symon
+                                    vi-tilde-fringe volatile-highlights
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
