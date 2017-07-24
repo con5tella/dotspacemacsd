@@ -109,6 +109,7 @@ This function should only modify configuration layer settings."
                                     evil-unimpaired
                                     eyebrowse
                                     fancy-battery
+                                    fill-column-indicator
                                     flx-ido
                                     google-translate
                                     helm/init-helm-spacemacs-faq
@@ -117,10 +118,12 @@ This function should only modify configuration layer settings."
                                     helm/init-helm-themes
                                     helm-make
                                     highlight-indentation
+                                    hl-todo
                                     holy-mode
                                     ido-vertical-mode
                                     ivy-purpose-setup
                                     lorem-ipsum
+                                    orgit
                                     org-bullets
                                     org-download
                                     rainbow-delimiters
