@@ -40,10 +40,12 @@ This function should only modify configuration layer settings."
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-snippets-in-popup t
                       ;; auto-completion-complete-with-key-sequence "jk"
+                      :disabled-for org markdown
                       )
      better-defaults
-     (colors :variables
-             colors-colorize-identifiers 'variables)
+     colors
+     ;; (colors :variables
+     ;;         colors-colorize-identifiers 'variables)
      emacs-lisp
      (ess :variables
           ess-enable-smart-equals t)
@@ -59,8 +61,8 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-reveal-js-support t)
      python
-     (ranger :variables
-             ranger-show-preview nil)
+     ;; (ranger :variables
+     ;;         ranger-show-preview nil)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom
@@ -75,16 +77,16 @@ This function should only modify configuration layer settings."
                       syntax-checking-enable-tooltips nil)
      ;; themes-megapack
      (version-control :variables
-                      version-control-diff-tool 'diff-hl
+                      version-control-diff-tool 'git-gutter+
                       version-control-global-margin t)
      vimscript
      yaml
+     zilongshanren-ui
      (chinese :variables
               chinese-enable-fcitx t
               ;; chinese-enable-youdao-dict t
               )
      asterix
-     zilongshanren-ui
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -94,8 +96,43 @@ This function should only modify configuration layer settings."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(chinese-pyim
+   dotspacemacs-excluded-packages '(auto-complete
+                                    auto-dictionary
+                                    chinese-pyim
+                                    clean-aindent-mode
+                                    define-word
+                                    exec-path-from-shell
+                                    evil-args
+                                    evil-edit
+                                    evil-exchange
+                                    evil-indent-plus
+                                    evil-mc
+                                    evil-unimpaired
+                                    eyebrowse
+                                    fancy-battery
+                                    flx-ido
+                                    google-translate
+                                    helm/init-helm-spacemacs-faq
+                                    helm/init-helm-spacemacs-help
+                                    helm/init-helm-swoop
+                                    helm/init-helm-themes
+                                    helm-make
+                                    highlight-indentation
+                                    holy-mode
+                                    ido-vertical-mode
+                                    ivy-purpose-setup
+                                    lorem-ipsum
+                                    org-bullets
+                                    org-download
+                                    rainbow-delimiters
+                                    realgud
+                                    smeargle
                                     spaceline
+                                    spacemacs-purpose-popwin
+                                    symon
+                                    vi-tilde-fringe
+                                    volatile-highlights
+                                    window-purpose
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -168,7 +205,7 @@ It should only modify the values of Spacemacs settings."
                          ;; anti-zenburn
                          ;; spacemacs-dark
                          ;; spacemacs-light
-                         material-light
+                         ;; material-light
                          ;; sanityinc-solarized-light
                          ;; sanityinc-tomorrow-eighties
                          ;; leuven
