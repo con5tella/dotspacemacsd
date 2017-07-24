@@ -79,7 +79,6 @@ This function should only modify configuration layer settings."
      (version-control :variables
                       version-control-diff-tool 'git-gutter+
                       version-control-global-margin t)
-     vimscript
      yaml
      zilongshanren-ui
      (chinese :variables

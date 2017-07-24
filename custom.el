@@ -6,7 +6,7 @@
  '(delete-selection-mode nil)
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
-   (quote
+   (
     )))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
