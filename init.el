@@ -76,9 +76,10 @@ This function should only modify configuration layer settings."
                      ispell-program-name "aspell"
                      ispell-dictionary "american"
                      spell-checking-enable-by-default nil)
-     (syntax-checking :variables
-                      syntax-checking-enable-by-default nil
-                      syntax-checking-enable-tooltips nil)
+     ;; (syntax-checking :variables
+     ;;                  syntax-checking-enable-tooltips nil
+     ;;                  syntax-checking-enable-by-default nil
+     ;;                  syntax-checking-use-original-bitmaps t)
      ;; themes-megapack
      ;; (version-control :variables
      ;;                  version-control-diff-tool 'diff-hl
