@@ -114,7 +114,8 @@ This function should only modify configuration layer settings."
                                     ido-vertical-mode ivy-purpose-setup
                                     lorem-ipsum
                                     magit-gitflow
-                                    orgit org-bullets org-download org-present org-projectile org-timer
+                                    orgit org-bullets org-download org-present org-projectile
+                                    org-pomodoro org-timer
                                     rainbow-delimiters realgud
                                     smeargle smooth-scrolling spaceline spacemacs-purpose-popwin
                                     sticky symon
