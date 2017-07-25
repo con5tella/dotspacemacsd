@@ -96,32 +96,39 @@ This function should only modify configuration layer settings."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(auto-dictionary
+   dotspacemacs-excluded-packages '(auto-complete auto-dictionary
                                     chinese-pyim clean-aindent-mode coffee
                                     define-word doc-view
                                     emmet-mode exec-path-from-shell
-                                    evil-anzu evil-args evil-ediff evil-escape evil-exchange
-                                    evil-indent-plus evil-magit evil-mc evil-search-highlight-persist
+                                    evil-anzu evil-args evil-ediff evil-escape
+                                    evil-exchange evil-indent-plus evil-magit
+                                    evil-mc evil-search-highlight-persist
                                     evil-tutor evil-unimpaired
                                     eyebrowse
-                                    fancy-battery fill-column-indicator find-by-pinyin-dired flx-ido
+                                    fancy-battery fill-column-indicator
+                                    find-by-pinyin-dired flx-ido
                                     gh-md
-                                    gitattributes-mode gitconfig-mode gitignore-mode
-                                    git-gutter+ git-gutter-fringe+ git-link git-messenger git-timemachine
+                                    gitattributes-mode gitconfig-mode
+                                    gitignore-mode git-gutter+ git-gutter-fringe+
+                                    git-link git-messenger git-timemachine
                                     google-translate
-                                    helm/init-helm-spacemacs-faq helm/init-helm-spacemacs-help
+                                    helm helm-core helm-make
+                                    helm/init-helm-spacemacs-faq
+                                    helm/init-helm-spacemacs-help
                                     helm/init-helm-swoop helm/init-helm-themes
                                     highlight-indentation hl-todo holy-mode
                                     ido-vertical-mode ivy-purpose-setup
                                     lorem-ipsum
                                     magit-gitflow
-                                    orgit org-bullets org-download org-present org-projectile
-                                    org-pomodoro org-timer
+                                    orgit org-bullets org-download org-present
+                                    org-projectile org-pomodoro org-timer
                                     rainbow-delimiters realgud
-                                    smeargle smooth-scrolling spaceline spacemacs-purpose-popwin
+                                    smeargle smooth-scrolling spaceline
+                                    spacemacs-purpose-popwin
                                     sticky symon
                                     vi-tilde-fringe volatile-highlights
                                     youdao-dictionary
+                                    window-purpose
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
