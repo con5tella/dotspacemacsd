@@ -451,9 +451,6 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
-  ;; ace-pinyin Traditional Chinese Characters Support
-  ;; (setq ace-pinyin-simplified-chinese-only-p nil)
-
   ;; ;; org-mode align table
   ;; (when (configuration-layer/layer-usedp 'chinese)
   ;;   (spacemacs//set-monospaced-font "Source Code Pro" "Source Han Sans CN" 14 16)
