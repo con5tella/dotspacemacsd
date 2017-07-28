@@ -43,10 +43,10 @@ This function should only modify configuration layer settings."
                       :disabled-for org markdown
                       )
      better-defaults
-     (chinese :variables
-              chinese-enable-fcitx t
-              ;; chinese-enable-youdao-dict t
-              )
+     ;; (chinese :variables
+     ;;          chinese-enable-fcitx t
+     ;;          ;; chinese-enable-youdao-dict t
+     ;;          )
      ;; colors
      ;; (colors :variables
      ;;         colors-colorize-identifiers 'variables)
@@ -454,9 +454,16 @@ before packages are loaded."
   ;; ace-pinyin Traditional Chinese Characters Support
   ;; (setq ace-pinyin-simplified-chinese-only-p nil)
 
-  ;; org-mode align table
-  (when (configuration-layer/layer-usedp 'chinese)
-    (spacemacs//set-monospaced-font "Source Code Pro" "Source Han Sans CN" 14 16))
+  ;; ;; org-mode align table
+  ;; (when (configuration-layer/layer-usedp 'chinese)
+  ;;   (spacemacs//set-monospaced-font "Source Code Pro" "Source Han Sans CN" 14 16)
+  ;;   )
+
+  ;; set Chinese fonts not using chinese layer, same to chinese-fonts-setup, cnfonts
+  (set-frame-font "Source Code Pro")
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+                      charset (font-spec :family "Source Han Sans CN" :size 16)))
 
   ;; hungry-delete-mode on
   (global-hungry-delete-mode t)

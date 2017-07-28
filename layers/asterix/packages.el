@@ -31,11 +31,14 @@
 
 (defconst asterix-packages
   '(
+    ace-pinyin
     bing-dict
+    evil-find-char-pinyin
     ;; evil-swap-keys
     fcitx
     general
     org
+    pangu-spacing
     )
   "The list of Lisp packages required by the asterix layer.
 
@@ -64,12 +67,22 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
+;; ace-pinyin
+(defun asterix/init-ace-pinyin ()
+  ;; (setq ace-pinyin-use-avy nil) ;; uncomment if you want to use `ace-jump-mode
+  ;; (ace-pinyin-global-mode +1)
+  )
+
 ;; bing-dict
 (defun asterix/init-bing-dict ()
   (with-eval-after-load 'bing-dict
     (setq bing-dict-show-thesaurus 'both)
     ;; (setq bing-dict-pronunciation-style 'uk)
     ))
+
+(defun asterix/init-evil-find-char-pinyin ()
+  (evil-find-char-pinyin-mode +1)
+  )
 
 ;; (defun asterix/init-evil-swap-keys ()
 ;;   (global-evil-swap-keys-mode)
@@ -107,5 +120,10 @@ Each entry is either:
        (C . t)
        ))
     ))
+
+(defun asterix/init-pangu-spacing ()
+  (global-pangu-spacing-mode 1)
+  (setq pangu-spacing-real-insert-separtor t)
+  )
 
 ;;; packages.el ends here
