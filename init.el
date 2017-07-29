@@ -92,7 +92,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(auto-complete auto-dictionary
-                                    chinese-pyim clean-aindent-mode coffee
+                                    clean-aindent-mode coffee
                                     define-word doc-view dumb-jump
                                     emmet-mode exec-path-from-shell
                                     evil-anzu evil-args evil-ediff evil-escape
@@ -101,7 +101,7 @@ This function should only modify configuration layer settings."
                                     evil-tutor evil-unimpaired
                                     eyebrowse
                                     fancy-battery fill-column-indicator
-                                    find-by-pinyin-dired flx-ido
+                                    flx-ido
                                     gh-md
                                     gitattributes-mode gitconfig-mode
                                     gitignore-mode
