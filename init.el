@@ -43,10 +43,6 @@ This function should only modify configuration layer settings."
                       :disabled-for org markdown
                       )
      better-defaults
-     ;; (chinese :variables
-     ;;          chinese-enable-fcitx t
-     ;;          ;; chinese-enable-youdao-dict t
-     ;;          )
      ;; colors
      ;; (colors :variables
      ;;         colors-colorize-identifiers 'variables)
@@ -85,7 +81,6 @@ This function should only modify configuration layer settings."
      ;;                  version-control-diff-tool 'diff-hl
      ;;                  version-control-global-margin t)
      yaml
-     ;; zilongshanren-ui
      asterix
      )
    ;; List of additional packages that will be installed without being
