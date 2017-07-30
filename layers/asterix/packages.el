@@ -39,6 +39,7 @@
     general
     org
     pangu-spacing
+    pyim
     )
   "The list of Lisp packages required by the asterix layer.
 
@@ -89,15 +90,13 @@ Each entry is either:
 ;;   (global-evil-swap-keys-mode)
 ;;   )
 
-(defun asterix/post-init-fcitx ()
-  (with-eval-after-load 'fcitx
-    ;; Make sure the following comes before `(fcitx-aggressive-setup)'
-    (setq fcitx-active-evil-states '(insert emacs hybrid)) ;; if you use hybrid mode
-    (fcitx-aggressive-setup)
-    (fcitx-prefix-keys-add "M-m") ;; M-m is common in Spacemacs
-    (when (spacemacs/system-is-linux)
-      (setq fcitx-use-dbus t) ;; uncomment if you're using Linux
-      )
+(defun asterix/init-fcitx ()
+  ;; Make sure the following comes before `(fcitx-aggressive-setup)'
+  (setq fcitx-active-evil-states '(insert emacs hybrid)) ;; if you use hybrid mode
+  (fcitx-aggressive-setup)
+  (fcitx-prefix-keys-add "M-m") ;; M-m is common in Spacemacs
+  (when (spacemacs/system-is-linux)
+    (setq fcitx-use-dbus t) ;; uncomment if you're using Linux
     ))
 
 (defun asterix/init-general ()
