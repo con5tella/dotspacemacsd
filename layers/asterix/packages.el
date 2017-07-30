@@ -39,7 +39,7 @@
     general
     org
     pangu-spacing
-    pyim
+    ;; pyim
     )
   "The list of Lisp packages required by the asterix layer.
 
