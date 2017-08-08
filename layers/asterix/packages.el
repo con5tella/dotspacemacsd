@@ -33,7 +33,7 @@
   '(
     ace-pinyin
     bing-dict
-    evil-find-char-pinyin
+    ;; evil-find-char-pinyin
     ;; evil-swap-keys
     fcitx
     general
@@ -82,9 +82,9 @@ Each entry is either:
     ;; (setq bing-dict-pronunciation-style 'uk)
     ))
 
-(defun asterix/init-evil-find-char-pinyin ()
-  (evil-find-char-pinyin-mode +1)
-  )
+;; (defun asterix/init-evil-find-char-pinyin ()
+;;   (evil-find-char-pinyin-mode +1)
+;;   )
 
 ;; (defun asterix/init-evil-swap-keys ()
 ;;   (global-evil-swap-keys-mode)

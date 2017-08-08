@@ -33,7 +33,6 @@
  "/" 'evil-search-forward ;; mainly used in fundamental-mode for large-file
  "f" 'counsel-describe-function
  "k" 'describe-key
- "K" '(spacemacs/kill-this-buffer)
  ;; "r" 'deer
  "R" '(dotspacemacs/sync-configuration-layers)
  "u" 'undo-tree-visualize
@@ -78,6 +77,11 @@
  :states '(normal visual)
  "/" 'swiper
  ";" 'spacemacs/comment-or-uncomment-lines
+ "c" 'bing-dict-brief
+ "f" 'evil-avy-goto-char
+ "K" '(spacemacs/kill-this-buffer)
+ "U" 'undo-tree-visualize
+ "W" '(spacemacs/window-manipulation-transient-state/body)
  )
 
 ;; remap navigate org-mode-map
