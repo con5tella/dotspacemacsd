@@ -1,4 +1,4 @@
-;;; packages.el --- asterix layer packages file for Spacemacs.
+;;; packages.el --- stella layer packages file for Spacemacs.
 ;;
 ;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
 ;;
@@ -18,30 +18,28 @@
 ;;
 ;;
 ;; Briefly, each package to be installed or configured by this layer should be
-;; added to `asterix-packages'. Then, for each package PACKAGE:
+;; added to `stella-packages'. Then, for each package PACKAGE:
 ;;
 ;; - If PACKAGE is not referenced by any other Spacemacs layer, define a
-;;   function `asterix/init-PACKAGE' to load and initialize the package.
+;;   function `stella/init-PACKAGE' to load and initialize the package.
 
 ;; - Otherwise, PACKAGE is already referenced by another Spacemacs layer, so
-;;   define the functions `asterix/pre-init-PACKAGE' and/or
-;;   `asterix/post-init-PACKAGE' to customize the package as it is loaded.
+;;   define the functions `stella/pre-init-PACKAGE' and/or
+;;   `stella/post-init-PACKAGE' to customize the package as it is loaded.
 
 ;;; Code:
 
-(defconst asterix-packages
+(defconst stella-packages
   '(
     ace-pinyin
     bing-dict
-    ;; evil-find-char-pinyin
-    ;; evil-swap-keys
     fcitx
     general
     org
     pangu-spacing
     ;; pyim
     )
-  "The list of Lisp packages required by the asterix layer.
+  "The list of Lisp packages required by the stella layer.
 
 Each entry is either:
 
@@ -69,28 +67,20 @@ Each entry is either:
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
 ;; ace-pinyin
-(defun asterix/init-ace-pinyin ()
+(defun stella/init-ace-pinyin ()
   ;; (setq ace-pinyin-use-avy nil) ;; uncomment if you want to use `ace-jump-mode
   (ace-pinyin-global-mode +1)
   ;; (setq ace-pinyin-simplified-chinese-only-p nil)
   )
 
 ;; bing-dict
-(defun asterix/init-bing-dict ()
+(defun stella/init-bing-dict ()
   (with-eval-after-load 'bing-dict
     (setq bing-dict-show-thesaurus 'both)
     ;; (setq bing-dict-pronunciation-style 'uk)
     ))
 
-;; (defun asterix/init-evil-find-char-pinyin ()
-;;   (evil-find-char-pinyin-mode +1)
-;;   )
-
-;; (defun asterix/init-evil-swap-keys ()
-;;   (global-evil-swap-keys-mode)
-;;   )
-
-(defun asterix/init-fcitx ()
+(defun stella/init-fcitx ()
   ;; Make sure the following comes before `(fcitx-aggressive-setup)'
   (setq fcitx-active-evil-states '(insert emacs hybrid)) ;; if you use hybrid mode
   (fcitx-aggressive-setup)
@@ -99,10 +89,10 @@ Each entry is either:
     (setq fcitx-use-dbus t) ;; uncomment if you're using Linux
     ))
 
-(defun asterix/init-general ()
+(defun stella/init-general ()
   )
 
-(defun asterix/post-init-org ()
+(defun stella/post-init-org ()
   (with-eval-after-load 'org
     (;; load-languages in org-mode
      org-babel-do-load-languages
@@ -121,7 +111,7 @@ Each entry is either:
        ))
     ))
 
-(defun asterix/init-pangu-spacing ()
+(defun stella/init-pangu-spacing ()
   (global-pangu-spacing-mode 1)
   (setq pangu-spacing-real-insert-separtor t)
   )

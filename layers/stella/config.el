@@ -1,4 +1,4 @@
-;;; config.el --- asterix Layer configuration variables File for Spacemacs
+;;; config.el --- stella Layer configuration variables File for Spacemacs
 ;;
 ;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
 ;;
@@ -10,12 +10,12 @@
 ;;; License: GPLv3
 
 ;; ;; reset frame size
-;; (asterix/reset-frame-size)
+;; (stella/reset-frame-size)
 ;; ;; learn from liu233w
-;; (add-hook 'after-make-frame-functions 'asterix/reset-frame-size)
+;; (add-hook 'after-make-frame-functions 'stella/reset-frame-size)
 
-;; (unless (functionp 'asterix/reset-frame-size)
-;;   (defun asterix/reset-frame-size (&optional frame)
+;; (unless (functionp 'stella/reset-frame-size)
+;;   (defun stella/reset-frame-size (&optional frame)
 ;;     "reset frame size"
 ;;     (interactive)
 ;;     (when frame
@@ -28,10 +28,6 @@
 (set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
 (set-face-attribute 'font-lock-comment-face nil :slant 'italic)
 ;; (set-face-attribute 'font-lock-string-face nil :foreground '"forest green")
-
-;; ;; swap numbers and symbols
-;; ;; (add-hook 'evil-insert-state-entry-hook 'evil-swap-keys-swap-number-row)
-;; (add-hook 'prog-mode-hook 'evil-swap-keys-swap-number-row)
 
 ;; performance of opening large file
 (add-hook 'find-file-hook 'spacemacs/check-large-file)

@@ -81,7 +81,7 @@ This function should only modify configuration layer settings."
      ;;                  version-control-diff-tool 'diff-hl
      ;;                  version-control-global-margin t)
      yaml
-     asterix
+     stella
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -194,12 +194,11 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         ;; anti-zenburn
                          ;; spacemacs-dark
                          ;; spacemacs-light
-                         material-light
-                         organic-green
-                         ;; sanityinc-solarized-light
+                         ;; material-light
+                         ;; organic-green
+                         sanityinc-solarized-light
                          ;; sanityinc-tomorrow-eighties
                          ;; leuven
                          zenburn
@@ -459,9 +458,6 @@ before packages are loaded."
 
   ;; hungry-delete-mode on
   (global-hungry-delete-mode t)
-
-  ;; ;; golden-ratio on
-  ;; (golden-ratio-mode t)
 
   ;; ;; display long lines by truncation
   ;; (setq truncate-lines nil)

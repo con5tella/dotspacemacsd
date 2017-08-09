@@ -1,4 +1,4 @@
-;;; keybindings.el --- asterix Layer key bindings File for Spacemacs
+;;; keybindings.el --- stella Layer key bindings File for Spacemacs
 ;;
 ;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
 ;;
