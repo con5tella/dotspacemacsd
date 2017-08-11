@@ -101,7 +101,7 @@ This function should only modify configuration layer settings."
                                     evil-tutor evil-unimpaired
                                     eyebrowse
                                     fancy-battery fill-column-indicator
-                                    find-by-pinyin-dired flx-ido
+                                    find-by-pinyin-dired flx-ido fuzzy
                                     gh-md
                                     gitattributes-mode gitconfig-mode
                                     gitignore-mode
@@ -197,9 +197,9 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-themes '(
                          ;; spacemacs-dark
                          ;; spacemacs-light
-                         ;; material-light
+                         material-light
                          ;; organic-green
-                         sanityinc-solarized-light
+                         ;; sanityinc-solarized-light
                          ;; sanityinc-tomorrow-eighties
                          ;; leuven
                          zenburn
