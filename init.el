@@ -57,7 +57,8 @@ This function should only modify configuration layer settings."
      ;; (latex :variables
      ;;        latex-enable-auto-fill t
      ;;        latex-enable-folding t)
-     (markdown :variables markdown-live-preview-engine 'vmd)
+     markdown
+     ;; (markdown :variables markdown-live-preview-engine 'vmd)
      (org :variables
           org-enable-reveal-js-support t)
      ;; python

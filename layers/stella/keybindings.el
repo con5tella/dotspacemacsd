@@ -79,6 +79,8 @@
  ";" 'spacemacs/comment-or-uncomment-lines
  "c" 'bing-dict-brief
  "f" 'evil-avy-goto-char
+ "j" 'evil-next-visual-line
+ "k" 'evil-previous-visual-line
  "K" '(spacemacs/kill-this-buffer)
  "U" 'undo-tree-visualize
  "W" '(spacemacs/window-manipulation-transient-state/body)
