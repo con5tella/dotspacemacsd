@@ -103,7 +103,6 @@ This function should only modify configuration layer settings."
                                     eyebrowse
                                     fancy-battery fill-column-indicator
                                     find-by-pinyin-dired flx-ido fuzzy
-                                    gh-md
                                     gitattributes-mode gitconfig-mode
                                     gitignore-mode
                                     git-gutter+ git-gutter-fringe+
@@ -123,6 +122,7 @@ This function should only modify configuration layer settings."
                                     smeargle smooth-scrolling spaceline
                                     spacemacs-purpose-popwin
                                     sticky symon
+                                    vmd-mode
                                     vi-tilde-fringe volatile-highlights
                                     youdao-dictionary
                                     window-purpose
