@@ -48,10 +48,10 @@
                            ;; (spacemacs/toggle-centered-point-on)
                            ))
 
-;; performance of opening markdown file
-(add-hook 'markdown-mode-hook (lambda ()
-                                ;; (visual-line-mode t)
-                                (spacemacs/toggle-centered-point-on)))
+;; ;; performance of opening markdown file
+;; (add-hook 'markdown-mode-hook (lambda ()
+;;                                 ;; (visual-line-mode t)
+;;                                 (spacemacs/toggle-centered-point-on)))
 
 ;; line-numbers for yaml-mode
 (add-hook 'yaml-mode-hook (lambda () (spacemacs/toggle-line-numbers-on)) 'append)

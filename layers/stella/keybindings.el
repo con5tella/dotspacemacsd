@@ -86,6 +86,19 @@
  "W" '(spacemacs/window-manipulation-transient-state/body)
  )
 
+;; remap heading markdown-mode
+(general-define-key
+ :states '(normal visual)
+ :keymaps 'markdown-mode-map
+ :prefix general-leader
+ "1" 'markdown-insert-header-atx-1
+ "2" 'markdown-insert-header-atx-2
+ "3" 'markdown-insert-header-atx-3
+ "4" 'markdown-insert-header-atx-4
+ "5" 'markdown-insert-header-atx-5
+ "6" 'markdown-insert-header-atx-6
+ )
+
 ;; remap navigate org-mode-map
 (general-define-key
  :states '(normal visual)
