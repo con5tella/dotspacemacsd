@@ -113,7 +113,7 @@ Each entry is either:
 
 (defun stella/init-pangu-spacing ()
   (global-pangu-spacing-mode 1)
-  (setq pangu-spacing-real-insert-separtor t)
+  ;; (setq pangu-spacing-real-insert-separtor t)
   )
 
 ;;; packages.el ends here
