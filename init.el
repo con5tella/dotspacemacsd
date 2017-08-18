@@ -198,11 +198,11 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-themes '(
                          ;; spacemacs-dark
                          ;; spacemacs-light
+                         zenburn
                          material-light
                          ;; organic-green
                          ;; sanityinc-solarized-light
                          ;; sanityinc-tomorrow-eighties
-                         zenburn
                          )
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
