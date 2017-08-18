@@ -79,6 +79,7 @@
  ";" 'spacemacs/comment-or-uncomment-lines
  "c" 'bing-dict-brief
  "f" 'evil-avy-goto-char
+ "ga" 'describe-char
  "j" 'evil-next-visual-line
  "k" 'evil-previous-visual-line
  "K" '(spacemacs/kill-this-buffer)
