@@ -69,7 +69,8 @@ Each entry is either:
 ;; ace-pinyin
 (defun stella/init-ace-pinyin ()
   ;; (setq ace-pinyin-use-avy nil) ;; uncomment if you want to use `ace-jump-mode
-  (ace-pinyin-global-mode +1)
+  ;; (ace-pinyin-global-mode +1)
+  (ace-pinyin-global-mode t)
   ;; (setq ace-pinyin-simplified-chinese-only-p nil)
   )
 

@@ -2,3 +2,7 @@
 #+STARTUP: indent
 * My spacemacs config files
 - Emacs config files using [[https://github.com/syl20bnr/spacemacs][spacemacs]].
+- use develop branch
+  #+BEGIN_SRC shell
+  git clone git@github.com:syl20bnr/spacemacs.git ~/.emacs.d -b develop
+  #+END_SRC
