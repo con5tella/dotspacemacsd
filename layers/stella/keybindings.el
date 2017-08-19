@@ -19,10 +19,6 @@
 ;; (evil-leader/set-key "oy" 'youdao-dictionary-search-at-point)
 ;; (evil-leader/set-key "oi" 'youdao-dictionary-search-from-input)
 
-;; remap C-n and C-p for next and previous candidate
-(define-key evil-insert-state-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
-(define-key evil-insert-state-map (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1)))
-
 ;; remap with leader-key
 (setq general-leader ",")
 (general-define-key
@@ -87,6 +83,13 @@
  "W" '(spacemacs/window-manipulation-transient-state/body)
  )
 
+;; ;; insert state
+;; (general-define-key
+;;  :keymaps 'global
+;;  :states '(insert)
+;;  (kbd "C-n") 'hippie-expand
+;;  )
+
 ;; remap heading markdown-mode
 (general-define-key
  :states '(normal visual)
@@ -95,7 +98,9 @@
  "1" 'markdown-insert-header-atx-1
  "2" 'markdown-insert-header-atx-2
  "3" 'markdown-insert-header-atx-3
+ "e" 'markdown-insert-header-atx-3
  "4" 'markdown-insert-header-atx-4
+ "r" 'markdown-insert-header-atx-4
  "5" 'markdown-insert-header-atx-5
  "6" 'markdown-insert-header-atx-6
  )
@@ -111,3 +116,7 @@
  "gj" 'org-next-visible-heading
  "gk" 'org-previous-visible-heading
  )
+
+;; remap C-n and C-p for next and previous candidate
+(define-key evil-insert-state-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
+(define-key evil-insert-state-map (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1)))
