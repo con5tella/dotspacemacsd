@@ -90,7 +90,7 @@
 
 ;; git-commit insert
 (general-define-key
- :keymaps 'git-commit-mode-map
+ :keymaps '(git-commit-mode-map org-mode-map markdown-mode-map)
  :states '(insert)
  (kbd "C-n") 'hippie-expand
  )
