@@ -39,7 +39,6 @@
     org
     pangu-spacing
     ;; pyim
-    wttrin
     )
   "The list of Lisp packages required by the stella layer.
 
@@ -147,17 +146,6 @@ Each entry is either:
 
     ;; (setq pangu-spacing-real-insert-separtor t)
 
-    ))
-
-(defun stella/init-wttrin()
-  (use-package wttrin
-    :ensure t
-    :commands (wttrin)
-    :init
-    (setq wttrin-default-cities '("Zhengzhou"
-                                  ;; "Zhongmou"
-                                  ))
-    (setq wttrin-default-accept-language '("Accept-Language" . "zh-CN"))
     ))
 
 ;;; packages.el ends here
