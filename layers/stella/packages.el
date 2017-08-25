@@ -126,8 +126,8 @@ Each entry is either:
     (spacemacs|hide-lighter pangu-spacing-mode)
 
     ;; Always insert `real' space in org-mode, markdown-mode.
-    (dolist (org-and-markdown-mode-hook '(org-mode-hook markdown-mode-hook))
-      (add-hook org-and-markdown-mode-hook
+    (dolist (org-and-markdown-pangu-hook '(org-mode-hook markdown-mode-hook))
+      (add-hook org-and-markdown-pangu-hook
                 '(lambda ()
                    (set (make-local-variable
                          'pangu-spacing-real-insert-separtor) t)

@@ -36,7 +36,6 @@
     (progn
       (fundamental-mode)
       (hl-line-mode -1)
-      ;; (evil-swap-keys-mode -1)
       )))
 
 ;; improve the performance of opening org file
@@ -48,13 +47,6 @@
                            ;; (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
                            ;; (spacemacs/toggle-centered-point-on)
                            ))
-
-;; ;; performance of opening markdown file
-;; (add-hook 'markdown-mode-hook (lambda ()
-;;                                 ;; (visual-line-mode t)
-;;                                 (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
-;;                                 ;; (spacemacs/toggle-centered-point-on)
-;;                                 ))
 
 ;; line-numbers for yaml-mode
 (add-hook 'yaml-mode-hook (lambda () (spacemacs/toggle-line-numbers-on)) 'append)
