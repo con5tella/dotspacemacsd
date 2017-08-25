@@ -125,17 +125,13 @@ Each entry is either:
     (global-pangu-spacing-mode -1)
     (spacemacs|hide-lighter pangu-spacing-mode)
 
-    ;; Always insert `real' space in org-mode.
-    (add-hook 'org-mode-hook
-              '(lambda ()
-                 (set (make-local-variable
-                       'pangu-spacing-real-insert-separtor) t)))
-
-    ;; Always insert `real' space in markdown-mode.
-    (add-hook 'markdown-mode-hook
-              '(lambda ()
-                 (set (make-local-variable
-                       'pangu-spacing-real-insert-separtor) t)))
+    ;; Always insert `real' space in org-mode, markdown-mode.
+    (dolist (org-and-markdown-mode-hook '(org-mode-hook markdown-mode-hook))
+      (add-hook org-and-markdown-mode-hook
+                '(lambda ()
+                   (set (make-local-variable
+                         'pangu-spacing-real-insert-separtor) t)
+                   )))
 
     (defun liu233w/pangu-spacing-space-the-buffer ()
       "Spacing this buffer with `pangu-spacing-mode'."
