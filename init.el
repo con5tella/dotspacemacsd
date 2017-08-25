@@ -124,8 +124,8 @@ This function should only modify configuration layer settings."
                                     sticky symon
                                     vmd-mode
                                     vi-tilde-fringe volatile-highlights
-                                    youdao-dictionary
                                     window-purpose
+                                    youdao-dictionary
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.

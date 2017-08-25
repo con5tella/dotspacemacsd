@@ -12,9 +12,9 @@
 ;; ;; bing-dict-brief
 (evil-leader/set-key "ob" 'bing-dict-brief)
 
-;; remap C-n and C-p for next and previous candidate
-(define-key evil-insert-state-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
-(define-key evil-insert-state-map (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1)))
+;; ;; remap C-n and C-p for next and previous candidate
+;; (define-key evil-insert-state-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
+;; (define-key evil-insert-state-map (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1)))
 
 ;; remap with leader-key
 (setq general-leader ",")
@@ -64,7 +64,7 @@
  (kbd "S-<right>") 'next-buffer
  )
 
-;; remap without leader-key or modifier-key
+;; remap without leader-key or modifier-key in normal and/or visual state
 (general-define-key
  :keymaps 'global
  :states '(normal visual)
@@ -80,7 +80,15 @@
  "W" '(spacemacs/window-manipulation-transient-state/body)
  )
 
-;; insert state
+;; remap without leader-key or modifier-key in insert state
+(general-define-key
+ :keymaps 'global
+ :states '(insert)
+ (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1))
+ (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1))
+ )
+
+;; git-commit insert
 (general-define-key
  :keymaps 'git-commit-mode-map
  :states '(insert)
