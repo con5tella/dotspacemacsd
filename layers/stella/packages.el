@@ -32,12 +32,14 @@
 (defconst stella-packages
   '(
     ace-pinyin
+    ;; beacon
     bing-dict
     fcitx
     general
     org
     pangu-spacing
     ;; pyim
+    wttrin
     )
   "The list of Lisp packages required by the stella layer.
 
@@ -72,6 +74,13 @@ Each entry is either:
   (ace-pinyin-global-mode +1)
   ;; (setq ace-pinyin-simplified-chinese-only-p nil)
   )
+
+;; (defun stella/init-beacon()
+;;   "Initialize beacon"
+;;   (use-package beacon
+;;     :init
+;;     (beacon-mode 1)
+;;     (setq beacon-color "#666600")))
 
 ;; bing-dict
 (defun stella/init-bing-dict ()
@@ -112,8 +121,43 @@ Each entry is either:
     ))
 
 (defun stella/init-pangu-spacing ()
-  (global-pangu-spacing-mode 1)
-  ;; (setq pangu-spacing-real-insert-separtor t)
-  )
+  (use-package pangu-spacing
+    :config
+    (global-pangu-spacing-mode -1)
+    (spacemacs|hide-lighter pangu-spacing-mode)
+
+    ;; Always insert `real' space in org-mode.
+    (add-hook 'org-mode-hook
+              '(lambda ()
+                 (set (make-local-variable
+                       'pangu-spacing-real-insert-separtor) t)))
+
+    ;; Always insert `real' space in markdown-mode.
+    (add-hook 'markdown-mode-hook
+              '(lambda ()
+                 (set (make-local-variable
+                       'pangu-spacing-real-insert-separtor) t)))
+
+    (defun liu233w/pangu-spacing-space-the-buffer ()
+      "Spacing this buffer with `pangu-spacing-mode'."
+      (interactive)
+      (let ((pangu-spacing-real-insert-separtor t))
+        (pangu-spacing-modify-buffer)))
+    (evil-ex-define-cmd "pangu" #'liu233w/pangu-spacing-space-the-buffer)
+
+    ;; (setq pangu-spacing-real-insert-separtor t)
+
+    ))
+
+(defun stella/init-wttrin()
+  (use-package wttrin
+    :ensure t
+    :commands (wttrin)
+    :init
+    (setq wttrin-default-cities '("Zhengzhou"
+                                  ;; "Zhongmou"
+                                  ))
+    (setq wttrin-default-accept-language '("Accept-Language" . "zh-CN"))
+    ))
 
 ;;; packages.el ends here

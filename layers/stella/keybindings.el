@@ -91,7 +91,7 @@
 (general-define-key
  :keymaps 'global
  :states '(insert)
- (kbd "C-n") 'hippie-expand
+ (kbd "C-n") 'company-complete-common-or-cycle
  )
 
 ;; remap heading markdown-mode
