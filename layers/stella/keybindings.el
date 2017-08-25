@@ -15,6 +15,9 @@
 ;; ;; find by Pinyin directory
 ;; (evil-leader/set-key "od" 'find-by-pinyin-dired)
 
+;; wttrin weather
+(evil-leader/set-key "ow" 'wttrin)
+
 ;; ;; youdao dictionary
 ;; (evil-leader/set-key "oy" 'youdao-dictionary-search-at-point)
 ;; (evil-leader/set-key "oi" 'youdao-dictionary-search-from-input)
@@ -89,9 +92,9 @@
 
 ;; insert state
 (general-define-key
- :keymaps 'global
- :states '(insert)
- (kbd "C-n") 'company-complete-common-or-cycle
+ :keymaps 'git-commit-mode
+ :states '(emacs insert)
+ (kbd "C-n") 'hippie-expand
  )
 
 ;; remap heading markdown-mode
