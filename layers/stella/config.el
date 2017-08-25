@@ -38,15 +38,16 @@
       (hl-line-mode -1)
       )))
 
-;; improve the performance of opening org file
+;; improve the performance of opening org/markdown file
 ;; (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
-(add-hook 'org-mode-hook (lambda ()
-                           ;; (auto-fill-mode)  ;; if column ==80 return
-                           (setq truncate-lines nil)  ;; truncate lines ignore words
-                           ;; (visual-line-mode t)
-                           ;; (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
-                           ;; (spacemacs/toggle-centered-point-on)
-                           ))
+(dolist (org-and-markdown-hook '(org-mode-hook markdown-mode-hook))
+  (add-hook 'org-and-markdown-hook (lambda ()
+                                     ;; (auto-fill-mode)  ;; if column ==80 return
+                                     (setq truncate-lines nil)  ;; truncate lines ignore words
+                                     ;; (visual-line-mode t)
+                                     (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
+                                     ;; (spacemacs/toggle-centered-point-on)
+                                     )))
 
 ;; line-numbers for yaml-mode
 (add-hook 'yaml-mode-hook (lambda () (spacemacs/toggle-line-numbers-on)) 'append)

@@ -120,28 +120,8 @@ Each entry is either:
     ))
 
 (defun stella/init-pangu-spacing ()
-  (use-package pangu-spacing
-    :config
-    (global-pangu-spacing-mode -1)
-    (spacemacs|hide-lighter pangu-spacing-mode)
-
-    ;; Always insert `real' space in org-mode, markdown-mode.
-    (dolist (org-and-markdown-pangu-hook '(org-mode-hook markdown-mode-hook))
-      (add-hook org-and-markdown-pangu-hook
-                '(lambda ()
-                   (set (make-local-variable
-                         'pangu-spacing-real-insert-separtor) t)
-                   )))
-
-    (defun liu233w/pangu-spacing-space-the-buffer ()
-      "Spacing this buffer with `pangu-spacing-mode'."
-      (interactive)
-      (let ((pangu-spacing-real-insert-separtor t))
-        (pangu-spacing-modify-buffer)))
-    (evil-ex-define-cmd "pangu" #'liu233w/pangu-spacing-space-the-buffer)
-
-    ;; (setq pangu-spacing-real-insert-separtor t)
-
-    ))
+  (global-pangu-spacing-mode 1)
+  ;; (setq pangu-spacing-real-insert-separtor t)
+  )
 
 ;;; packages.el ends here
