@@ -92,8 +92,8 @@
 
 ;; insert state
 (general-define-key
- :keymaps 'git-commit-mode
- :states '(emacs insert)
+ :keymaps 'git-commit-mode-map
+ :states '(insert)
  (kbd "C-n") 'hippie-expand
  )
 
