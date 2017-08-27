@@ -103,9 +103,7 @@
  "1" 'markdown-insert-header-atx-1
  "2" 'markdown-insert-header-atx-2
  "3" 'markdown-insert-header-atx-3
- "e" 'markdown-insert-header-atx-3
  "4" 'markdown-insert-header-atx-4
- "r" 'markdown-insert-header-atx-4
  "5" 'markdown-insert-header-atx-5
  "6" 'markdown-insert-header-atx-6
  )
