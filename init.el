@@ -101,6 +101,10 @@ This function should only modify configuration layer settings."
                                     git-gutter+ git-gutter-fringe+
                                     git-link git-messenger git-timemachine
                                     google-translate
+                                    helm helm-core helm-make
+                                    highlight-indentation hl-todo holy-mode
+                                    ido-vertical-mode ivy-purpose-setup
+                                    lorem-ipsum
                                     magit-gitflow
                                     orgit org-bullets org-download org-present
                                     org-projectile org-pomodoro org-timer
