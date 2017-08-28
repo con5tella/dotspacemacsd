@@ -113,8 +113,7 @@ This function should only modify configuration layer settings."
                                     spacemacs-purpose-popwin
                                     sticky symon
                                     tetris
-                                    vmd-mode
-                                    vi-tilde-fringe volatile-highlights
+                                    vmd-mode volatile-highlights
                                     window-purpose
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
