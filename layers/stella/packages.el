@@ -86,7 +86,9 @@ Each entry is either:
 
 ;; bing-dict
 (defun stella/init-bing-dict ()
-  (with-eval-after-load 'bing-dict
+  (use-package bing-dict
+    :defer t
+    :init
     (setq bing-dict-show-thesaurus 'both)
     ;; (setq bing-dict-pronunciation-style 'uk)
     ))
@@ -101,7 +103,8 @@ Each entry is either:
     ))
 
 (defun stella/init-general ()
-  )
+  (use-package general
+    ))
 
 (defun stella/post-init-org ()
   (with-eval-after-load 'org
@@ -123,8 +126,11 @@ Each entry is either:
     ))
 
 (defun stella/init-pangu-spacing ()
-  (global-pangu-spacing-mode 1)
-  ;; (setq pangu-spacing-real-insert-separtor t)
-  )
+  (use-package pangu-spacing
+    :defer t
+    :init
+    (global-pangu-spacing-mode 1)
+    ;; (setq pangu-spacing-real-insert-separtor t)
+    ))
 
 ;;; packages.el ends here
