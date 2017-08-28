@@ -64,12 +64,17 @@
  (kbd "S-<right>") 'next-buffer
  )
 
-;; remap without leader-key or modifier-key in normal and/or visual state
+;; remap without leader-key or modifier-key
 (general-define-key
  :keymaps 'global
  :states '(normal visual)
  "/" 'swiper
  ";" 'spacemacs/comment-or-uncomment-lines
+<<<<<<< HEAD
+=======
+ "c" 'bing-dict-brief
+ "D" '(spacemacs/delete-window)
+>>>>>>> origin/master
  "f" 'evil-avy-goto-char
  "ga" 'describe-char
  "j" 'evil-next-visual-line
@@ -107,6 +112,4 @@
  (kbd "C-e") 'evil-end-of-visual-line
  "j" 'evil-next-visual-line
  "k" 'evil-previous-visual-line
- "gj" 'org-next-visible-heading
- "gk" 'org-previous-visible-heading
  )

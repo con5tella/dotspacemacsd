@@ -39,19 +39,16 @@ This function should only modify configuration layer settings."
      (auto-completion :variables
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-snippets-in-popup t
-                      ;; auto-completion-complete-with-key-sequence "jk"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
                       ;; :disabled-for org markdown
                       )
      better-defaults
-     ;; colors
-     ;; (colors :variables
-     ;;         colors-colorize-identifiers 'variables)
      emacs-lisp
      ;; (ess :variables
      ;;      ess-enable-smart-equals t)
      git
-     ;; (git :variables
-          ;; git-magit-status-fullscreen t)
      ;; github
      ;; html
      ;; (latex :variables
@@ -62,8 +59,6 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-reveal-js-support t)
      ;; python
-     ;; (ranger :variables
-     ;;         ranger-show-preview nil)
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom
@@ -94,6 +89,7 @@ This function should only modify configuration layer settings."
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
                                     anzu
+<<<<<<< HEAD
                                     auto-complete auto-dictionary
                                     chinese-pyim clean-aindent-mode coffee
                                     define-word doc-view dumb-jump
@@ -108,15 +104,11 @@ This function should only modify configuration layer settings."
                                     gitattributes-mode gitconfig-mode
                                     git-gutter+ git-gutter-fringe+
                                     git-link git-messenger git-timemachine
+=======
+>>>>>>> origin/master
                                     google-translate
-                                    helm helm-core helm-make
-                                    helm/init-helm-spacemacs-faq
-                                    helm/init-helm-spacemacs-help
-                                    helm/init-helm-swoop helm/init-helm-themes
-                                    highlight-indentation hl-todo holy-mode
-                                    ido-vertical-mode ivy-purpose-setup
-                                    lorem-ipsum
                                     magit-gitflow
+<<<<<<< HEAD
                                     orgit org-bullets org-download org-present
                                     org-projectile org-pomodoro org-timer
                                     rainbow-delimiters realgud
@@ -126,8 +118,9 @@ This function should only modify configuration layer settings."
                                     tetris
                                     vmd-mode
                                     vi-tilde-fringe volatile-highlights
+=======
+>>>>>>> origin/master
                                     window-purpose
-                                    youdao-dictionary
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -188,7 +181,6 @@ It should only modify the values of Spacemacs settings."
    ;; List sizes may be nil, in which case
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
    dotspacemacs-startup-lists '((recents . 5)
-                                (bookmarks . 7)
                                 (projects . 7))
    ;; True if the home buffer should respond to resize events. (default t)
    dotspacemacs-startup-buffer-responsive t
@@ -334,7 +326,7 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
-   dotspacemacs-smooth-scrolling nil
+   dotspacemacs-smooth-scrolling t
    ;; Control line numbers activation.
    ;; If set to `t' or `relative' line numbers are turned on in all `prog-mode' and
    ;; `text-mode' derivatives. If set to `relative', line numbers are relative.
@@ -451,11 +443,6 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
-  ;; ;; org-mode align table
-  ;; (when (configuration-layer/layer-usedp 'chinese)
-  ;;   (spacemacs//set-monospaced-font "Source Code Pro" "Source Han Sans CN" 14 16)
-  ;;   )
-
   ;; set Chinese fonts not using chinese layer, same to chinese-fonts-setup, cnfonts
   (set-frame-font "Source Code Pro")
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
@@ -464,15 +451,6 @@ before packages are loaded."
 
   ;; hungry-delete-mode on
   (global-hungry-delete-mode t)
-
-  ;; ;; display long lines by truncation
-  ;; (setq truncate-lines nil)
-
-  ;; ;; global-visual-line-mode
-  ;; (global-visual-line-mode t)
-
-  ;; set default widths of images in org-mode
-  (setq org-image-actual-width 720)
 
   )
 
