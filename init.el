@@ -39,9 +39,6 @@ This function should only modify configuration layer settings."
      (auto-completion :variables
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-snippets-in-popup t
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
                       ;; :disabled-for org markdown
                       )
      better-defaults
@@ -89,7 +86,6 @@ This function should only modify configuration layer settings."
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
                                     anzu
-<<<<<<< HEAD
                                     auto-complete auto-dictionary
                                     chinese-pyim clean-aindent-mode coffee
                                     define-word doc-view dumb-jump
@@ -104,11 +100,8 @@ This function should only modify configuration layer settings."
                                     gitattributes-mode gitconfig-mode
                                     git-gutter+ git-gutter-fringe+
                                     git-link git-messenger git-timemachine
-=======
->>>>>>> origin/master
                                     google-translate
                                     magit-gitflow
-<<<<<<< HEAD
                                     orgit org-bullets org-download org-present
                                     org-projectile org-pomodoro org-timer
                                     rainbow-delimiters realgud
@@ -118,8 +111,6 @@ This function should only modify configuration layer settings."
                                     tetris
                                     vmd-mode
                                     vi-tilde-fringe volatile-highlights
-=======
->>>>>>> origin/master
                                     window-purpose
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.

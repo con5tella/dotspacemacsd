@@ -70,11 +70,8 @@
  :states '(normal visual)
  "/" 'swiper
  ";" 'spacemacs/comment-or-uncomment-lines
-<<<<<<< HEAD
-=======
- "c" 'bing-dict-brief
+ ;; "c" 'bing-dict-brief
  "D" '(spacemacs/delete-window)
->>>>>>> origin/master
  "f" 'evil-avy-goto-char
  "ga" 'describe-char
  "j" 'evil-next-visual-line
