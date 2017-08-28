@@ -40,7 +40,7 @@ This function should only modify configuration layer settings."
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-snippets-in-popup t
                       ;; auto-completion-complete-with-key-sequence "jk"
-                      :disabled-for org markdown
+                      ;; :disabled-for org markdown
                       )
      better-defaults
      ;; colors
@@ -92,7 +92,9 @@ This function should only modify configuration layer settings."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(auto-complete auto-dictionary
+   dotspacemacs-excluded-packages '(
+                                    anzu
+                                    auto-complete auto-dictionary
                                     chinese-pyim clean-aindent-mode coffee
                                     define-word doc-view dumb-jump
                                     emmet-mode exec-path-from-shell
@@ -102,9 +104,8 @@ This function should only modify configuration layer settings."
                                     evil-tutor evil-unimpaired
                                     eyebrowse
                                     fancy-battery fill-column-indicator
-                                    find-by-pinyin-dired flx-ido fuzzy
+                                    find-by-pinyin-dired flx flx-ido fuzzy
                                     gitattributes-mode gitconfig-mode
-                                    gitignore-mode
                                     git-gutter+ git-gutter-fringe+
                                     git-link git-messenger git-timemachine
                                     google-translate
@@ -122,6 +123,7 @@ This function should only modify configuration layer settings."
                                     smeargle smooth-scrolling spaceline
                                     spacemacs-purpose-popwin
                                     sticky symon
+                                    tetris
                                     vmd-mode
                                     vi-tilde-fringe volatile-highlights
                                     window-purpose
