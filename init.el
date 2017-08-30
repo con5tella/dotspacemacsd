@@ -109,7 +109,7 @@ This function should only modify configuration layer settings."
                                     orgit org-bullets org-download org-present
                                     org-projectile org-pomodoro org-timer
                                     rainbow-delimiters realgud
-                                    smeargle smooth-scrolling spaceline
+                                    smeargle spaceline
                                     spacemacs-purpose-popwin
                                     sticky symon
                                     tetris
