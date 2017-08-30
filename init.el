@@ -86,19 +86,16 @@ This function should only modify configuration layer settings."
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
                                     anzu
-                                    auto-complete auto-dictionary
-                                    chinese-pyim clean-aindent-mode coffee
                                     define-word doc-view dumb-jump
-                                    emmet-mode exec-path-from-shell
-                                    evil-anzu evil-args evil-ediff evil-escape
-                                    evil-exchange evil-indent-plus evil-magit
-                                    evil-mc evil-search-highlight-persist
-                                    evil-tutor evil-unimpaired
+                                    emmet-mode
+                                    evil-anzu evil-ediff
+                                    evil-exchange evil-indent-plus
+                                    evil-search-highlight-persist
+                                    evil-tutor exec-path-from-shell
                                     eyebrowse
                                     fancy-battery fill-column-indicator
                                     find-by-pinyin-dired flx flx-ido fuzzy
                                     gitattributes-mode gitconfig-mode
-                                    git-gutter+ git-gutter-fringe+
                                     git-link git-messenger git-timemachine
                                     google-translate
                                     helm helm-core helm-make
@@ -106,14 +103,12 @@ This function should only modify configuration layer settings."
                                     ido-vertical-mode ivy-purpose-setup
                                     lorem-ipsum
                                     magit-gitflow
-                                    orgit org-bullets org-download org-present
-                                    org-projectile org-pomodoro org-timer
-                                    rainbow-delimiters realgud
-                                    smeargle spaceline
-                                    spacemacs-purpose-popwin
-                                    sticky symon
+                                    org-download org-pomodoro org-present
+                                    org-projectile org-timer
+                                    rainbow-delimiters
+                                    spaceline symon
                                     tetris
-                                    vmd-mode volatile-highlights
+                                    volatile-highlights
                                     window-purpose
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
