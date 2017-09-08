@@ -94,7 +94,7 @@ This function should only modify configuration layer settings."
                                     evil-tutor exec-path-from-shell
                                     eyebrowse
                                     fancy-battery fill-column-indicator
-                                    find-by-pinyin-dired flx flx-ido fuzzy
+                                    find-by-pinyin-dired flx flx-ido
                                     gitattributes-mode gitconfig-mode
                                     git-link git-messenger git-timemachine
                                     google-translate
