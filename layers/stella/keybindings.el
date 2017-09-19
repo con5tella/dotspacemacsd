@@ -92,13 +92,6 @@
 ;; git-commit insert
 (general-define-key
  :keymaps '(git-commit-mode-map)
- :states '(normal visual)
- "f" 'magit-fetch-popup
- )
-
-;; git-commit insert
-(general-define-key
- :keymaps '(git-commit-mode-map)
  :states '(insert)
  (kbd "C-n") 'hippie-expand
  )
