@@ -56,11 +56,11 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-reveal-js-support t)
      ;; python
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom
-     ;;        shell-default-shell 'multi-term
-     ;;        shell-enable-smart-eshell t)
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom
+            shell-default-shell 'multi-term
+            shell-enable-smart-eshell t)
      (spell-checking :variables
                      ispell-program-name "aspell"
                      ispell-dictionary "american"
