@@ -48,9 +48,9 @@ This function should only modify configuration layer settings."
      git
      ;; github
      ;; html
-     ;; (latex :variables
-     ;;        latex-enable-auto-fill t
-     ;;        latex-enable-folding t)
+     (latex :variables
+            latex-enable-auto-fill t
+            latex-enable-folding t)
      markdown
      ;; (markdown :variables markdown-live-preview-engine 'vmd)
      (org :variables
