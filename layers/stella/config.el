@@ -57,5 +57,12 @@
                            ;; (spacemacs/toggle-centered-point-on)
                            ))
 
+;; improve the performance of opening tex file
+(add-hook 'LaTeX-mode-hook
+          (lambda ()
+            (setq TeX-engine 'xetex
+                  TeX-show-compilation t
+                  )))
+
 ;; line-numbers for yaml-mode
 (add-hook 'yaml-mode-hook (lambda () (spacemacs/toggle-line-numbers-on)) 'append)
