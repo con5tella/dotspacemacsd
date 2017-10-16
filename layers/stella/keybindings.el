@@ -36,7 +36,7 @@
 (general-define-key
  :keymaps 'global
  :states '(normal visual)
- (kbd "M-b") 'bing-dict-brief
+ ;; (kbd "M-b") 'bing-dict-brief
  ;; (kbd "M-d") 'find-by-pinyin-dired
  (kbd "M-f") 'counsel-find-file
  (kbd "M-g") 'magit-status
@@ -74,6 +74,7 @@
  "D" '(spacemacs/delete-window)
  "f" 'evil-avy-goto-char
  "ga" 'describe-char
+ "gt" 'google-translate-at-point
  "j" 'evil-next-visual-line
  "k" 'evil-previous-visual-line
  "K" '(spacemacs/kill-this-buffer)
