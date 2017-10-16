@@ -97,7 +97,7 @@ This function should only modify configuration layer settings."
                                     find-by-pinyin-dired flx flx-ido
                                     gitattributes-mode gitconfig-mode
                                     git-link git-messenger git-timemachine
-                                    google-translate
+                                    ;; google-translate
                                     helm helm-core helm-make
                                     highlight-indentation hl-todo holy-mode
                                     ido-vertical-mode ivy-purpose-setup
