@@ -70,6 +70,7 @@
 ;; set default translate web as translate.google.cn
 (eval-after-load 'google-translate-core
   '(setq google-translate-base-url "http://translate.google.cn/translate_a/single"
-         google-translate-listen-url "http://translate.google.cn/translate_tts"))
+         google-translate-listen-url "http://translate.google.cn/translate_tts"
+         google-translate-default-target-language "zh_CN"))
 (eval-after-load 'google-translate-tk
   '(setq google-translate--tkk-url "http://translate.google.cn/"))
