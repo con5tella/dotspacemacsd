@@ -181,7 +181,6 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-themes '(
                          ;; spacemacs-dark
                          ;; spacemacs-light
-                         gruvbox-light-medium
                          material-light
                          zenburn
                          ;; organic-green
