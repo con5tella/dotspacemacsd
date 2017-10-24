@@ -181,9 +181,9 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-themes '(
                          ;; spacemacs-dark
                          ;; spacemacs-light
+                         solarized-light
                          material-light
                          zenburn
-                         ;; organic-green
                          ;; sanityinc-solarized-light
                          ;; sanityinc-tomorrow-eighties
                          )
