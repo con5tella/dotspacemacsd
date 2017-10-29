@@ -35,44 +35,30 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
+     helm
      ivy
-     (auto-completion :variables
-                      auto-completion-enable-sort-by-usage t
-                      auto-completion-enable-snippets-in-popup t
-                      ;; :disabled-for org markdown
-                      )
+     auto-completion
      better-defaults
      emacs-lisp
      ;; (ess :variables
      ;;      ess-enable-smart-equals t)
      git
-     ;; github
-     ;; html
      (latex :variables
             latex-enable-auto-fill t
             latex-enable-folding t)
-     markdown
-     ;; (markdown :variables markdown-live-preview-engine 'vmd)
+     ;; markdown
+     neotree
      (org :variables
           org-enable-reveal-js-support t)
-     ;; python
      ;; (shell :variables
      ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom
-     ;;        shell-default-shell 'multi-term
-     ;;        shell-enable-smart-eshell t)
+     ;;        shell-default-position 'bottom)
      (spell-checking :variables
                      ispell-program-name "aspell"
                      ispell-dictionary "american"
                      spell-checking-enable-by-default nil)
-     ;; (syntax-checking :variables
-     ;;                  syntax-checking-enable-tooltips nil
-     ;;                  syntax-checking-enable-by-default nil
-     ;;                  syntax-checking-use-original-bitmaps t)
-     ;; themes-megapack
-     ;; (version-control :variables
-     ;;                  version-control-diff-tool 'diff-hl
-     ;;                  version-control-global-margin t)
+     ;; syntax-checking
+     ;; version-control
      yaml
      stella
      )
@@ -85,31 +71,9 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
-                                    anzu
-                                    define-word doc-view dumb-jump
-                                    emmet-mode
-                                    evil-anzu evil-ediff
-                                    evil-exchange evil-indent-plus
-                                    evil-search-highlight-persist
-                                    evil-tutor exec-path-from-shell
-                                    eyebrowse
-                                    fancy-battery fill-column-indicator
-                                    find-by-pinyin-dired flx flx-ido
-                                    gitattributes-mode gitconfig-mode
-                                    git-link git-messenger git-timemachine
-                                    ;; google-translate
-                                    helm helm-core helm-make
-                                    highlight-indentation hl-todo holy-mode
-                                    ido-vertical-mode ivy-purpose-setup
-                                    lorem-ipsum
-                                    magit-gitflow
-                                    org-download org-pomodoro org-present
-                                    org-projectile org-timer
+                                    exec-path-from-shell
                                     rainbow-delimiters
-                                    spaceline symon
-                                    tetris
-                                    volatile-highlights
-                                    ;; window-purpose
+                                    spaceline
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -145,8 +109,8 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-check-for-update nil
    ;; If non-nil, a form that evaluates to a package directory. For example, to
    ;; use different package directories for different Emacs versions, set this
-   ;; to `emacs-version'. (default nil)
-   dotspacemacs-elpa-subdirectory nil
+   ;; to `emacs-version'. (default 'emacs-version)
+   dotspacemacs-elpa-subdirectory 'emacs-version
    ;; One of `vim', `emacs' or `hybrid'.
    ;; `hybrid' is like `vim' except that `insert state' is replaced by the
    ;; `hybrid state' with `emacs' key bindings. The value can also be a list
@@ -339,7 +303,7 @@ It should only modify the values of Spacemacs settings."
                                :size-limit-kb 1000)
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
-   dotspacemacs-folding-method 'origami
+   dotspacemacs-folding-method 'evil
    ;; If non-nil `smartparens-strict-mode' will be enabled in programming modes.
    ;; (default nil)
    dotspacemacs-smartparens-strict-mode nil
