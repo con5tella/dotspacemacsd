@@ -39,7 +39,6 @@
  ;; (kbd "M-d") 'find-by-pinyin-dired
  (kbd "M-f") 'counsel-find-file
  (kbd "M-g") 'magit-status
- (kbd "M-i") '(spacemacs/find-dotfile)
  (kbd "M-p") 'counsel-projectile-find-file
  ;; (kbd "M-r") 'ranger
  (kbd "M-u") 'undo-tree-visualize
@@ -68,15 +67,12 @@
  "/" 'swiper
  ";" 'spacemacs/comment-or-uncomment-lines
  ;; "c" 'bing-dict-brief
- "D" '(spacemacs/delete-window)
  "f" 'evil-avy-goto-char
  "ga" 'describe-char
  "gt" 'google-translate-at-point
  "j" 'evil-next-visual-line
  "k" 'evil-previous-visual-line
- "K" '(spacemacs/kill-this-buffer)
  "U" 'undo-tree-visualize
- "W" '(spacemacs/window-manipulation-transient-state/body)
  )
 
 ;; remap without leader-key or modifier-key in insert state
