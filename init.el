@@ -39,6 +39,7 @@ This function should only modify configuration layer settings."
      ivy
      auto-completion
      better-defaults
+     bibtex
      emacs-lisp
      ;; (ess :variables
      ;;      ess-enable-smart-equals t)

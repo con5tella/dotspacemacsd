@@ -27,7 +27,6 @@
  "f" 'counsel-describe-function
  "k" 'describe-key
  ;; "r" 'deer
- "R" '(dotspacemacs/sync-configuration-layers)
  "u" 'undo-tree-visualize
  "w" 'save-buffer
  )
@@ -43,9 +42,7 @@
  (kbd "M-i") '(spacemacs/find-dotfile)
  (kbd "M-p") 'counsel-projectile-find-file
  ;; (kbd "M-r") 'ranger
- (kbd "M-s") '(spacemacs/search-project-auto)
  (kbd "M-u") 'undo-tree-visualize
- (kbd "M-w") '(spacemacs/window-manipulation-transient-state/body)
  )
 
 ;; remap with Ctrl-key
