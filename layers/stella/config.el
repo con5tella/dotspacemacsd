@@ -62,7 +62,10 @@
           (lambda ()
             (setq TeX-engine 'xetex
                   TeX-show-compilation t
-                  )))
+                  )
+            (setq truncate-lines nil)  ;; truncate lines ignore words
+            (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
+            ))
 
 ;; line-numbers for yaml-mode
 (add-hook 'yaml-mode-hook (lambda () (spacemacs/toggle-line-numbers-on)) 'append)
