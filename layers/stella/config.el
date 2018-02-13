@@ -63,6 +63,7 @@
             (setq TeX-engine 'xetex
                   TeX-show-compilation t
                   )
+            (auto-fill-mode -1)
             (setq truncate-lines nil)  ;; truncate lines ignore words
             (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
             ))

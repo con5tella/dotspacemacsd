@@ -9,8 +9,11 @@
 ;;
 ;;; License: GPLv3
 
-;; ;; bing-dict-brief
+;; bing-dict-brief
 (evil-leader/set-key "ob" 'bing-dict-brief)
+
+;; clear highlight
+(evil-leader/set-key "DEL" 'evil-ex-nohighlight)
 
 ;; ;; remap C-n and C-p for next and previous candidate
 ;; (define-key evil-insert-state-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
