@@ -55,6 +55,7 @@ This function should only modify configuration layer settings."
      neotree
      (org :variables
           org-enable-reveal-js-support t)
+     perl5
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -63,7 +64,8 @@ This function should only modify configuration layer settings."
                      ispell-program-name "aspell"
                      ispell-dictionary "american"
                      spell-checking-enable-by-default nil)
-     ;; syntax-checking
+     (syntax-checking :variables
+                      syntax-checking-enable-by-default nil)
      ;; version-control
      yaml
      stella
@@ -174,7 +176,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-startup-buffer-responsive t
 
    ;; Default major mode of the scratch buffer (default `text-mode')
-   dotspacemacs-scratch-mode 'text-mode
+   dotspacemacs-scratch-mode 'org-mode
 
    ;; Initial message in the scratch buffer, such as "Welcome to Spacemacs!"
    ;; (default nil)
@@ -187,7 +189,7 @@ It should only modify the values of Spacemacs settings."
                          ;; spacemacs-dark
                          ;; spacemacs-light
                          solarized-light
-                         material-light
+                         ;; material-light
                          zenburn
                          )
 
@@ -379,7 +381,7 @@ It should only modify the values of Spacemacs settings."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers '(:relative nil
+   dotspacemacs-line-numbers '(:relative t
                                :disabled-for-modes dired-mode
                                doc-view-mode
                                markdown-mode
