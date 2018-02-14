@@ -12,8 +12,8 @@
 ;; bing-dict-brief
 (evil-leader/set-key "ob" 'bing-dict-brief)
 
-;; quickrun
-(evil-leader/set-key "or" 'quickrun)
+;; ;; quickrun
+;; (evil-leader/set-key "or" 'quickrun)
 
 ;; clear highlight
 (evil-leader/set-key "DEL" 'evil-ex-nohighlight)
@@ -32,7 +32,7 @@
  "/" 'evil-search-forward ;; mainly used in fundamental-mode for large-file
  "f" 'counsel-describe-function
  "k" 'describe-key
- ;; "r" 'deer
+ "r" 'quickrun
  "u" 'undo-tree-visualize
  "w" 'save-buffer
  )
