@@ -39,6 +39,7 @@
     org
     pangu-spacing
     ;; pyim
+    quickrun
     )
   "The list of Lisp packages required by the stella layer.
 
@@ -132,5 +133,8 @@ Each entry is either:
     (global-pangu-spacing-mode 1)
     ;; (setq pangu-spacing-real-insert-separtor t)
     ))
+
+(defun stella/init-quickrun ()
+  )
 
 ;;; packages.el ends here
