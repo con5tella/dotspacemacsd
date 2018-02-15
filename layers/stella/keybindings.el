@@ -12,8 +12,8 @@
 ;; bing-dict-brief
 (evil-leader/set-key "ob" 'bing-dict-brief)
 
-;; ;; quickrun
-;; (evil-leader/set-key "or" 'quickrun)
+;; quickrun
+(evil-leader/set-key "or" 'quickrun)
 
 ;; clear highlight
 (evil-leader/set-key "DEL" 'evil-ex-nohighlight)
