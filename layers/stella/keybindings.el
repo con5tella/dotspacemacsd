@@ -16,7 +16,7 @@
 (evil-leader/set-key "or" 'quickrun)
 
 ;; clear highlight
-(evil-leader/set-key "DEL" 'evil-ex-nohighlight)
+(evil-leader/set-key "DEL" 'spacemacs/evil-search-clear-highlight)
 
 ;; ;; remap C-n and C-p for next and previous candidate
 ;; (define-key evil-insert-state-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
