@@ -89,12 +89,12 @@
  (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1))
  )
 
-;; git-commit insert
-(general-define-key
- :keymaps '(git-commit-mode-map)
- :states '(insert)
- (kbd "C-n") 'hippie-expand
- )
+;; ;; git-commit insert
+;; (general-define-key
+;;  :keymaps '(git-commit-mode-map)
+;;  :states '(insert)
+;;  (kbd "C-n") 'hippie-expand
+;;  )
 
 ;; remap heading markdown-mode
 (general-define-key
