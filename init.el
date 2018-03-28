@@ -44,6 +44,7 @@ This function should only modify configuration layer settings."
      auto-completion
      better-defaults
      bibtex
+     csv
      emacs-lisp
      (ess :variables
           ess-enable-smart-equals t)
