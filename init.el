@@ -506,6 +506,14 @@ before packages are loaded."
   ;; hungry-delete-mode on
   (global-hungry-delete-mode t)
 
+  ;; garbage-collection
+  (when (eq system-type 'windows-nt)
+    (setq gc-cons-threshold (* 512 1024 1024))
+    (setq gc-cons-percentage 0.5)
+    (run-with-idle-timer 5 t #'garbage-collect)
+    ;; display garbage-collection-messages
+    ;; (setq garbage-collection-messages t)
+)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
