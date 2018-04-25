@@ -56,6 +56,7 @@
  :states '(normal visual insert emacs)
  (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment
  (kbd "C-e") 'mwim-end-of-code-or-line
+ (kbd "C-t") 'query-replace-regexp
  )
 
 ;; remap with Shift-key
