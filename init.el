@@ -210,7 +210,7 @@ It should only modify the values of Spacemacs settings."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 17
+                               :size 14
                                :weight normal
                                :width normal)
 
@@ -498,7 +498,7 @@ before packages are loaded."
   (set-frame-font "Source Code Pro")
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
-                      charset (font-spec :family "Source Han Sans CN" :size 20)))
+                      charset (font-spec :family "Source Han Sans CN" :size 16)))
 
   ;; enable company globally
   (global-company-mode)
