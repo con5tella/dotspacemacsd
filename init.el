@@ -486,13 +486,6 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-  )
-
-(defun dotspacemacs/user-load ()
-  "Library to load while dumping.
-This function is called while dumping Spacemacs configuration. You can
-`require' or `load' the libraries of your choice that will be included
-in the dump."
 
   (setq configuration-layer-elpa-archives
         '(("melpa-cn" . "https://elpa.zilongshanren.com/melpa/")
@@ -512,6 +505,13 @@ in the dump."
   ;; hack for remove purpose mode
   (setq purpose-mode nil)
 
+  )
+
+(defun dotspacemacs/user-load ()
+  "Library to load while dumping.
+This function is called while dumping Spacemacs configuration. You can
+`require' or `load' the libraries of your choice that will be included
+in the dump."
   )
 
 (defun dotspacemacs/user-config ()
