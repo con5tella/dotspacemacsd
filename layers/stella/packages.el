@@ -1,6 +1,6 @@
 ;;; packages.el --- stella layer packages file for Spacemacs.
 ;;
-;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
+;; Copyright (c) 2012-2018 Sylvain Benner & Contributors
 ;;
 ;; Author: Yuanchen Xie <yuanchen.gm@gmail.com>
 ;; URL: https://github.com/erstern/dotspacemacsd
@@ -36,7 +36,7 @@
     bing-dict
     fcitx
     general
-    org
+    ;; org
     pangu-spacing
     ;; pyim
     quickrun
@@ -67,6 +67,7 @@ Each entry is either:
 
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
+
 
 ;; ace-pinyin
 (defun stella/init-ace-pinyin ()
@@ -107,24 +108,24 @@ Each entry is either:
   (use-package general
     ))
 
-(defun stella/post-init-org ()
-  (with-eval-after-load 'org
-    (;; load-languages in org-mode
-     org-babel-do-load-languages
-     'org-babel-load-languages
-     '(
-       (sh . t)
-       (python . t)
-       (R . t)
-       (ruby . t)
-       (ditaa . t)
-       (dot . t)
-       (octave . t)
-       (sqlite . t)
-       (perl . t)
-       (C . t)
-       ))
-    ))
+;; (defun stella/post-init-org ()
+;;   (with-eval-after-load 'org
+;;     (;; load-languages in org-mode
+;;      org-babel-do-load-languages
+;;      'org-babel-load-languages
+;;      '(
+;;        (sh . t)
+;;        (python . t)
+;;        (R . t)
+;;        (ruby . t)
+;;        (ditaa . t)
+;;        (dot . t)
+;;        (octave . t)
+;;        (sqlite . t)
+;;        (perl . t)
+;;        (C . t)
+;;        ))
+;;     ))
 
 (defun stella/init-pangu-spacing ()
   (use-package pangu-spacing

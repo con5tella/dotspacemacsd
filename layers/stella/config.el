@@ -1,6 +1,6 @@
 ;;; config.el --- stella Layer configuration variables File for Spacemacs
 ;;
-;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
+;; Copyright (c) 2012-2018 Sylvain Benner & Contributors
 ;;
 ;; Author: Yuanchen Xie <yuanchen.gm@gmail.com>
 ;; URL: https://github.com/erstern/dotspacemacsd

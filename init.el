@@ -43,7 +43,7 @@ This function should only modify configuration layer settings."
      ivy
      auto-completion
      better-defaults
-     bibtex
+     ;; bibtex
      csv
      emacs-lisp
      (ess :variables
@@ -90,6 +90,7 @@ This function should only modify configuration layer settings."
                                     rainbow-delimiters
                                     spaceline
                                     )
+
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and deletes any unused
@@ -540,7 +541,8 @@ before packages are loaded."
     (run-with-idle-timer 5 t #'garbage-collect)
     ;; display garbage-collection-messages
     ;; (setq garbage-collection-messages t)
-)
+    )
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
