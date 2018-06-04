@@ -88,7 +88,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-excluded-packages '(
                                     exec-path-from-shell
                                     rainbow-delimiters
-                                    spaceline
+                                    ;; spaceline
                                     )
 
    ;; Defines the behaviour of Spacemacs when installing packages.
@@ -208,8 +208,8 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          ;; spacemacs-dark
-                         ;; spacemacs-light
-                         solarized-light
+                         spacemacs-light
+                         ;; solarized-light
                          ;; material-light
                          zenburn
                          )
