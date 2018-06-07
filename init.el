@@ -57,9 +57,9 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-reveal-js-support t)
      perl5
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
      ;; spacemacs-completion
      (spell-checking :variables
                      ispell-program-name "aspell"
