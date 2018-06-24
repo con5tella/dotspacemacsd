@@ -68,6 +68,13 @@
             (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
             ))
 
+;; improve the performance of opening python file
+(add-hook 'python-mode-hook
+          (lambda ()
+            ;; set conda's env path as default python interpreter
+            (setq python-shell-interpreter "~/.conda/envs/python36/bin/python")
+            ))
+
 ;; line-numbers for yaml-mode
 (add-hook 'yaml-mode-hook (lambda () (spacemacs/toggle-line-numbers-on)) 'append)
 
