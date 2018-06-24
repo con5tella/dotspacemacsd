@@ -57,11 +57,14 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-reveal-js-support t)
      perl5
-     (python :variables
-             python-backend 'anaconda)
+     python
+     ;; (python :variables
+             ;; python-backend 'anaconda)
      (shell :variables
-            shell-default-height 30
-            shell-default-position 'bottom)
+            ;; shell-default-position 'bottom
+            ;; shell-default-height 30)
+            shell-default-position 'right
+            shell-default-width 40)
      ;; spacemacs-completion
      (spell-checking :variables
                      ispell-program-name "aspell"
@@ -409,7 +412,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-smartparens-strict-mode nil
 
    ;; If non-nil pressing the closing parenthesis `)' key in insert mode passes
-   ;; over any automatically added closing parenthesis, bracket, quote, etc…
+   ;; over any automatically added closing parenthesis, bracket, quote, etc …
    ;; This can be temporary disabled by pressing `C-q' before `)'. (default nil)
    dotspacemacs-smart-closing-parenthesis nil
 
