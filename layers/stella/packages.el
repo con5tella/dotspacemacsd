@@ -38,6 +38,7 @@
     general
     ;; org
     pangu-spacing
+    ;; proxy-mode
     ;; pyim
     quickrun
     )
@@ -134,6 +135,13 @@ Each entry is either:
     (global-pangu-spacing-mode 1)
     ;; (setq pangu-spacing-real-insert-separtor t)
     ))
+
+;; (defun stella/init-proxy-mode ()
+;;   (use-package proxy-mode
+;;     :ensure t
+;;   (setq url-gateway-local-host-regexp
+;;         (concat "\\`" (regexp-opt '("localhost" "127.0.0.1")) "\\'"))
+;;   ))
 
 (defun stella/init-quickrun ()
   )
