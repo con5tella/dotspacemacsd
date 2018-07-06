@@ -52,7 +52,7 @@ This function should only modify configuration layer settings."
      (latex :variables
             latex-enable-auto-fill t
             latex-enable-folding t)
-     ;; markdown
+     markdown
      neotree
      (org :variables
           org-enable-reveal-js-support t)
