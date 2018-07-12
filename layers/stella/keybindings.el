@@ -12,6 +12,12 @@
 ;; bing-dict-brief
 (evil-leader/set-key "ob" 'bing-dict-brief)
 
+;; markdown-mode
+(evil-leader/set-key "om" 'markdown-mode)
+
+;; org-mode
+(evil-leader/set-key "oo" 'org-mode)
+
 ;; quickrun
 (evil-leader/set-key "or" 'quickrun)
 
