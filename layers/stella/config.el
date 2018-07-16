@@ -72,7 +72,7 @@
 (add-hook 'python-mode-hook
           (lambda ()
             ;; set conda's env path as default python interpreter
-            (setq python-shell-interpreter "~/.conda/envs/python36/bin/python")
+            (setq python-shell-interpreter "/opt/anaconda/bin/python")
             ))
 
 ;; line-numbers for yaml-mode
