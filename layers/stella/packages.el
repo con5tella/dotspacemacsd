@@ -134,6 +134,10 @@ Each entry is either:
     :init
     (global-pangu-spacing-mode 1)
     ;; (setq pangu-spacing-real-insert-separtor t)
+    (defcustom pangu-spacing-inhibit-mode-alist '(eshell-mode shell-mode term-mode yaml-mode)
+      "Inhibit mode alist for pangu-spacing-mode."
+      :group 'pangu-spacing
+      :type 'list)
     ))
 
 ;; (defun stella/init-proxy-mode ()
