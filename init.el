@@ -216,7 +216,7 @@ It should only modify the values of Spacemacs settings."
                          spacemacs-light
                          ;; solarized-light
                          ;; material-light
-                         zenburn
+                         ;; zenburn
                          )
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
