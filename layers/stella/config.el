@@ -29,14 +29,14 @@
 (set-face-attribute 'font-lock-comment-face nil :slant 'italic)
 ;; (set-face-attribute 'font-lock-string-face nil :foreground '"forest green")
 
-;; performance of opening large file
-(add-hook 'find-file-hook 'spacemacs/check-large-file)
-(defun spacemacs/check-large-file ()
-  (when (> (buffer-size) 500000)
-    (progn
-      (fundamental-mode)
-      (hl-line-mode -1)
-      )))
+;; ;; performance of opening large file
+;; (add-hook 'find-file-hook 'spacemacs/check-large-file)
+;; (defun spacemacs/check-large-file ()
+;;   (when (> (buffer-size) 500000)
+;;     (progn
+;;       (fundamental-mode)
+;;       (hl-line-mode -1)
+;;       )))
 
 ;; improve the performance of opening org file
 ;; (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
