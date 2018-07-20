@@ -58,8 +58,8 @@
 (general-define-key
  :keymaps 'global
  :states '(normal visual insert emacs)
- (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment
- (kbd "C-e") 'mwim-end-of-code-or-line
+ ;; (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment
+ ;; (kbd "C-e") 'mwim-end-of-code-or-line
  (kbd "C-t") 'query-replace-regexp
  )
 
@@ -80,8 +80,8 @@
  ;; "c" 'bing-dict-brief
  "f" 'evil-avy-goto-char
  "ga" 'describe-char
- "j" 'evil-next-visual-line
- "k" 'evil-previous-visual-line
+ ;; "j" 'evil-next-visual-line
+ ;; "k" 'evil-previous-visual-line
  "U" 'undo-tree-visualize
  )
 
