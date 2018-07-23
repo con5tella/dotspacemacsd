@@ -46,8 +46,8 @@ This function should only modify configuration layer settings."
      ;; bibtex
      csv
      emacs-lisp
-     ;; (ess :variables
-     ;;      ess-enable-smart-equals t)
+     (ess :variables
+          ess-enable-smart-equals t)
      git
      (latex :variables
             latex-enable-auto-fill t
@@ -396,7 +396,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-smartparens-strict-mode nil
 
    ;; If non-nil pressing the closing parenthesis `)' key in insert mode passes
-   ;; over any automatically added closing parenthesis, bracket, quote, etc…
+   ;; over any automatically added closing parenthesis, bracket, quote, etc …
    ;; This can be temporary disabled by pressing `C-q' before `)'. (default nil)
    dotspacemacs-smart-closing-parenthesis nil
 
