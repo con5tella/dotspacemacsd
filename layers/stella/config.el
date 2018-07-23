@@ -23,11 +23,31 @@
 ;;     (set-frame-size (selected-frame) 96 48))
 ;;   )
 
-;; set face-attribute font, disabling in default theme
-(set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
-(set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
-(set-face-attribute 'font-lock-comment-face nil :slant 'italic)
-;; (set-face-attribute 'font-lock-string-face nil :foreground '"forest green")
+;; one-key switch theme via @ksqsf at emacs-china
+(defvar *my-dark-theme* 'spacemacs-dark)
+(defvar *my-light-theme* 'spacemacs-light)
+(defvar *current-variant* 'light)
+
+(load-theme 'spacemacs-light t)
+(global-set-key (kbd "<f8>") #'switch-theme-variant)
+
+(defun switch-theme-variant ()
+  (interactive)
+  (cond ((eq *current-variant* 'light)
+	       (disable-theme *my-light-theme*)
+	       (load-theme *my-dark-theme*)
+	       (setq *current-variant* 'dark))
+	      ((eq *current-variant* 'dark)
+	       (disable-theme *my-dark-theme*)
+	       (load-theme *my-light-theme*)
+	       (setq *current-variant* 'light))
+	      (t (error "unknown variant"))))
+
+;; ;; set face-attribute font, disabling in default theme
+;; (set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
+;; (set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
+;; (set-face-attribute 'font-lock-comment-face nil :slant 'italic)
+;; ;; (set-face-attribute 'font-lock-string-face nil :foreground '"forest green")
 
 ;; ;; performance of opening large file
 ;; (add-hook 'find-file-hook 'spacemacs/check-large-file)
