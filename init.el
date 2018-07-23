@@ -42,7 +42,7 @@ This function should only modify configuration layer settings."
      helm
      ivy
      auto-completion
-     better-defaults
+     ;; better-defaults
      ;; bibtex
      csv
      emacs-lisp
