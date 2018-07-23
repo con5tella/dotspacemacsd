@@ -19,6 +19,9 @@
 ;; quickrun
 (evil-leader/set-key "or" 'quickrun)
 
+;; switch-Theme
+(evil-leader/set-key "ot" 'switch-theme-variant)
+
 ;; clear highlight
 (evil-leader/set-key "DEL" 'spacemacs/evil-search-clear-highlight)
 

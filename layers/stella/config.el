@@ -28,8 +28,8 @@
 (defvar *my-light-theme* 'spacemacs-light)
 (defvar *current-variant* 'light)
 
-(load-theme 'spacemacs-light t)
-(global-set-key (kbd "<f8>") #'switch-theme-variant)
+;; (load-theme 'spacemacs-light t)
+;; (global-set-key (kbd "<f8>") #'switch-theme-variant)
 
 (defun switch-theme-variant ()
   (interactive)
