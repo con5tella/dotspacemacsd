@@ -46,8 +46,8 @@ This function should only modify configuration layer settings."
      ;; bibtex
      csv
      emacs-lisp
-     (ess :variables
-          ess-enable-smart-equals t)
+     ;; (ess :variables
+     ;;      ess-enable-smart-equals t)
      git
      (latex :variables
             latex-enable-auto-fill t
