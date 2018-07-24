@@ -12,12 +12,17 @@
 ;; bing-dict-brief
 (evil-leader/set-key "ob" 'bing-dict-brief)
 
-;; markdown-mode & org-mode
+;; switch diff modes
+(evil-leader/set-key "oe" 'emacs-lisp-mode)
+(evil-leader/set-key "ol" 'latex-mode)
 (evil-leader/set-key "om" 'markdown-mode)
 (evil-leader/set-key "oo" 'org-mode)
+(evil-leader/set-key "op" 'python-mode)
+(evil-leader/set-key "or" 'R-mode)
+(evil-leader/set-key "oy" 'yaml-mode)
 
 ;; quickrun
-(evil-leader/set-key "or" 'quickrun)
+(evil-leader/set-key "oq" 'quickrun)
 
 ;; switch-Theme
 (evil-leader/set-key "ot" 'switch-theme-variant)

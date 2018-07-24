@@ -142,6 +142,8 @@ Each entry is either:
     ))
 
 ;; (defun stella/init-polymode ()
+;;   (require 'poly-R)
+;;   (require 'poly-markdown)
 ;;   ;; markdown
 ;;   (add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
 ;;   ;; R modes
