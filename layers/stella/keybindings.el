@@ -55,19 +55,23 @@
  :states '(normal visual)
  ;; (kbd "M-b") 'bing-dict-brief
  ;; (kbd "M-d") 'find-by-pinyin-dired
- (kbd "M-f") 'counsel-find-file
+ (kbd "M-f") 'counsel-projectile-find-file
  (kbd "M-g") 'magit-status
- (kbd "M-p") 'counsel-projectile-find-file
+ (kbd "M-n") 'sp-next-sexp
  ;; (kbd "M-r") 'ranger
  (kbd "M-u") 'undo-tree-visualize
+ (kbd "M-[") 'sp-backward-slurp-sexp
+ (kbd "M-]") 'sp-forward-slurp-sexp
+ (kbd "M-{") 'sp-backward-barf-sexp
+ (kbd "M-}") 'sp-forward-barf-sexp
  )
 
 ;; remap with Ctrl-key
 (general-define-key
  :keymaps 'global
  :states '(normal visual insert emacs)
- ;; (kbd "C-a") 'mwim-beginning-of-code-or-line-or-comment
- ;; (kbd "C-e") 'mwim-end-of-code-or-line
+ (kbd "C-a") 'sp-beginning-of-sexp
+ (kbd "C-e") 'sp-end-of-sexp
  (kbd "C-t") 'query-replace-regexp
  )
 
@@ -90,6 +94,7 @@
  "ga" 'describe-char
  ;; "j" 'evil-next-visual-line
  ;; "k" 'evil-previous-visual-line
+ "S" 'sp-backward-unwrap-sexp
  "U" 'undo-tree-visualize
  )
 
@@ -99,6 +104,7 @@
  :states '(insert)
  (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1))
  (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1))
+ (kbd "C-o") 'sp-forward-sexp
  )
 
 ;; ;; git-commit insert
