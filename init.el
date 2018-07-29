@@ -85,7 +85,9 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(
+                                      (eaf :location "~/github/emacs-application-framework/")
+                                      )
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -93,6 +95,9 @@ This function should only modify configuration layer settings."
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
                                     exec-path-from-shell
+                                    google-translate
+                                    magit-svn
+                                    org-pomodoro
                                     rainbow-delimiters
                                     spaceline
                                     )
@@ -391,7 +396,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-smartparens-strict-mode t
 
    ;; If non-nil pressing the closing parenthesis `)' key in insert mode passes
-   ;; over any automatically added closing parenthesis, bracket, quote, etc …
+   ;; over any automatically added closing parenthesis, bracket, quote, etc…
    ;; This can be temporary disabled by pressing `C-q' before `)'. (default nil)
    dotspacemacs-smart-closing-parenthesis nil
 
@@ -507,6 +512,9 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+
+  ;; https://github.com/manateelazycat/emacs-application-framework
+  (require 'eaf)
 
   ;; set Chinese fonts not using chinese layer, same to chinese-fonts-setup, cnfonts
   (set-frame-font "Source Code Pro")
