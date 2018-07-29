@@ -86,7 +86,7 @@ This function should only modify configuration layer settings."
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(
-                                      (eaf :location "~/github/emacs-application-framework/")
+                                      ;; (eaf :location "~/github/emacs-application-framework/")
                                       )
 
    ;; A list of packages that cannot be updated.
@@ -513,8 +513,8 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
-  ;; https://github.com/manateelazycat/emacs-application-framework
-  (require 'eaf)
+  ;; ;; https://github.com/manateelazycat/emacs-application-framework
+  ;; (require 'eaf)
 
   ;; set Chinese fonts not using chinese layer, same to chinese-fonts-setup, cnfonts
   (set-frame-font "Source Code Pro")
