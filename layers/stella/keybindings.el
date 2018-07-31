@@ -40,6 +40,9 @@
 ;; switch-Theme
 (evil-leader/set-key "ot" 'switch-theme-variant)
 
+;; toggle to write with company-english-helper or not
+(evil-leader/set-key "ow" 'toggle-company-english-helper)
+
 ;; clear highlight
 (evil-leader/set-key "DEL" 'spacemacs/evil-search-clear-highlight)
 
