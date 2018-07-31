@@ -34,7 +34,7 @@
     ace-pinyin
     ;; beacon
     bing-dict
-    company-english-helper
+    ;; company-english-helper
     ;; eaf
     fcitx
     general
@@ -99,15 +99,11 @@ Each entry is either:
     ;; (setq bing-dict-pronunciation-style 'uk)
     ))
 
-(defun stella/init-company-english-helper ()
-  (use-package company-english-helper
-    :defer t
-    ))
+;; (defun stella/init-company-english-helper ()
+;;   )
 
 ;; (defun stella/init-eaf ()
-;;   (use-package eaf
-;;     :defer t
-;;     ))
+;;   )
 
 (defun stella/init-fcitx ()
   ;; Make sure the following comes before `(fcitx-aggressive-setup)'

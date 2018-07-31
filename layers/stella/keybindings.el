@@ -27,10 +27,8 @@
 ;; macros for TeX-mode
 (evil-leader/set-key "of" 'TeX-macro-frame)
 (evil-leader/set-key "ob" 'TeX-macro-block)
-
 (fset 'TeX-macro-frame
       (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([111 92 98 101 103 105 110 123 102 114 97 109 101 right 123 right return 92 98 101 103 105 110 123 98 108 111 99 107 right return return 92 101 110 100 123 98 108 111 99 107 right return 92 101 110 100 123 102 114 97 109 101 escape 36 118 107 107 107 107 48 61 106 106] 0 "%d") arg)))
-
 (fset 'TeX-macro-block
       (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([111 92 98 101 103 105 110 123 98 108 111 99 107 right return return 92 101 110 100 123 98 108 111 99 107 escape 36 118 107 107 48 61 106] 0 "%d") arg)))
 
@@ -88,8 +86,16 @@
  :states '(normal visual insert emacs)
  (kbd "C-a") 'sp-beginning-of-sexp
  (kbd "C-e") 'sp-end-of-sexp
+ (kbd "C-o") 'next-line-insert-mode
+ (kbd "C-O") 'previous-line-insert-mode
  (kbd "C-t") 'query-replace-regexp
  )
+
+;; macros for open new line in insert mode
+(fset 'previous-line-insert-mode
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([escape 79] 0 "%d") arg)))
+(fset 'next-line-insert-mode
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([escape 111] 0 "%d") arg)))
 
 ;; remap with Shift-key
 (general-define-key
@@ -120,7 +126,6 @@
  :states '(insert)
  (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1))
  (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1))
- (kbd "C-o") 'sp-forward-sexp
  )
 
 ;; ;; git-commit insert

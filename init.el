@@ -86,9 +86,6 @@ This function should only modify configuration layer settings."
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(
-                                      ;; https://github.com/manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/english-helper
-                                      (company-english-healper :location "~/github/company-english-helper")
-                                      ;; ;; https://github.com/manateelazycat/emacs-application-framework
                                       ;; (eaf :location "~/github/emacs-application-framework/")
                                       )
 
@@ -500,6 +497,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; hack for remove purpose mode
   (setq purpose-mode nil)
 
+  ;; company-english-helper path
+  (add-to-list 'load-path (expand-file-name "~/github/company-english-helper"))
+
   )
 
 (defun dotspacemacs/user-load ()
@@ -515,6 +515,12 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+
+  ;; https://github.com/manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/english-helper
+  (require 'company-english-helper)
+
+  ;; ;; https://github.com/manateelazycat/emacs-application-framework
+  ;; (require 'eaf)
 
   ;; set Chinese fonts not using chinese layer, same to chinese-fonts-setup, cnfonts
   (set-frame-font "Source Code Pro")
