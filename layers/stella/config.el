@@ -9,6 +9,7 @@
 ;;
 ;;; License: GPLv3
 
+
 ;; ;; reset frame size
 ;; (stella/reset-frame-size)
 ;; ;; learn from liu233w
@@ -22,6 +23,7 @@
 ;;       (select-frame frame))
 ;;     (set-frame-size (selected-frame) 96 48))
 ;;   )
+
 
 ;; one-key switch theme via @ksqsf at emacs-china
 (defvar *my-dark-theme* 'zenburn)
@@ -43,11 +45,13 @@
 	       (setq *current-variant* 'light))
 	      (t (error "unknown variant"))))
 
+
 ;; ;; set face-attribute font, disabling in default theme
 ;; (set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
 ;; (set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
 ;; (set-face-attribute 'font-lock-comment-face nil :slant 'italic)
 ;; ;; (set-face-attribute 'font-lock-string-face nil :foreground '"forest green")
+
 
 ;; ;; performance of opening large file
 ;; (add-hook 'find-file-hook 'spacemacs/check-large-file)
@@ -57,6 +61,7 @@
 ;;       (fundamental-mode)
 ;;       (hl-line-mode -1)
 ;;       )))
+
 
 ;; improve the performance of opening org file
 ;; (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
@@ -68,6 +73,7 @@
                            ;; (spacemacs/toggle-centered-point-on)
                            ))
 
+
 ;; improve the performance of opening markdown file
 (add-hook 'markdown-mode-hook (lambda ()
                            ;; (auto-fill-mode)  ;; if column ==80 return
@@ -76,6 +82,7 @@
                            (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
                            ;; (spacemacs/toggle-centered-point-on)
                            ))
+
 
 ;; improve the performance of opening tex file
 (add-hook 'LaTeX-mode-hook
@@ -88,6 +95,7 @@
             (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
             ))
 
+
 ;; improve the performance of opening python file
 (add-hook 'python-mode-hook
           (lambda ()
@@ -95,8 +103,10 @@
             (setq python-shell-interpreter "/opt/anaconda/bin/python")
             ))
 
+
 ;; line-numbers for yaml-mode
 (add-hook 'yaml-mode-hook (lambda () (spacemacs/toggle-line-numbers-on)) 'append)
+
 
 ;; ;; set default translate web as translate.google.cn
 ;; (eval-after-load 'google-translate-core
@@ -105,6 +115,7 @@
 ;;          google-translate-default-target-language "zh_CN"))
 ;; (eval-after-load 'google-translate-tk
 ;;   '(setq google-translate--tkk-url "http://translate.google.cn/"))
+
 
 ;; ;; pretty symbols via:
 ;; ;; https://github.com/MetroWind/dotfiles-mac/blob/master/.emacs-pkgs/mw-unicode-symbols-subst.el

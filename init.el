@@ -334,7 +334,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
-   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-at-startup t
 
    ;; If non-nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
    ;; Use to disable fullscreen animations in OSX. (default nil)
@@ -343,7 +343,7 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup t
+   dotspacemacs-maximized-at-startup nil
 
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
@@ -442,7 +442,8 @@ It should only modify the values of Spacemacs settings."
    ;; %z - mnemonics of buffer, terminal, and keyboard coding systems
    ;; %Z - like %z, but including the end-of-line format
    ;; (default "%I@%S")
-   dotspacemacs-frame-title-format "%a @ %m"
+   dotspacemacs-frame-title-format "%I@%S"
+   ;; dotspacemacs-frame-title-format "%a @ %m"
 
    ;; Format specification for setting the icon title format
    ;; (default nil - same as frame-title-format)
@@ -527,6 +528,11 @@ before packages are loaded."
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
                       charset (font-spec :family "Source Han Sans CN" :size 16)))
+
+  ;; display time on modeline
+  (setq display-time-format "%H:%M")
+  ;; (display-time-mode 1)
+  (spacemacs/toggle-display-time-on)
 
   ;; enable company globally
   (global-company-mode)

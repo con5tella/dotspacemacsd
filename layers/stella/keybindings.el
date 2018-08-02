@@ -41,6 +41,10 @@
 ;; toggle to write with company-english-helper or not
 (evil-leader/set-key "ow" 'toggle-company-english-helper)
 
+;; toggle-fullscreen-frame (maximized-frame-at-startup t in .spacemacs|init.el)
+(evil-leader/set-key "oF" 'spacemacs/toggle-fullscreen-frame)
+(evil-leader/set-key "oM" 'spacemacs/toggle-maximize-frame)
+
 ;; clear highlight
 (evil-leader/set-key "DEL" 'spacemacs/evil-search-clear-highlight)
 
@@ -87,7 +91,6 @@
  (kbd "C-a") 'sp-beginning-of-sexp
  (kbd "C-e") 'sp-end-of-sexp
  (kbd "C-o") 'next-line-insert-mode
- (kbd "C-O") 'previous-line-insert-mode
  (kbd "C-t") 'query-replace-regexp
  )
 
