@@ -499,6 +499,8 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; hack for remove purpose mode
   (setq purpose-mode nil)
 
+  ;; auto-save.el path
+  (add-to-list 'load-path (expand-file-name "~/.spacemacs.d/site-lisp"))
   ;; company-english-helper path
   (add-to-list 'load-path (expand-file-name "~/github/company-english-helper"))
 
@@ -518,18 +520,6 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
-  ;; https://github.com/manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/english-helper
-  (require 'company-english-helper)
-
-  ;; ;; https://github.com/manateelazycat/emacs-application-framework
-  ;; (require 'eaf)
-
-  ;; set Chinese fonts not using chinese layer, same to chinese-fonts-setup, cnfonts
-  (set-frame-font "Source Code Pro")
-  (dolist (charset '(kana han symbol cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font)
-                      charset (font-spec :family "Source Han Sans CN" :size 16)))
-
   ;;display time in space-powerline
   (spaceline-define-segment date-and-time
     (shell-command-to-string "echo -n $(date '+%a @%W/52 -*- %F(%j) -*- %H:%M%')"))
@@ -540,8 +530,27 @@ before packages are loaded."
   ;; ;; (display-time-mode 1)
   ;; (spacemacs/toggle-display-time-on)
 
+  ;; ;; manateelazycat/emacs-application-framework
+  ;; (require 'eaf)
+
+  ;; set Chinese fonts not using chinese layer, same to chinese-fonts-setup, cnfonts
+  (set-frame-font "Source Code Pro")
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+                      charset (font-spec :family "Source Han Sans CN" :size 16)))
+
+  ;; auto-save via manateelazycat/lazycat-emacs/site-lisp/extensions/lazycat/auto-save.el
+  (require 'auto-save)
+  (auto-save-enable)
+  (setq auto-save-slient t)
+  ;; (setq auto-save-delete-trailing-whitespace t)
+
+  ;; manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/english-helper
+  (require 'company-english-helper)
+
   ;; enable company globally
   (global-company-mode)
+  (setq company-minimum-prefix-length 2)
 
   ;; hungry-delete-mode on
   (global-hungry-delete-mode t)

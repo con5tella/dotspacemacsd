@@ -30,7 +30,7 @@
 (defvar *my-light-theme* 'spacemacs-light)
 (defvar *current-variant* 'light)
 
-(load-theme 'spacemacs-light t)
+;; (load-theme 'spacemacs-light t)
 ;; (global-set-key (kbd "<f8>") #'switch-theme-variant)
 
 (defun switch-theme-variant ()
@@ -63,27 +63,6 @@
 ;;       )))
 
 
-;; improve the performance of opening org file
-;; (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
-(add-hook 'org-mode-hook (lambda ()
-                           ;; (auto-fill-mode)  ;; if column ==80 return
-                           (setq truncate-lines nil)  ;; truncate lines ignore words
-                           ;; (visual-line-mode t)
-                           (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
-                           ;; (spacemacs/toggle-centered-point-on)
-                           ))
-
-
-;; improve the performance of opening markdown file
-(add-hook 'markdown-mode-hook (lambda ()
-                           ;; (auto-fill-mode)  ;; if column ==80 return
-                           ;; (setq truncate-lines nil)  ;; truncate lines ignore words
-                           ;; (visual-line-mode t)
-                           (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
-                           ;; (spacemacs/toggle-centered-point-on)
-                           ))
-
-
 ;; improve the performance of opening tex file
 (add-hook 'LaTeX-mode-hook
           (lambda ()
@@ -93,6 +72,29 @@
             (auto-fill-mode -1)
             (setq truncate-lines nil)  ;; truncate lines ignore words
             (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
+            ))
+
+
+;; improve the performance of opening markdown file
+(add-hook 'markdown-mode-hook
+          (lambda ()
+            ;; (auto-fill-mode)  ;; if column ==80 return
+            ;; (setq truncate-lines nil)  ;; truncate lines ignore words
+            ;; (visual-line-mode t)
+            (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
+            ;; (spacemacs/toggle-centered-point-on)
+            ))
+
+
+;; improve the performance of opening org file
+;; (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
+(add-hook 'org-mode-hook
+          (lambda ()
+            ;; (auto-fill-mode)  ;; if column ==80 return
+            (setq truncate-lines nil)  ;; truncate lines ignore words
+            ;; (visual-line-mode t)
+            (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
+            ;; (spacemacs/toggle-centered-point-on)
             ))
 
 
