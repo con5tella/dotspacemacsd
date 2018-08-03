@@ -99,7 +99,7 @@ This function should only modify configuration layer settings."
                                     magit-svn
                                     org-pomodoro
                                     rainbow-delimiters
-                                    spaceline
+                                    ;; spaceline
                                     )
 
    ;; Defines the behaviour of Spacemacs when installing packages.
@@ -232,8 +232,8 @@ It should only modify the values of Spacemacs settings."
    ;; to create your own spaceline theme. Value can be a symbol or list with\
    ;; additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   ;; dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.5)
-   dotspacemacs-mode-line-theme 'vim-powerline
+   dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.5)
+   ;; dotspacemacs-mode-line-theme 'vim-powerline
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -529,10 +529,15 @@ before packages are loaded."
     (set-fontset-font (frame-parameter nil 'font)
                       charset (font-spec :family "Source Han Sans CN" :size 16)))
 
-  ;; display time on modeline
-  (setq display-time-format "%H:%M")
-  ;; (display-time-mode 1)
-  (spacemacs/toggle-display-time-on)
+  ;;display time in space-powerline
+  (spaceline-define-segment date-and-time
+    (shell-command-to-string "echo -n $(date '+%a @%W/52 -*- %F(%j) -*- %H:%M%')"))
+  (spaceline-spacemacs-theme 'date-and-time)
+
+  ;; ;; display time on vim-modeline
+  ;; (setq display-time-format "%H:%M")
+  ;; ;; (display-time-mode 1)
+  ;; (spacemacs/toggle-display-time-on)
 
   ;; enable company globally
   (global-company-mode)
