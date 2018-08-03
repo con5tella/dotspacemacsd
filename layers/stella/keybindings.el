@@ -62,7 +62,7 @@
  "/" 'evil-search-forward ;; mainly used in fundamental-mode for large-file
  "f" 'counsel-describe-function
  "k" 'describe-key
- "r" 'quickrun
+ "q" 'quickrun
  "u" 'undo-tree-visualize
  "w" 'save-buffer
  )
