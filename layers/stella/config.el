@@ -106,8 +106,8 @@
             ))
 
 
-;; line-numbers for yaml-mode
-(add-hook 'yaml-mode-hook (lambda () (spacemacs/toggle-line-numbers-on)) 'append)
+;; ;; line-numbers for yaml-mode
+;; (add-hook 'yaml-mode-hook (lambda () (spacemacs/toggle-line-numbers-on)) 'append)
 
 
 ;; ;; set default translate web as translate.google.cn
