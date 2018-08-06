@@ -520,6 +520,10 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
+  ;; to solve the problem "args out of range" when replace-regexp
+  ;; github.com/syl20bnr/spacemacs/issues/10938
+  (setq frame-title-format nil)
+
   ;;display time in space-powerline
   (spaceline-define-segment date-and-time
     (shell-command-to-string "echo -n $(date '+%a @%W/52 -*- %F(%j) -*- %H:%M%')"))
