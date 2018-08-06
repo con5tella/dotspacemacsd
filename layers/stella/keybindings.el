@@ -45,6 +45,9 @@
 (evil-leader/set-key "oF" 'spacemacs/toggle-fullscreen-frame)
 (evil-leader/set-key "oM" 'spacemacs/toggle-maximize-frame)
 
+;; ;; latex-preview-pane
+;; (evil-leader/set-key "oP" 'latex-preview-pane-mode)
+
 ;; clear highlight
 (evil-leader/set-key "DEL" 'spacemacs/evil-search-clear-highlight)
 
@@ -76,6 +79,7 @@
  (kbd "M-f") 'counsel-projectile-find-file
  (kbd "M-g") 'magit-status
  (kbd "M-n") 'sp-next-sexp
+ ;; (kbd "M-p") 'latex-preview-pane-update
  ;; (kbd "M-r") 'ranger
  (kbd "M-u") 'undo-tree-visualize
  (kbd "M-[") 'sp-backward-slurp-sexp

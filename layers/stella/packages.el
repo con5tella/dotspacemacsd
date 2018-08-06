@@ -38,6 +38,7 @@
     ;; eaf
     fcitx
     general
+    ;; latex-preview-pane
     ;; org
     pangu-spacing
     ;; polymode
@@ -135,6 +136,10 @@ Each entry is either:
 ;;        (perl . t)
 ;;        (C . t)
 ;;        ))
+;;     ))
+
+;; (defun stella/init-latex-preview-pane ()
+;;   (use-package latex-preview-pane
 ;;     ))
 
 (defun stella/init-pangu-spacing ()
