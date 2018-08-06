@@ -40,7 +40,7 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
-     ivy
+     ;; ivy
      auto-completion
      ;; better-defaults
      ;; bibtex
