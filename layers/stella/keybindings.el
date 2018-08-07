@@ -99,8 +99,6 @@
  )
 
 ;; macros for open new line in insert mode
-(fset 'previous-line-insert-mode
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([escape 79] 0 "%d") arg)))
 (fset 'next-line-insert-mode
       (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([escape 111] 0 "%d") arg)))
 

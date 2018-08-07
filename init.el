@@ -520,6 +520,11 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
+  ;; disable spacemacs buffer and switch to scratch when startup
+  ;; (when (string= "*scratch*" (buffer-name))
+  ;;   (spacemacs/switch-to-scratch-buffer))
+  (kill-buffer "*spacemacs*")
+
   ;; to solve the problem "args out of range" when replace-regexp
   ;; github.com/syl20bnr/spacemacs/issues/10938
   (setq frame-title-format nil)
