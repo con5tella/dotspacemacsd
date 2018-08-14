@@ -51,6 +51,9 @@
 ;; clear highlight
 (evil-leader/set-key "DEL" 'spacemacs/evil-search-clear-highlight)
 
+;; ;; awesome shell via manateelazycat/aweshell
+;; (evil-leader/set-key "'" 'aweshell-new)
+
 ;; ;; remap C-n and C-p for next and previous candidate
 ;; (define-key evil-insert-state-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
 ;; (define-key evil-insert-state-map (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1)))

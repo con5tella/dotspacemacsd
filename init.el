@@ -65,7 +65,8 @@ This function should only modify configuration layer settings."
             shell-default-position 'right
             shell-default-width 40
             shell-default-term-shell "/usr/bin/zsh"
-            shell-default-full-span nil)
+            ;; shell-default-full-span nil
+            )
      ;; spacemacs-completion
      (spell-checking :variables
                      ispell-program-name "aspell"
@@ -501,7 +502,6 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
   ;; path of auto-save.el & aweshell
   (add-to-list 'load-path (expand-file-name "~/.spacemacs.d/site-lisp"))
-  ;; (add-to-list 'load-path (expand-file-name "~/.spacemacs.d/site-lisp/aweshell"))
   ;; path of company-english-helper
   (add-to-list 'load-path (expand-file-name "~/nutstore/nutbk/company-english-helper"))
 
@@ -549,8 +549,8 @@ before packages are loaded."
     (set-fontset-font (frame-parameter nil 'font)
                       charset (font-spec :family "Source Han Sans CN" :size 16)))
 
-  ;; ;; aweshell, extension to eshell
-  ;; ;; via manateelazycat/lazycat-emacs/site-lisp/extensions/aweshell/
+  ;; ;; aweshell, extension to eshell via manateelazycat/aweshell
+  ;; ;; submodule to manateelazycat/lazycat-emacs/site-lisp/extensions/aweshell/
   ;; (require 'aweshell)
 
   ;; auto-save via manateelazycat/lazycat-emacs/site-lisp/extensions/lazycat/auto-save.el
