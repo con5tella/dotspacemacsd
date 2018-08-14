@@ -61,11 +61,11 @@ This function should only modify configuration layer settings."
      ;; (python :variables
              ;; python-backend 'anaconda)
      (shell :variables
-            ;; shell-default-position 'bottom
-            ;; shell-default-height 30)
+            shell-default-shell 'multi-term
             shell-default-position 'right
-            shell-default-width 39
-            shell-default-term-shell "/usr/bin/zsh")
+            shell-default-width 40
+            shell-default-term-shell "/usr/bin/zsh"
+            shell-default-full-span nil)
      ;; spacemacs-completion
      (spell-checking :variables
                      ispell-program-name "aspell"
@@ -499,10 +499,11 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; hack for remove purpose mode
   (setq purpose-mode nil)
 
-  ;; auto-save.el path
+  ;; path of auto-save.el & aweshell
   (add-to-list 'load-path (expand-file-name "~/.spacemacs.d/site-lisp"))
-  ;; company-english-helper path
-  (add-to-list 'load-path (expand-file-name "~/github/company-english-helper"))
+  ;; (add-to-list 'load-path (expand-file-name "~/.spacemacs.d/site-lisp/aweshell"))
+  ;; path of company-english-helper
+  (add-to-list 'load-path (expand-file-name "~/nutstore/nutbk/company-english-helper"))
 
   )
 
@@ -548,6 +549,10 @@ before packages are loaded."
     (set-fontset-font (frame-parameter nil 'font)
                       charset (font-spec :family "Source Han Sans CN" :size 16)))
 
+  ;; ;; aweshell, extension to eshell
+  ;; ;; via manateelazycat/lazycat-emacs/site-lisp/extensions/aweshell/
+  ;; (require 'aweshell)
+
   ;; auto-save via manateelazycat/lazycat-emacs/site-lisp/extensions/lazycat/auto-save.el
   (require 'auto-save)
   (auto-save-enable)
@@ -564,8 +569,8 @@ before packages are loaded."
   ;; ;; hungry-delete-mode on
   ;; (global-hungry-delete-mode t)
 
-  ;; change default quoted char radix 8, alter option:16
-  (setq read-quoted-char-radix 10)
+  ;; change default quoted char radix 8, alter option:10/16
+  (setq read-quoted-char-radix 16)
 
   ;; garbage-collection
   (when (eq system-type 'windows-nt)
