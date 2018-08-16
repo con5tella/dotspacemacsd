@@ -62,6 +62,7 @@ This function should only modify configuration layer settings."
              ;; python-backend 'anaconda)
      (shell :variables
             shell-default-shell 'ansi-term
+            ;; shell-default-shell 'multi-term
             shell-default-position 'right
             shell-default-width 40
             shell-default-term-shell "/usr/bin/zsh")
@@ -498,8 +499,10 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; hack for remove purpose mode
   (setq purpose-mode nil)
 
-  ;; path of auto-save.el & aweshell
+  ;; path of auto-save.el
   (add-to-list 'load-path (expand-file-name "~/.spacemacs.d/site-lisp"))
+  ;; ;; path of aweshell
+  ;; (add-to-list 'load-path (expand-file-name "~/github/lazycat-aweshell"))
   ;; path of company-english-helper
   (add-to-list 'load-path (expand-file-name "~/nutstore/nutbk/company-english-helper"))
 
