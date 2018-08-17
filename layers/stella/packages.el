@@ -41,7 +41,7 @@
     ;; latex-preview-pane
     ;; org
     pangu-spacing
-    ;; polymode
+    polymode
     ;; proxy-mode
     ;; pyim
     quickrun
@@ -154,16 +154,9 @@ Each entry is either:
       :type 'list)
     ))
 
-;; (defun stella/init-polymode ()
-;;   (require 'poly-R)
-;;   (require 'poly-markdown)
-;;   ;; markdown
-;;   (add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
-;;   ;; R modes
-;;   (add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
-;;   (add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
-;;   (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
-;;   )
+(defun stella/init-polymode ()
+  (use-package polymode
+    ))
 
 ;; (defun stella/init-proxy-mode ()
 ;;   (use-package proxy-mode

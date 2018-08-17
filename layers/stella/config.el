@@ -106,6 +106,26 @@
             ))
 
 
+;; poly-mode for .Rmd file
+;; via stackoverflow.com/questions/16172345/how-can-i-use-emacs-ess-mode-with-r-markdown
+(defun rmd-mode ()
+  "ESS Markdown mode for rmd files"
+  (interactive)
+  ;; (setq load-path
+  ;;       (append (list "path/to/polymode/" "path/to/polymode/modes/")
+  ;;               load-path))
+  (require 'poly-R)
+  (require 'poly-markdown)
+  ;; ;; markdown
+  ;; (add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
+  ;; ;; R modes
+  ;; (add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
+  ;; (add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
+  ;; (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
+  (poly-markdown+r-mode)
+  )
+
+
 ;; ;; line-numbers for yaml-mode
 ;; (add-hook 'yaml-mode-hook (lambda () (spacemacs/toggle-line-numbers-on)) 'append)
 

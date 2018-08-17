@@ -22,6 +22,7 @@
 (evil-leader/set-key "oo" 'org-mode)
 (evil-leader/set-key "op" 'python-mode)
 (evil-leader/set-key "or" 'R-mode)
+(evil-leader/set-key "oR" 'rmd-mode)
 (evil-leader/set-key "oy" 'yaml-mode)
 
 ;; macros for TeX-mode
