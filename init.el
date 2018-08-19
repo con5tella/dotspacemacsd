@@ -62,7 +62,6 @@ This function should only modify configuration layer settings."
              ;; python-backend 'anaconda)
      (shell :variables
             shell-default-shell 'ansi-term
-            ;; shell-default-shell 'multi-term
             shell-default-position 'right
             shell-default-width 40
             shell-default-term-shell "/usr/bin/zsh")
@@ -305,9 +304,9 @@ It should only modify the values of Spacemacs settings."
    ;; Maximum number of rollback slots to keep in the cache. (default 5)
    dotspacemacs-max-rollback-slots 5
 
-   ;; If non-nil, the paste transient-state is enabled. While enabled, pressing
-   ;; `p' several times cycles through the elements in the `kill-ring'.
-   ;; (default nil)
+   ;; If non-nil, the paste transient-state is enabled. While enabled, after you
+   ;; paste something, pressing `C-j' and `C-k' several times cycles through the
+   ;; elements in the `kill-ring'. (default nil)
    dotspacemacs-enable-paste-transient-state nil
 
    ;; Which-key delay in seconds. The which-key buffer is the popup listing
@@ -501,7 +500,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
   ;; path of auto-save.el
   (add-to-list 'load-path (expand-file-name "~/.spacemacs.d/site-lisp"))
-  ;; ;; path of aweshell
+  ;; path of aweshell
   ;; (add-to-list 'load-path (expand-file-name "~/github/lazycat-aweshell"))
   ;; path of company-english-helper
   (add-to-list 'load-path (expand-file-name "~/nutstore/nutbk/company-english-helper"))
