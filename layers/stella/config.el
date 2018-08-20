@@ -27,7 +27,8 @@
 
 ;; one-key switch theme via @ksqsf at emacs-china
 (defvar *my-dark-theme* 'zenburn)
-(defvar *my-light-theme* 'spacemacs-light)
+;; (defvar *my-light-theme* 'spacemacs-light)
+(defvar *my-light-theme* 'tango)
 (defvar *current-variant* 'light)
 
 ;; (load-theme 'spacemacs-light t)
