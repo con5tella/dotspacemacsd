@@ -219,9 +219,11 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-themes '(
                          ;; spacemacs-dark
                          ;; spacemacs-light
-                         tango
+                         ;; adwaita
+                         ;; tango
                          ;; solarized-light
                          ;; material-light
+                         leuven
                          zenburn
                          )
 
