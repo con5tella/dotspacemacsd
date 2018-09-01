@@ -220,12 +220,12 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-themes '(
                          ;; spacemacs-dark
                          ;; spacemacs-light
-                         ;; adwaita
-                         ;; tango
                          ;; solarized-light
                          ;; material-light
-                         leuven
                          zenburn
+                         ;; adwaita
+                         ;; tango
+                         leuven
                          )
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
