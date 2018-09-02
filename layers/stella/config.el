@@ -29,7 +29,7 @@
 (defvar *my-dark-theme* 'zenburn)
 ;; (defvar *my-light-theme* 'spacemacs-light)
 (defvar *my-light-theme* 'leuven)
-(defvar *current-variant* 'light)
+(defvar *current-variant* 'dark)
 
 ;; (load-theme 'spacemacs-light t)
 ;; (global-set-key (kbd "<f8>") #'switch-theme-variant)
