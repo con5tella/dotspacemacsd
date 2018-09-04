@@ -29,9 +29,9 @@
 (evil-leader/set-key "of" 'TeX-macro-frame)
 (evil-leader/set-key "ob" 'TeX-macro-block)
 (fset 'TeX-macro-frame
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([111 92 98 101 103 105 110 123 102 114 97 109 101 right 123 right return 92 98 101 103 105 110 123 98 108 111 99 107 right return return 92 101 110 100 123 98 108 111 99 107 right return 92 101 110 100 123 102 114 97 109 101 escape 36 118 107 107 107 107 48 61 106 106] 0 "%d") arg)))
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([111 92 98 101 103 105 110 123 102 114 97 109 101 6 123 escape 111 92 98 101 103 105 110 123 98 108 111 99 107 6 123 escape 111 return 92 101 110 100 123 98 108 111 99 107 escape 111 92 101 110 100 123 102 114 97 109 101 escape 36 118 107 107 107 107 48 61 106 106] 0 "%d") arg)))
 (fset 'TeX-macro-block
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([111 92 98 101 103 105 110 123 98 108 111 99 107 right return return 92 101 110 100 123 98 108 111 99 107 escape 36 118 107 107 48 61 106] 0 "%d") arg)))
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item '([111 92 98 101 103 105 110 123 98 108 111 99 107 6 123 escape 111 return 92 101 110 100 123 98 108 111 99 107 escape 36 118 107 107 48 61 106] 0 "%d") arg)))
 
 ;; quickrun
 (evil-leader/set-key "oq" 'quickrun)
