@@ -222,9 +222,11 @@ It should only modify the values of Spacemacs settings."
                          ;; spacemacs-light
                          ;; solarized-light
                          ;; material-light
-                         zenburn
                          ;; adwaita
+                         ;; darktooth
                          ;; tango
+                         zenburn
+                         monokai
                          leuven
                          )
 
