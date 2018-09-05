@@ -93,13 +93,17 @@ This function should only modify configuration layer settings."
 
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
+                                    all-the-icons
+                                    doom-modeline
                                     exec-path-from-shell
                                     google-translate
                                     magit-svn
                                     org-bullets
                                     org-pomodoro
+                                    powerline
                                     rainbow-delimiters
                                     ;; spaceline
+                                    spaceline-all-the-icons
                                     )
 
    ;; Defines the behaviour of Spacemacs when installing packages.
@@ -238,7 +242,6 @@ It should only modify the values of Spacemacs settings."
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
    dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.5)
-   ;; dotspacemacs-mode-line-theme 'vim-powerline
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
