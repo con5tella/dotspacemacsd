@@ -230,7 +230,8 @@ It should only modify the values of Spacemacs settings."
                          ;; darktooth
                          ;; tango
                          zenburn
-                         monokai
+                         sanityinc-tomorrow-eighties
+                         tsdh-dark
                          leuven
                          )
 
